@@ -287,5 +287,116 @@ export const sources = {
     url: 'https://www.aeaweb.org/conference/2013/retrieve.php?pdfid=504',
     note: '영국·스웨덴·미국·인도·일본·중국/대만의 성씨를 이용한 사회이동 연구 방법을 비교.',
     type: 'conference-paper'
-  }
+  },
+
+  koreaCensus2015: {
+    id: 'koreaCensus2015',
+    title: '2015 인구주택총조사 — 성씨 및 본관 집계',
+    org: '통계청',
+    year: '2016 발표 / 2015 기준',
+    url: 'https://www.kostat.go.kr/boardDownload.es?bid=203&list_no=356061&seq=8',
+    note: '성씨별 인구와 상위 성씨·본관별 인구를 수록. 본 서비스의 한국 성씨 TOP 20과 본관 TOP 20 기준.',
+    type: 'official-census-data'
+  },
+  kimSuroAKS: {
+    id: 'kimSuroAKS', title: '수로왕', org: '한국민족문화대백과사전', year: '2023 수정',
+    url: 'https://encykorea.aks.ac.kr/Article/E0031325',
+    note: '금관가야 초대왕이자 김해 김씨의 시조로 설명.', type: 'academic-encyclopedia'
+  },
+  miryangParkGenealogy: {
+    id: 'miryangParkGenealogy', title: '밀양박씨 족보(숭정임인보)', org: '한국민족문화대백과사전', year: '1662 자료 / 2022 수정',
+    url: 'https://encykorea.aks.ac.kr/Article/E0020408',
+    note: '1662년 간행된 밀양박씨 족보와 분파 연혁, 자녀 기록 방식 등을 설명.', type: 'genealogy-record'
+  },
+  parkUiyeongAKS: {
+    id: 'parkUiyeongAKS', title: '박의영', org: '한국민족문화대백과사전', year: '2023 수정',
+    url: 'https://encykorea.aks.ac.kr/Article/E0021041',
+    note: '본관 밀양의 조선 전기 문신 박의영의 전기.', type: 'academic-biography'
+  },
+  taejoAKS: {
+    id: 'taejoAKS', title: '태조', org: '한국민족문화대백과사전', year: '2025 수정',
+    url: 'https://encykorea.aks.ac.kr/Article/E0059033',
+    note: '조선 제1대 왕 이성계의 본관을 전주로 기록.', type: 'academic-biography'
+  },
+  seonwonSokboAKS: {
+    id: 'seonwonSokboAKS', title: '선원속보', org: '한국민족문화대백과사전', year: '2024 수정',
+    url: 'https://encykorea.aks.ac.kr/Article/E0028866',
+    note: '대한제국기 종정원에서 간행한 조선 왕실의 종합 족보로 전주 이씨 전체를 수록.', type: 'royal-genealogy-record'
+  },
+  kimAljiAKS: {
+    id: 'kimAljiAKS', title: '김알지', org: '한국민족문화대백과사전', year: '2023 수정',
+    url: 'https://encykorea.aks.ac.kr/Article/E0009726',
+    note: '신라 경주 김씨의 시조 전승과 김알지 설화를 설명.', type: 'academic-encyclopedia'
+  },
+  yiHangbokAKS: {
+    id: 'yiHangbokAKS', title: '이항복', org: '한국민족문화대백과사전', year: '2026 확인',
+    url: 'https://encykorea.aks.ac.kr/Article/E0046429',
+    note: '본관 경주의 조선 중기 문신 이항복의 관직과 활동 기록.', type: 'academic-biography'
+  },
+  gangMincheomAKS: {
+    id: 'gangMincheomAKS', title: '강민첨', org: '한국민족문화대백과사전', year: '2025 수정',
+    url: 'https://encykorea.aks.ac.kr/Article/E0001152',
+    note: '본관 진주의 고려 전기 장수·공신 강민첨 기록.', type: 'academic-biography'
+  },
+  choeChiwonAKS: {
+    id: 'choeChiwonAKS', title: '최치원', org: '한국민족문화대백과사전', year: '2026 수정',
+    url: 'https://encykorea.aks.ac.kr/Article/E0057711',
+    note: '본관 경주의 통일신라 학자·문장가·관료 최치원 기록.', type: 'academic-biography'
+  },
+  kimJangsaengAKS: {
+    id: 'kimJangsaengAKS', title: '김장생', org: '한국민족문화대백과사전', year: '2023 수정',
+    url: 'https://encykorea.aks.ac.kr/Article/E0010318',
+    note: '본관 광산의 조선 예학자 김장생 기록.', type: 'academic-biography'
+  },
+  yunGwanAKS: {
+    id: 'yunGwanAKS', title: '윤관', org: '한국민족문화대백과사전', year: '2026 수정',
+    url: 'https://encykorea.aks.ac.kr/Article/E0042215',
+    note: '본관 파평의 고려 문신·장군 윤관과 별무반·여진 정벌 기록.', type: 'academic-biography'
+  },
+  hanMyeonghoeAKS: {
+    id: 'hanMyeonghoeAKS', title: '한명회', org: '한국민족문화대백과사전', year: '2022 수정',
+    url: 'https://encykorea.aks.ac.kr/Article/E0061599',
+    note: '본관 청주의 조선 전기 문신 한명회와 왕실 혼인·정치활동 기록.', type: 'academic-biography'
+  },
+  cheongjuHanGenealogy: {
+    id: 'cheongjuHanGenealogy', title: '청주한씨 세보', org: '한국민족문화대백과사전', year: '조선 후기 자료',
+    url: 'https://encykorea.aks.ac.kr/Article/E0056764',
+    note: '청주 한씨의 선대 사적과 왕후 세계 등을 수록한 족보 기록.', type: 'genealogy-record'
+  },
+  gwonHaengAKS: {
+    id: 'gwonHaengAKS', title: '권행', org: '한국민족문화대백과사전', year: '2023 수정',
+    url: 'https://encykorea.aks.ac.kr/Article/E0007131',
+    note: '고창전투 공로 뒤 고려 태조에게 권씨 성을 하사받은 안동 권씨 시조 기록.', type: 'academic-biography'
+  },
+  andongKwonGenealogy: {
+    id: 'andongKwonGenealogy', title: '안동권씨 을사보', org: '한국민족문화대백과사전', year: '1605 자료 / 2025 수정',
+    url: 'https://encykorea.aks.ac.kr/Article/E0034590',
+    note: '1605년에 편찬된 안동 권씨 족보 관련 기록.', type: 'genealogy-record'
+  },
+  jangHyeongwangAKS: {
+    id: 'jangHyeongwangAKS', title: '장현광', org: '한국민족문화대백과사전', year: '2026 확인',
+    url: 'https://encykorea.aks.ac.kr/Article/E0048902',
+    note: '본관 인동의 조선 후기 성리학자 장현광 기록.', type: 'academic-biography'
+  },
+  shinSunggyeomAKS: {
+    id: 'shinSunggyeomAKS', title: '신숭겸', org: '한국민족문화대백과사전', year: '2026 확인',
+    url: 'https://encykorea.aks.ac.kr/Article/E0033141',
+    note: '평산 신씨 시조이자 고려 개국공신 신숭겸 기록.', type: 'academic-biography'
+  },
+  kimJosunAKS: {
+    id: 'kimJosunAKS', title: '김조순', org: '한국민족문화대백과사전', year: '2023 수정',
+    url: 'https://encykorea.aks.ac.kr/Article/E0010476',
+    note: '본관 안동의 조선 후기 문신 김조순 기록.', type: 'academic-biography'
+  },
+  sedoPoliticsAKS: {
+    id: 'sedoPoliticsAKS', title: '세도정치', org: '한국민족문화대백과사전', year: '2026 확인',
+    url: 'https://encykorea.aks.ac.kr/Article/E0029786',
+    note: '순조 이후 안동 김씨 등 외척 가문의 권력 집중 과정을 설명.', type: 'academic-history'
+  },
+  andongKimGenealogy: {
+    id: 'andongKimGenealogy', title: '안동김씨 성보', org: '한국민족문화대백과사전', year: '1580경 자료 / 2024 수정',
+    url: 'https://encykorea.aks.ac.kr/Article/E0073015',
+    note: '1580년경 간행된 안동 김씨 족보로 조선 전기 족보 편찬사를 보여주는 기록.', type: 'genealogy-record'
+  },
+
 };
