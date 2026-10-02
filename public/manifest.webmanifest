@@ -1,0 +1,14 @@
+{
+  "name": "성씨 시그널 아틀라스",
+  "short_name": "성씨아틀라스",
+  "description": "성씨 빈도순위·역사 기록·사회이동 연구·대표 인물을 출처와 한계까지 함께 보는 팩트체크 웹서비스",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b1020",
+  "theme_color": "#0b1020",
+  "icons": [
+    {"src":"./icon-192.png","sizes":"192x192","type":"image/png"},
+    {"src":"./icon-512.png","sizes":"512x512","type":"image/png"}
+  ]
+}
