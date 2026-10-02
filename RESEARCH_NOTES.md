@@ -158,3 +158,54 @@ Barone & Mocetti는 1427년 피렌체 주민 자료와 2011년 같은 성씨의 
 - 상세 아카이브 14개: 김해 김씨, 밀양 박씨, 전주 이씨, 경주 김씨, 경주 이씨, 진주 강씨, 경주 최씨, 광산 김씨, 파평 윤씨, 청주 한씨, 안동 권씨, 인동 장씨, 평산 신씨, 안동 김씨.
 - 주요 역사 연결: 수로왕, 밀양박씨 족보, 태조 이성계·선원속보, 김알지, 이항복, 강민첨, 최치원, 김장생, 윤관, 한명회, 권행, 장현광, 신숭겸, 김조순·세도정치.
 - `부·사회적 지위`는 한국의 본관·교육 성취 장기 상관 연구를 별도 섹션으로 두며, 역사적 위신·왕실·공신 기록과 개인 재산을 동일시하지 않는다.
+
+## v5 — ‘성만 들어도 부유가문이 떠오르는가’ 신호층 추가
+
+v5는 v4의 자료를 대체하지 않고 **별도 부호가문 신호층을 누적**했다. 서비스의 첫 질문은 사용자의 원래 관심사에 맞춰 다시 명확히 잡았다.
+
+> “그 나라에서 이 성씨를 들었을 때 재벌·귀족·대지주·창업가문을 떠올릴 만한 실제 기록이 있는가?”
+
+신호 강도는 개인의 자산 확률이 아니다. 아래 근거가 성씨와 얼마나 직접 결합되는지를 설명한다.
+
+- 기업명이 창업가문 성씨와 동일하거나 장기간 결합된 경우
+- 여러 세대의 가족 지배·지분 보유가 공개적으로 확인되는 경우
+- 왕실·귀족·대지주·은행가문처럼 역사적 가문명이 강하게 고착된 경우
+- Forbes 등 공개 부호 자료에서 동일 가문 구성원이 반복해서 확인되는 경우
+- 반대로 성씨가 너무 흔해 개인 식별력이 거의 없으면 `low-surname` 또는 `*-context`로 낮춰 표시
+
+### 추가 국가와 대표 사례
+
+- 일본: Toyoda, Torii, Mori, Yanai, Son
+- 한국: Samsung의 Lee, Hyundai의 Chung, LG의 Koo, SK의 Chey, Lotte의 Shin
+- 인도: Ambani, Adani, Birla, Godrej, Jindal, Bajaj, Poonawalla, Mistry
+- 영국: Grosvenor, Rothschild, Cavendish, Percy, Guinness
+- 미국: Walton, Mars, Koch, Rockefeller, Vanderbilt
+- 프랑스: Bettencourt Meyers, Arnault, Wertheimer, Dassault, Pinault
+- 독일: Quandt, Albrecht, Reimann, Klatten
+- 스웨덴: Wallenberg, Rausing, Persson, Schörling
+- 이탈리아: Ferrero, Agnelli, Del Vecchio, Medici
+- 스페인: Ortega, Del Pino, March
+- 멕시코: Slim, Larrea, Baillères
+- 중국: Zhong, Zhang, He — 유명 부호 사례는 있으나 흔한 성씨라 성씨 단독 신호는 약한 반례
+
+전체 54개 항목은 `DATA_CATALOG.md`와 `public/data/catalog.json`에서 확인할 수 있다. 각 항목은 `hook`, `history`, `wealthEvidence`, `notables`, `sourceIds`를 갖는다.
+
+### 기존 자료 보존 원칙
+
+v5에서도 다음 자료를 삭제하지 않는다.
+
+- 레이·나오이(直井) 원래 훅과 팩트체크
+- 일본 성씨 빈도 비교표와 사무라이/가조쿠 장기 연구
+- 인도 벵골 성씨 집단 연구
+- 영국 중세 엘리트 성씨 연구
+- 스웨덴 귀족 성씨와 현대 직업·소득 연구
+- 중국 역사적 엘리트 성씨 장기 연구
+- 한국 성씨 TOP 20, 본관 TOP 20, 14개 본관 역사 아카이브
+- 피렌체 1427–2011 성씨·경제지위 연구
+- 기존 상세 성씨 프로필 12개
+
+즉 `부호가문 신호 → 역사·빈도/본관 → 학술 연구` 순으로 층을 쌓는다.
+
+### 한국 해석 주의
+
+한국은 Lee/이, Chung/정, Shin/신처럼 매우 흔한 성씨가 많다. 따라서 “삼성 이씨”, “현대 정씨”, “롯데 신씨”처럼 **기업가문 맥락이 붙었을 때** 강한 신호로 보여주며, 성씨 단독으로 개인의 재산을 추정하지 않는다. 한국의 역사 탐색은 성씨보다 본관이 더 중요한 단위이므로 기존 본관 아카이브를 그대로 유지한다.

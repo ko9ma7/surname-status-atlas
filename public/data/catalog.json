@@ -1,0 +1,4850 @@
+{
+  "generatedAt": "2026-10-02",
+  "disclaimer": "Surname/family associations are cultural and historical signals, not a method for inferring an individual person’s wealth, ancestry, caste, or class.",
+  "countries": [
+    {
+      "id": "all",
+      "label": "전체 국가"
+    },
+    {
+      "id": "JP",
+      "label": "일본"
+    },
+    {
+      "id": "KR",
+      "label": "한국"
+    },
+    {
+      "id": "IN",
+      "label": "인도"
+    },
+    {
+      "id": "GB",
+      "label": "영국"
+    },
+    {
+      "id": "US",
+      "label": "미국"
+    },
+    {
+      "id": "FR",
+      "label": "프랑스"
+    },
+    {
+      "id": "DE",
+      "label": "독일"
+    },
+    {
+      "id": "SE",
+      "label": "스웨덴"
+    },
+    {
+      "id": "IT",
+      "label": "이탈리아"
+    },
+    {
+      "id": "ES",
+      "label": "스페인"
+    },
+    {
+      "id": "MX",
+      "label": "멕시코"
+    },
+    {
+      "id": "CN",
+      "label": "중국"
+    }
+  ],
+  "countrySummaries": [
+    {
+      "country": "JP",
+      "name": "일본",
+      "signal": "집단 수준에서는 연구 있음 · 개인 부 판정은 불가",
+      "evidence": "medium",
+      "summary": "희귀 사무라이·가조쿠 성씨 집단이 현대의 의학·법조·학계·기업 엘리트에서 과대표현됐다는 장기 연구가 있다. 하지만 “희귀 성씨 = 부자”라는 일반 법칙은 아니다.",
+      "caveat": "直井(나오이)는 현재 희소성 데이터는 확인되지만, 이 서비스가 인용한 장기 엘리트 연구에서 나오이 자체의 부유함이 입증된 것은 아니다.",
+      "sourceIds": [
+        "japanMobility",
+        "myojiNaoi",
+        "japanLaw"
+      ]
+    },
+    {
+      "country": "IN",
+      "name": "인도",
+      "signal": "지역·카스트·성씨 집단 결합 신호가 큼",
+      "evidence": "medium",
+      "summary": "서벵골 연구에서는 특정 성씨 집단의 의사·판사 등 엘리트 직종 대표성이 여러 세대에 걸쳐 지속됐다. 다만 이는 카스트·종교·지역 맥락과 강하게 결합된 집단 자료다.",
+      "caveat": "인도 성씨를 카스트나 자산 수준으로 자동 추정하는 것은 오류와 차별 위험이 크다. 연구에 명시된 집단만 역사적 맥락으로 표시한다.",
+      "sourceIds": [
+        "indiaMobility",
+        "indiaIncomeMobility"
+      ]
+    },
+    {
+      "country": "GB",
+      "name": "영국(잉글랜드)",
+      "signal": "장기 사회적 지위 지속성 연구가 강함",
+      "evidence": "high",
+      "summary": "중세 토지소유·옥스브리지 기록과 희귀 성씨를 연결한 연구에서 일부 역사적 엘리트 성씨의 지위 정보가 매우 오래 남는 것으로 나타났다.",
+      "caveat": "중세 엘리트 성씨라는 사실이 오늘날 특정 개인의 소득·자산을 뜻하지 않는다.",
+      "sourceIds": [
+        "englandMobility"
+      ]
+    },
+    {
+      "country": "SE",
+      "name": "스웨덴",
+      "signal": "귀족 성씨 집단과 현대 소득·직업 자료 비교",
+      "evidence": "high",
+      "summary": "희귀 귀족 성씨 집단은 Andersson 같은 일반 성씨 집단보다 의사·변호사·엘리트대학에서 더 많이 나타났고, 2008년 표본 세금자료에서도 평균 총소득·자본소득 차이가 보고됐다.",
+      "caveat": "논문의 세금 비교는 특정 6개 지방자치단체 표본이며 2008년 자료다. 현재 전국 개인의 재산을 뜻하지 않는다.",
+      "sourceIds": [
+        "swedenMobility"
+      ]
+    },
+    {
+      "country": "CN",
+      "name": "중국",
+      "signal": "역사적 엘리트 성씨의 장기 지속성 연구",
+      "evidence": "medium",
+      "summary": "제국·공화·공산 시기를 가로지르는 성씨 기반 연구에서 과거 엘리트 성씨 집단의 사회적 지위가 예상보다 천천히 평균으로 회귀했다.",
+      "caveat": "중국은 매우 흔한 성씨가 많아 성씨 하나만으로 개인 배경을 구분하기 어렵다. 연구는 집단·장기 추세를 다룬다.",
+      "sourceIds": [
+        "chinaMobility"
+      ]
+    },
+    {
+      "country": "KR",
+      "name": "한국",
+      "signal": "성씨보다 본관/문중 정보가 핵심",
+      "evidence": "medium",
+      "summary": "한국 연구는 김·이·박 같은 성씨 단독이 아니라 본관 계보의 역사적 위신과 현대 교육수준의 상관을 분석한다.",
+      "caveat": "같은 성씨라도 본관이 수십·수백 개라 성씨만으로 계층이나 부를 추정하는 것은 특히 부정확하다.",
+      "sourceIds": [
+        "koreaLineage"
+      ]
+    },
+    {
+      "country": "IT",
+      "name": "이탈리아",
+      "signal": "Ferrero·Agnelli 같은 기업가문 + 피렌체 장기 연구",
+      "evidence": "high",
+      "summary": "Ferrero·Agnelli처럼 성씨가 기업가문 브랜드가 된 사례와, 1427–2011 피렌체 성씨 집단의 장기 경제지위 연구를 함께 볼 수 있다.",
+      "caveat": "현대 기업가문 사례와 600년 장기 학술 연구는 서로 다른 종류의 근거다. 동일 성씨 개인의 부를 자동 판정하지 않는다.",
+      "sourceIds": [
+        "florenceMobility",
+        "ferreroHistory",
+        "agnelliFoundation"
+      ]
+    },
+    {
+      "country": "US",
+      "name": "미국",
+      "signal": "Walton·Mars·Koch·Rockefeller처럼 이름이 곧 부호가문 브랜드",
+      "evidence": "context",
+      "summary": "대형 가족기업과 역사적 산업자본 가문이 많아, 특정 희귀 성씨가 기업·재단·역사 기록과 강하게 결합되는 나라다.",
+      "caveat": "Walton이나 Rockefeller 같은 가문명은 강한 문화적 신호지만, 같은 성씨의 모든 사람을 해당 가문으로 볼 수 없다.",
+      "sourceIds": [
+        "walmartHistory",
+        "marsHistory",
+        "rockefellerFamily"
+      ]
+    },
+    {
+      "country": "FR",
+      "name": "프랑스",
+      "signal": "Bettencourt·Arnault·Wertheimer·Dassault·Pinault",
+      "evidence": "context",
+      "summary": "럭셔리·화장품·항공·미술 시장의 대형 가족자산과 성씨가 결합된 사례가 많다.",
+      "caveat": "현재 Forbes 자산 프로필과 기업 지배구조를 근거로 한 “가문 이미지”이며 성씨 인구 전체의 통계는 아니다.",
+      "sourceIds": [
+        "forbesBettencourt2026",
+        "lvmhArnault",
+        "forbesWertheimer2026"
+      ]
+    },
+    {
+      "country": "DE",
+      "name": "독일",
+      "signal": "Quandt·Albrecht·Reimann 같은 산업·유통 가문",
+      "evidence": "context",
+      "summary": "BMW·Aldi·JAB처럼 비상장 또는 가족 지배 사업과 연결된 성씨가 현대 부호가문 코드로 남아 있다.",
+      "caveat": "현대 기업가문 기록이며 독일 성씨 전체의 사회계층을 의미하지 않는다.",
+      "sourceIds": [
+        "forbesQuandt2026",
+        "forbesAlbrecht2026",
+        "forbesReimann2026"
+      ]
+    },
+    {
+      "country": "ES",
+      "name": "스페인",
+      "signal": "Ortega·Del Pino·March — 패션·인프라·은행 가문",
+      "evidence": "context",
+      "summary": "Inditex, Ferrovial, Banca March처럼 창업가 성씨와 대규모 지분이 세대에 걸쳐 연결된 사례가 있다.",
+      "caveat": "Ortega처럼 흔한 성씨는 기업 맥락 없이는 부의 신호가 약하다.",
+      "sourceIds": [
+        "forbesOrtega2026",
+        "forbesRafaelDelPino2026",
+        "forbesJuanMarch2026"
+      ]
+    },
+    {
+      "country": "MX",
+      "name": "멕시코",
+      "signal": "Slim·Larrea·Baillères — 통신·광산·금융 대자산 가문",
+      "evidence": "context",
+      "summary": "통신·광산·보험·지주회사와 결합된 소수 기업가문 성씨가 매우 강한 부호 이미지를 갖는다.",
+      "caveat": "가문·기업 문맥에서의 신호이며 멕시코의 동성인 전체를 의미하지 않는다.",
+      "sourceIds": [
+        "forbesSlim2026",
+        "forbesLarrea2026",
+        "forbesBailleres2026"
+      ]
+    }
+  ],
+  "wealthSignalLabels": {
+    "very-strong": "성씨 자체의 부호가문 신호 매우 강함",
+    "strong": "부호가문 신호 강함",
+    "strong-context": "기업/가문 맥락에서 매우 강함",
+    "medium": "유명 부호 사례 중심",
+    "medium-context": "기업 맥락 필요",
+    "medium-family": "가족기업 맥락 필요",
+    "low-surname": "성씨 단독 신호 약함",
+    "historical-strong": "역사적 부·권력 신호 강함",
+    "historical-very-strong": "역사적 부호가문 상징 매우 강함"
+  },
+  "wealthSignals": [
+    {
+      "id": "JP-toyoda",
+      "country": "JP",
+      "surname": "Toyoda",
+      "native": "豊田",
+      "korean": "도요다",
+      "signal": "strong-context",
+      "label": "기업 창업가문 신호",
+      "hook": "‘도요다’라는 이름 자체가 토요타 창업가문을 떠올리게 하는 일본의 대표적인 기업가문 사례.",
+      "history": "도요다 기이치로(豊田喜一郎)가 자동차 사업을 추진했고 1937년 Toyota Motor가 설립됐다. 회사명은 창업가 성씨 豊田(Toyoda)와 철자가 다르다.",
+      "wealthEvidence": "가문의 이름이 글로벌 자동차 기업의 기원과 직접 연결되는 사례다. 다만 豊田 성씨를 가진 모든 개인이 창업가문과 관련된 것은 아니다.",
+      "notables": [
+        [
+          "Toyoda Kiichiro",
+          "도요다 기이치로 · Toyota Motor 창업 핵심 인물"
+        ],
+        [
+          "Toyoda Akio",
+          "도요다 아키오 · Toyota Motor 회장"
+        ]
+      ],
+      "tags": [
+        "자동차",
+        "창업가문",
+        "토요타"
+      ],
+      "sourceIds": [
+        "toyotaHistory",
+        "toyotaName"
+      ]
+    },
+    {
+      "id": "JP-torii",
+      "country": "JP",
+      "surname": "Torii",
+      "native": "鳥井",
+      "korean": "도리이",
+      "signal": "strong-context",
+      "label": "주류 기업가문 신호",
+      "hook": "산토리의 창업자 가문으로 기업사에서 반복해서 등장하는 성씨.",
+      "history": "도리이 신지로가 1899년 Torii Shoten을 세우고 일본 위스키 사업을 개척했다. 산토리 역사는 창업가문이 여러 세대에 걸쳐 경영에 참여해온 기록을 제공한다.",
+      "wealthEvidence": "기업·가문 맥락에서는 매우 강한 부·기업가문 신호지만, 성씨 자체의 일반적인 계층 표지는 아니다.",
+      "notables": [
+        [
+          "Torii Shinjiro",
+          "도리이 신지로 · Suntory 창업자"
+        ],
+        [
+          "Torii Nobuhiro",
+          "도리이 노부히로 · Suntory Holdings 경영진"
+        ]
+      ],
+      "tags": [
+        "산토리",
+        "위스키",
+        "창업가문"
+      ],
+      "sourceIds": [
+        "suntoryHistory"
+      ]
+    },
+    {
+      "id": "JP-mori",
+      "country": "JP",
+      "surname": "Mori",
+      "native": "森",
+      "korean": "모리",
+      "signal": "medium-context",
+      "label": "부동산 기업가문 사례",
+      "hook": "도쿄 대형 도시개발의 Mori Building과 연결되면 강한 부동산 재벌 이미지가 생긴다.",
+      "history": "모리 다이키치로가 1955년 전신 회사를 세웠고, Mori Building은 이후 롯폰기힐스·아자부다이힐스 등 대규모 도시개발로 성장했다.",
+      "wealthEvidence": "森은 매우 흔한 성씨라 성만으로는 부를 추정할 수 없다. ‘Mori Building 가문’이라는 추가 맥락에서만 강한 신호다.",
+      "notables": [
+        [
+          "Mori Taikichiro",
+          "모리 다이키치로 · Mori Building 창업자"
+        ],
+        [
+          "Mori Minoru",
+          "모리 미노루 · 도시개발 사업가"
+        ]
+      ],
+      "tags": [
+        "부동산",
+        "도쿄",
+        "도시개발"
+      ],
+      "sourceIds": [
+        "moriBuildingHistory"
+      ]
+    },
+    {
+      "id": "JP-yanai",
+      "country": "JP",
+      "surname": "Yanai",
+      "native": "柳井",
+      "korean": "야나이",
+      "signal": "medium",
+      "label": "현대 억만장자 성씨",
+      "hook": "유니클로·Fast Retailing의 야나이 다다시 때문에 현대 일본 부호 이미지가 강해진 성씨.",
+      "history": "야나이는 부모의 의류점 환경에서 성장해 Fast Retailing을 구축했고, Forbes Japan 2026 부호 순위에서 최상위권에 올랐다.",
+      "wealthEvidence": "현재 유명 부호 한 가문의 강한 사례이지, 柳井 성씨 전체의 부유함을 뜻하지 않는다.",
+      "notables": [
+        [
+          "Tadashi Yanai",
+          "야나이 다다시 · Fast Retailing 창업자"
+        ]
+      ],
+      "tags": [
+        "유니클로",
+        "리테일",
+        "현대부호"
+      ],
+      "sourceIds": [
+        "forbesYanai2026"
+      ]
+    },
+    {
+      "id": "JP-son",
+      "country": "JP",
+      "surname": "Son",
+      "native": "孫",
+      "korean": "손",
+      "signal": "medium",
+      "label": "현대 억만장자 성씨",
+      "hook": "손정의(孫正義)라는 인물 때문에 기술·투자 부호 이미지를 즉시 연상시키는 사례.",
+      "history": "손정의는 SoftBank Group을 창업해 통신·투자·AI 사업으로 확장했다. Forbes Japan 2026에서는 일본 최고 부호로 집계됐다.",
+      "wealthEvidence": "개인 창업가의 성공 사례로, ‘孫’ 성씨 자체가 일본 사회에서 부유층 계보를 뜻하는 것은 아니다.",
+      "notables": [
+        [
+          "Masayoshi Son",
+          "손정의 · SoftBank Group 창업자"
+        ]
+      ],
+      "tags": [
+        "소프트뱅크",
+        "AI",
+        "투자"
+      ],
+      "sourceIds": [
+        "forbesJapan2026",
+        "forbesSon2026"
+      ]
+    },
+    {
+      "id": "KR-lee-samsung",
+      "country": "KR",
+      "surname": "Lee",
+      "native": "이",
+      "korean": "이(삼성)",
+      "signal": "strong-context",
+      "label": "재벌가문 맥락",
+      "hook": "한국에서 “삼성 이씨”라는 맥락이 붙으면 가장 강하게 재벌가문을 떠올리는 사례 중 하나.",
+      "history": "이병철이 1938년 삼성의 전신을 창업했고, 이후 이건희를 거쳐 이재용이 삼성전자 회장을 맡는 기업가문 계승사가 이어졌다.",
+      "wealthEvidence": "Forbes Korea 2026에서 이재용은 한국 부호 1위로 집계됐다. 그러나 이(李)는 한국에서 매우 흔한 성씨라 ‘이씨’만으로는 아무런 재산 추정이 불가능하다.",
+      "notables": [
+        [
+          "Lee Byung-chull",
+          "이병철 · 삼성 창업자"
+        ],
+        [
+          "Lee Kun-hee",
+          "이건희 · 삼성 회장"
+        ],
+        [
+          "Jay Y. Lee",
+          "이재용 · 삼성전자 회장"
+        ]
+      ],
+      "tags": [
+        "삼성",
+        "재벌",
+        "기업가문"
+      ],
+      "sourceIds": [
+        "samsungHistory",
+        "forbesKorea2026",
+        "forbesJayLee2026"
+      ]
+    },
+    {
+      "id": "KR-chung-hyundai",
+      "country": "KR",
+      "surname": "Chung",
+      "native": "정",
+      "korean": "정(현대)",
+      "signal": "strong-context",
+      "label": "재벌가문 맥락",
+      "hook": "“현대 정씨”는 창업자 정주영과 여러 현대 계열 기업가문을 함께 연상시키는 강한 기업가문 코드.",
+      "history": "정주영이 현대를 일으킨 뒤 자동차·건설·중공업 등으로 사업이 확장됐다. 현재도 정몽구·정의선 등 가족 경영의 흔적이 뚜렷하다.",
+      "wealthEvidence": "기업가문 맥락에서는 강하지만 정(鄭/丁/程 등)은 흔한 성씨이므로 성씨 단독 판정은 불가하다.",
+      "notables": [
+        [
+          "Chung Ju-yung",
+          "정주영 · 현대 창업자"
+        ],
+        [
+          "Chung Mong-koo",
+          "정몽구 · 현대자동차그룹 명예회장"
+        ],
+        [
+          "Euisun Chung",
+          "정의선 · 현대자동차그룹 회장"
+        ]
+      ],
+      "tags": [
+        "현대",
+        "자동차",
+        "건설",
+        "재벌"
+      ],
+      "sourceIds": [
+        "hyundaiHeritage",
+        "forbesKorea2026"
+      ]
+    },
+    {
+      "id": "KR-koo-lg",
+      "country": "KR",
+      "surname": "Koo",
+      "native": "구",
+      "korean": "구(LG)",
+      "signal": "strong-context",
+      "label": "재벌가문 맥락",
+      "hook": "한국 대기업사에서 구씨는 LG 창업가문과 연결될 때 매우 강한 재벌가문 신호.",
+      "history": "구인회가 락희화학을 창업했고, 금성사 등을 거쳐 LG그룹으로 성장했다. 구광모는 2018년 그룹 회장에 올랐다.",
+      "wealthEvidence": "Forbes는 구광모를 LG 지분을 상속한 대기업 총수이자 억만장자로 기록한다. 다만 모든 구씨와는 무관하다.",
+      "notables": [
+        [
+          "Koo In-hwoi",
+          "구인회 · LG 창업자"
+        ],
+        [
+          "Koo Kwang-mo",
+          "구광모 · LG 회장"
+        ]
+      ],
+      "tags": [
+        "LG",
+        "재벌",
+        "전자",
+        "화학"
+      ],
+      "sourceIds": [
+        "lgHistory",
+        "forbesKoo2026"
+      ]
+    },
+    {
+      "id": "KR-chey-sk",
+      "country": "KR",
+      "surname": "Chey",
+      "native": "최",
+      "korean": "최(SK)",
+      "signal": "strong-context",
+      "label": "재벌가문 맥락",
+      "hook": "SK그룹 맥락에서 최씨는 최종건·최종현·최태원으로 이어지는 기업가문을 뜻한다.",
+      "history": "선경직물에서 출발한 SK는 에너지·통신·반도체로 확장됐다. 최태원은 창업자 최종건의 조카로 현재 그룹 회장이다.",
+      "wealthEvidence": "Forbes 2026은 최태원을 억만장자이자 SK 회장으로 기록한다. ‘최씨’ 자체는 매우 흔하므로 기업 맥락이 필수다.",
+      "notables": [
+        [
+          "Chey Jong-gun",
+          "최종건 · SK 창업자"
+        ],
+        [
+          "Chey Jong-hyon",
+          "최종현 · SK 회장"
+        ],
+        [
+          "Chey Tae-won",
+          "최태원 · SK 회장"
+        ]
+      ],
+      "tags": [
+        "SK",
+        "반도체",
+        "통신",
+        "재벌"
+      ],
+      "sourceIds": [
+        "skHistory",
+        "forbesChey2026"
+      ]
+    },
+    {
+      "id": "KR-shin-lotte",
+      "country": "KR",
+      "surname": "Shin",
+      "native": "신",
+      "korean": "신(롯데)",
+      "signal": "strong-context",
+      "label": "재벌가문 맥락",
+      "hook": "“롯데 신씨”라고 하면 신격호 창업가문을 연상하는 한국·일본 양국 기업사 사례.",
+      "history": "신격호가 일본에서 롯데를 키운 뒤 1967년 한국 롯데제과를 설립하며 그룹을 확장했다.",
+      "wealthEvidence": "롯데 가문이라는 맥락은 강하지만 신씨 전체에 대한 신호는 아니다.",
+      "notables": [
+        [
+          "Shin Kyuk-ho",
+          "신격호 · 롯데 창업자"
+        ],
+        [
+          "Shin Dong-bin",
+          "신동빈 · 롯데 회장"
+        ]
+      ],
+      "tags": [
+        "롯데",
+        "유통",
+        "식품",
+        "재벌"
+      ],
+      "sourceIds": [
+        "lotteHistory"
+      ]
+    },
+    {
+      "id": "IN-ambani",
+      "country": "IN",
+      "surname": "Ambani",
+      "native": "अंबानी",
+      "korean": "암바니",
+      "signal": "very-strong",
+      "label": "현대 재벌가문",
+      "hook": "인도에서 부호 성씨를 말할 때 가장 먼저 거론되는 대표적인 재벌가문 이름.",
+      "history": "Dhirubhai Ambani가 Reliance를 성장시켰고, 이후 Mukesh Ambani와 가족이 Reliance Industries를 중심으로 거대한 기업 자산을 이어가고 있다.",
+      "wealthEvidence": "Forbes India의 부호 순위에서 Mukesh Ambani가 수년간 최상위권을 유지한다.",
+      "notables": [
+        [
+          "Dhirubhai Ambani",
+          "릴라이언스 창업자"
+        ],
+        [
+          "Mukesh Ambani",
+          "Reliance Industries 회장"
+        ]
+      ],
+      "tags": [
+        "Reliance",
+        "재벌",
+        "석유화학",
+        "통신"
+      ],
+      "sourceIds": [
+        "forbesIndia2025"
+      ]
+    },
+    {
+      "id": "IN-adani",
+      "country": "IN",
+      "surname": "Adani",
+      "native": "अडानी",
+      "korean": "아다니",
+      "signal": "very-strong",
+      "label": "현대 재벌가문",
+      "hook": "항만·에너지·인프라 그룹 때문에 성씨 자체가 기업집단 브랜드가 된 사례.",
+      "history": "Gautam Adani가 Adani Group을 성장시켜 항만·공항·에너지·인프라 사업을 확대했다.",
+      "wealthEvidence": "Forbes India 2025에서 Gautam Adani & family는 인도 최상위 부호권에 포함됐다.",
+      "notables": [
+        [
+          "Gautam Adani",
+          "Adani Group 창업자·회장"
+        ]
+      ],
+      "tags": [
+        "Adani",
+        "인프라",
+        "항만",
+        "에너지"
+      ],
+      "sourceIds": [
+        "forbesIndia2025"
+      ]
+    },
+    {
+      "id": "IN-birla",
+      "country": "IN",
+      "surname": "Birla",
+      "native": "बिड़ला",
+      "korean": "비를라",
+      "signal": "very-strong",
+      "label": "다세대 산업가문",
+      "hook": "인도 산업사에서 ‘Birla’는 여러 세대에 걸친 기업가문과 자선·교육기관을 동시에 연상시키는 이름.",
+      "history": "Aditya Birla Group은 세대를 거쳐 시멘트·금속·통신·금융 등으로 확장됐다. Kumar Mangalam Birla는 4세대 수장으로 소개된다.",
+      "wealthEvidence": "Forbes는 Kumar Birla를 4세대 그룹 수장 및 인도 주요 부호로 기록한다.",
+      "notables": [
+        [
+          "G.D. Birla",
+          "20세기 인도 산업가"
+        ],
+        [
+          "Kumar Mangalam Birla",
+          "Aditya Birla Group 회장"
+        ]
+      ],
+      "tags": [
+        "Aditya Birla",
+        "산업가문",
+        "다세대"
+      ],
+      "sourceIds": [
+        "forbesKumarBirla"
+      ]
+    },
+    {
+      "id": "IN-godrej",
+      "country": "IN",
+      "surname": "Godrej",
+      "native": "गोदरेज",
+      "korean": "고드레지",
+      "signal": "very-strong",
+      "label": "다세대 기업가문",
+      "hook": "기업명이 곧 성씨라서 ‘Godrej’라는 이름 자체가 인도 대기업·부호가문을 뜻하는 대표 사례.",
+      "history": "Godrej 가문은 소비재·부동산·가전·산업재 등에 걸친 사업을 구축했고 여러 가족 구성원이 Forbes 부호 명단에 올라 있다.",
+      "wealthEvidence": "Forbes India 2025 명단에 Godrej 가문 구성원들이 여러 명 포함됐다.",
+      "notables": [
+        [
+          "Adi Godrej",
+          "Godrej Industries 명예회장"
+        ],
+        [
+          "Nadir Godrej",
+          "Godrej Industries 경영진"
+        ]
+      ],
+      "tags": [
+        "Godrej",
+        "소비재",
+        "부동산",
+        "가문기업"
+      ],
+      "sourceIds": [
+        "forbesIndia2025"
+      ]
+    },
+    {
+      "id": "IN-jindal",
+      "country": "IN",
+      "surname": "Jindal",
+      "native": "जिंदल",
+      "korean": "진달",
+      "signal": "very-strong",
+      "label": "철강 산업가문",
+      "hook": "Jindal은 인도 철강·전력 산업과 연결된 거대 산업가문 성씨로 널리 알려져 있다.",
+      "history": "O.P. Jindal이 철강·전력 사업을 구축했고 가족이 여러 계열 사업을 이어가고 있다.",
+      "wealthEvidence": "Forbes India 2025에서 Savitri Jindal & family가 최상위 부호권에 포함된다.",
+      "notables": [
+        [
+          "O.P. Jindal",
+          "Jindal 산업가문 창업자"
+        ],
+        [
+          "Savitri Jindal",
+          "Jindal 가문 대표 인물"
+        ]
+      ],
+      "tags": [
+        "철강",
+        "전력",
+        "산업가문"
+      ],
+      "sourceIds": [
+        "forbesIndia2025"
+      ]
+    },
+    {
+      "id": "IN-bajaj",
+      "country": "IN",
+      "surname": "Bajaj",
+      "native": "बजाज",
+      "korean": "바자지",
+      "signal": "strong",
+      "label": "다세대 기업가문",
+      "hook": "Bajaj라는 성씨가 오토바이·금융·산업그룹의 브랜드와 사실상 동일하게 인식되는 사례.",
+      "history": "Bajaj Group은 제조·모빌리티·금융으로 확장된 대표 인도 기업가문이다.",
+      "wealthEvidence": "Forbes India 2025의 상위 부호 명단에 Bajaj family가 포함된다.",
+      "notables": [
+        [
+          "Jamnalal Bajaj",
+          "Bajaj Group 창업자"
+        ],
+        [
+          "Rahul Bajaj",
+          "Bajaj 그룹 전 회장"
+        ]
+      ],
+      "tags": [
+        "자동차",
+        "금융",
+        "기업가문"
+      ],
+      "sourceIds": [
+        "forbesIndia2025"
+      ]
+    },
+    {
+      "id": "IN-poona",
+      "country": "IN",
+      "surname": "Poonawalla",
+      "native": "पूनावाला",
+      "korean": "푸나왈라",
+      "signal": "strong",
+      "label": "제약·백신 부호가문",
+      "hook": "Serum Institute of India와 연결돼 백신·제약 분야의 부호가문을 연상시키는 성씨.",
+      "history": "Cyrus Poonawalla가 Serum Institute of India를 성장시켰고 가족이 사업을 이어가고 있다.",
+      "wealthEvidence": "Forbes India 2025 상위 부호 명단에 Cyrus Poonawalla가 포함된다.",
+      "notables": [
+        [
+          "Cyrus Poonawalla",
+          "Serum Institute 창업자"
+        ],
+        [
+          "Adar Poonawalla",
+          "Serum Institute CEO"
+        ]
+      ],
+      "tags": [
+        "백신",
+        "제약",
+        "Serum Institute"
+      ],
+      "sourceIds": [
+        "forbesIndia2025"
+      ]
+    },
+    {
+      "id": "IN-mistry",
+      "country": "IN",
+      "surname": "Mistry",
+      "native": "मिस्त्री",
+      "korean": "미스트리",
+      "signal": "strong",
+      "label": "건설·투자 가문",
+      "hook": "Shapoorji Pallonji 그룹과 Tata 지분으로 유명한 인도 파르시 기업가문 성씨.",
+      "history": "Mistry 가문은 Shapoorji Pallonji 건설·엔지니어링 그룹과 대규모 투자자산으로 알려져 있다.",
+      "wealthEvidence": "Forbes India 2025에서 Shapoor Mistry & family가 상위 부호 명단에 포함된다.",
+      "notables": [
+        [
+          "Pallonji Mistry",
+          "Shapoorji Pallonji 그룹 전 회장"
+        ],
+        [
+          "Shapoor Mistry",
+          "가문 사업 승계"
+        ]
+      ],
+      "tags": [
+        "건설",
+        "Tata",
+        "파르시 기업가문"
+      ],
+      "sourceIds": [
+        "forbesIndia2025"
+      ]
+    },
+    {
+      "id": "GB-grosvenor",
+      "country": "GB",
+      "surname": "Grosvenor",
+      "native": "",
+      "korean": "그로스베너",
+      "signal": "very-strong",
+      "label": "귀족·대지주 가문",
+      "hook": "런던 메이페어·벨그라비아와 수백 년간 연결된 성씨로, 영국에서 부·토지·귀족 이미지를 가장 강하게 갖는 이름 중 하나.",
+      "history": "Grosvenor 공식 연혁은 가문의 뿌리를 약 1,000년 전까지 추적하고, 1677년 이후 런던 부동산과 깊이 연결됐다고 설명한다.",
+      "wealthEvidence": "가문기업 Grosvenor가 장기간 대규모 부동산 자산을 관리해 성씨와 자산 이미지가 직접 결합돼 있다.",
+      "notables": [
+        [
+          "Hugh Grosvenor",
+          "7th Duke of Westminster"
+        ],
+        [
+          "Thomas Grosvenor",
+          "17세기 런던 토지 가문"
+        ]
+      ],
+      "tags": [
+        "웨스트민스터 공작",
+        "Mayfair",
+        "Belgravia",
+        "귀족"
+      ],
+      "sourceIds": [
+        "grosvenorHistory"
+      ]
+    },
+    {
+      "id": "GB-rothschild",
+      "country": "GB",
+      "surname": "Rothschild",
+      "native": "",
+      "korean": "로스차일드",
+      "signal": "very-strong",
+      "label": "은행가문",
+      "hook": "유럽 금융가문을 상징하는 이름 자체가 자산·은행·귀족 네트워크를 연상시키는 대표 사례.",
+      "history": "Mayer Amschel Rothschild의 후손들이 유럽 여러 금융 중심지에서 은행 네트워크를 구축했고 영국 지계도 큰 역할을 했다.",
+      "wealthEvidence": "개별 현대 자산을 하나의 수치로 합산하기 어려운 다분지 가문이지만, ‘Rothschild’라는 성 자체의 역사적 금융 엘리트 신호는 매우 강하다.",
+      "notables": [
+        [
+          "Nathan Mayer Rothschild",
+          "영국 Rothschild 은행가문 창립 세대"
+        ],
+        [
+          "Jacob Rothschild",
+          "영국 금융·자선 인물"
+        ]
+      ],
+      "tags": [
+        "은행",
+        "금융",
+        "유럽가문"
+      ],
+      "sourceIds": [
+        "rothschildArchive"
+      ]
+    },
+    {
+      "id": "GB-cavendish",
+      "country": "GB",
+      "surname": "Cavendish",
+      "native": "",
+      "korean": "캐번디시",
+      "signal": "strong",
+      "label": "귀족·대저택 가문",
+      "hook": "Chatsworth와 Devonshire 공작가로 이어지는 영국 전통 귀족 성씨.",
+      "history": "Chatsworth는 수백 년 동안 Cavendish 가문의 본거지였고 여러 세대의 공작·정치가·후원자를 배출했다.",
+      "wealthEvidence": "현대 개인 소득보다 토지·저택·귀족 지위의 장기 세습 이미지가 강한 사례다.",
+      "notables": [
+        [
+          "William Cavendish",
+          "Devonshire 공작가 여러 세대의 대표 성명"
+        ],
+        [
+          "Deborah Cavendish",
+          "Chatsworth 보존·운영에 기여"
+        ]
+      ],
+      "tags": [
+        "Chatsworth",
+        "Devonshire",
+        "귀족"
+      ],
+      "sourceIds": [
+        "chatsworthHistory"
+      ]
+    },
+    {
+      "id": "GB-percy",
+      "country": "GB",
+      "surname": "Percy",
+      "native": "",
+      "korean": "퍼시",
+      "signal": "strong",
+      "label": "중세 귀족가문",
+      "hook": "Northumberland 공작가와 Alnwick Castle로 이어지는 중세 이래 귀족 성씨.",
+      "history": "Percy 가문은 700년 이상 Alnwick과 연결되며 잉글랜드 북부의 정치·군사사에 반복해서 등장한다.",
+      "wealthEvidence": "귀족·토지·성곽이라는 상류층 역사 신호는 강하지만 현대 동일 성씨 개인의 부를 뜻하지는 않는다.",
+      "notables": [
+        [
+          "Henry Percy",
+          "Northumberland 공작가 계열의 반복되는 이름"
+        ],
+        [
+          "Ralph Percy",
+          "12th Duke of Northumberland"
+        ]
+      ],
+      "tags": [
+        "Northumberland",
+        "Alnwick",
+        "중세귀족"
+      ],
+      "sourceIds": [
+        "percyHistory"
+      ]
+    },
+    {
+      "id": "GB-guinness",
+      "country": "GB",
+      "surname": "Guinness",
+      "native": "",
+      "korean": "기네스",
+      "signal": "strong",
+      "label": "기업·귀족 가문",
+      "hook": "맥주 브랜드이자 다세대 기업·자선 가문으로 성씨가 곧 브랜드가 된 사례.",
+      "history": "Arthur Guinness가 1759년 St James’s Gate 양조장을 시작했고, 이후 여러 세대가 양조·자선·정치 활동에 참여했다.",
+      "wealthEvidence": "브랜드·가문 역사가 직접 연결돼 부유 기업가문 이미지가 강하다.",
+      "notables": [
+        [
+          "Arthur Guinness",
+          "Guinness 창업자"
+        ],
+        [
+          "Benjamin Guinness",
+          "양조업자·자선가"
+        ]
+      ],
+      "tags": [
+        "맥주",
+        "브랜드가문",
+        "자선"
+      ],
+      "sourceIds": [
+        "guinnessHistory"
+      ]
+    },
+    {
+      "id": "SE-wallenberg",
+      "country": "SE",
+      "surname": "Wallenberg",
+      "native": "",
+      "korean": "발렌베리",
+      "signal": "very-strong",
+      "label": "금융·산업 지배가문",
+      "hook": "스웨덴에서 “Wallenberg”는 은행·산업·재단 네트워크를 즉시 떠올리게 하는 가장 강한 부·권력 성씨 중 하나.",
+      "history": "1856년 André Oscar Wallenberg의 은행 설립에서 시작해 5~6세대가 Investor AB, SEB, 재단 등을 통해 산업·금융에 참여해왔다.",
+      "wealthEvidence": "공식 가문사는 170년 가까운 기업·금융 활동을 기록하며, 가문 재단과 지주회사가 대기업 지분을 장기 보유한다.",
+      "notables": [
+        [
+          "André Oscar Wallenberg",
+          "SEB 전신 창립자"
+        ],
+        [
+          "Marcus Wallenberg",
+          "은행가·산업가"
+        ],
+        [
+          "Jacob Wallenberg",
+          "Investor AB 회장 경력"
+        ]
+      ],
+      "tags": [
+        "Investor AB",
+        "SEB",
+        "재단",
+        "산업가문"
+      ],
+      "sourceIds": [
+        "wallenbergHistory",
+        "wallenbergHoldings"
+      ]
+    },
+    {
+      "id": "SE-rausing",
+      "country": "SE",
+      "surname": "Rausing",
+      "native": "",
+      "korean": "라우싱",
+      "signal": "very-strong",
+      "label": "포장재 부호가문",
+      "hook": "Tetra Pak 창업가문으로 스웨덴의 대표적인 세습 부호 성씨.",
+      "history": "가문의 조부가 Tetra Pak을 창업했고 후손들이 TetraLaval 지분을 이어받았다.",
+      "wealthEvidence": "Forbes 2026은 Jörn·Kirsten 등 Rausing 형제자매를 각각 억만장자로 기록한다.",
+      "notables": [
+        [
+          "Ruben Rausing",
+          "Tetra Pak 창업자"
+        ],
+        [
+          "Jörn Rausing",
+          "TetraLaval 공동 소유 가문"
+        ],
+        [
+          "Kirsten Rausing",
+          "TetraLaval 공동 소유 가문"
+        ]
+      ],
+      "tags": [
+        "Tetra Pak",
+        "포장",
+        "세습부"
+      ],
+      "sourceIds": [
+        "forbesRausing2026"
+      ]
+    },
+    {
+      "id": "SE-persson",
+      "country": "SE",
+      "surname": "Persson",
+      "native": "",
+      "korean": "페르손",
+      "signal": "strong-context",
+      "label": "H&M 창업가문",
+      "hook": "H&M 창업가문 맥락에서는 스웨덴에서 매우 강한 기업가문 성씨.",
+      "history": "Erling Persson이 H&M을 창업했고, 후손인 Stefan Persson 가문이 오랜 기간 대규모 의결권을 유지해왔다.",
+      "wealthEvidence": "H&M 공식 지배구조 자료에서 창업가문 Persson의 높은 의결권 비중이 확인된다.",
+      "notables": [
+        [
+          "Erling Persson",
+          "H&M 창업자"
+        ],
+        [
+          "Stefan Persson",
+          "H&M 전 회장"
+        ]
+      ],
+      "tags": [
+        "H&M",
+        "패션",
+        "창업가문"
+      ],
+      "sourceIds": [
+        "hmOwnership"
+      ]
+    },
+    {
+      "id": "SE-schorling",
+      "country": "SE",
+      "surname": "Schörling",
+      "native": "",
+      "korean": "셰를링",
+      "signal": "strong",
+      "label": "투자·산업가문",
+      "hook": "스웨덴 상장기업 지분을 장기간 보유해온 투자 가문으로 알려진 성씨.",
+      "history": "Melker Schörling이 산업·투자 지주 포트폴리오를 구축했고 가족이 관련 지분을 이어받았다.",
+      "wealthEvidence": "Forbes는 Schörling 가족 구성원을 억만장자로 기록한다.",
+      "notables": [
+        [
+          "Melker Schörling",
+          "산업가·투자자"
+        ],
+        [
+          "Sofia Högberg Schörling",
+          "가문 자산 상속인"
+        ]
+      ],
+      "tags": [
+        "투자",
+        "산업",
+        "지주회사"
+      ],
+      "sourceIds": [
+        "forbesSchorling"
+      ]
+    },
+    {
+      "id": "CN-zhong",
+      "country": "CN",
+      "surname": "Zhong",
+      "native": "钟",
+      "korean": "중",
+      "signal": "low-surname",
+      "label": "현대 부호 사례 · 성씨 신호 약함",
+      "hook": "Zhong Shanshan은 중국 최상위 부호지만, 钟이라는 성 자체가 부유가문을 뜻하지는 않는다.",
+      "history": "Zhong Shanshan은 Nongfu Spring과 Wantai Biological 지분으로 거대한 자산을 형성했다.",
+      "wealthEvidence": "Forbes China 2025 1위였지만 중국 성씨는 인구가 매우 크고 동성인이 많아 성씨만으로 부를 판정하기 어렵다.",
+      "notables": [
+        [
+          "Zhong Shanshan",
+          "Nongfu Spring 창업자"
+        ]
+      ],
+      "tags": [
+        "중국부호",
+        "Nongfu Spring",
+        "주의사례"
+      ],
+      "sourceIds": [
+        "forbesChina2025",
+        "forbesZhong2026"
+      ]
+    },
+    {
+      "id": "CN-zhang",
+      "country": "CN",
+      "surname": "Zhang",
+      "native": "张",
+      "korean": "장",
+      "signal": "low-surname",
+      "label": "현대 부호 사례 · 성씨 신호 약함",
+      "hook": "Zhang Yiming 같은 초부호가 있어도 张은 매우 흔한 성씨이므로 ‘부자 성씨’ 신호로는 약하다.",
+      "history": "Zhang Yiming은 ByteDance 공동창업자로 글로벌 기술 부호가 됐다.",
+      "wealthEvidence": "Forbes China 2025 2위였지만 같은 张 성씨 인구가 방대해 성씨 단독 분류는 무의미하다.",
+      "notables": [
+        [
+          "Zhang Yiming",
+          "ByteDance 공동창업자"
+        ]
+      ],
+      "tags": [
+        "ByteDance",
+        "기술부호",
+        "주의사례"
+      ],
+      "sourceIds": [
+        "forbesChina2025",
+        "forbesZhangYiming2026"
+      ]
+    },
+    {
+      "id": "CN-he",
+      "country": "CN",
+      "surname": "He",
+      "native": "何",
+      "korean": "허/하",
+      "signal": "medium-family",
+      "label": "가족기업 사례",
+      "hook": "Midea 창업가문처럼 가족기업 맥락이 붙을 때만 부의 신호가 강해진다.",
+      "history": "He Xiangjian이 Midea를 세계적 가전기업으로 키웠고 그의 아들도 기업 이사회·지분 사업에 참여한다.",
+      "wealthEvidence": "Forbes 2025 중국 부호 상위권이지만 何 성씨 전체의 부와는 관계없다.",
+      "notables": [
+        [
+          "He Xiangjian",
+          "Midea 창업자"
+        ],
+        [
+          "He Jianfeng",
+          "가문 계열 사업가"
+        ]
+      ],
+      "tags": [
+        "Midea",
+        "가전",
+        "가족기업"
+      ],
+      "sourceIds": [
+        "forbesChina2025",
+        "forbesHe2026"
+      ]
+    },
+    {
+      "id": "IT-ferrero",
+      "country": "IT",
+      "surname": "Ferrero",
+      "native": "",
+      "korean": "페레로",
+      "signal": "very-strong",
+      "label": "식품 재벌가문",
+      "hook": "Nutella·Ferrero Rocher로 유명한 기업명이 곧 창업가 성씨인 대표적인 이탈리아 부호가문.",
+      "history": "Pietro와 Giovanni Ferrero가 1946년 회사를 세웠고 세대를 거쳐 가족 소유 기업으로 성장했다.",
+      "wealthEvidence": "기업 브랜드와 가문 성씨가 완전히 겹쳐 현대 부호가문 신호가 매우 강하다.",
+      "notables": [
+        [
+          "Pietro Ferrero",
+          "Ferrero 공동창업자"
+        ],
+        [
+          "Michele Ferrero",
+          "2세대 경영자"
+        ],
+        [
+          "Giovanni Ferrero",
+          "3세대 회장"
+        ]
+      ],
+      "tags": [
+        "Nutella",
+        "식품",
+        "가족기업"
+      ],
+      "sourceIds": [
+        "ferreroHistory"
+      ]
+    },
+    {
+      "id": "IT-agnelli",
+      "country": "IT",
+      "surname": "Agnelli",
+      "native": "",
+      "korean": "아녤리",
+      "signal": "very-strong",
+      "label": "자동차 산업가문",
+      "hook": "FIAT과 이탈리아 산업사를 상징하는 성씨로, 20세기 유럽 부유 산업가문 이미지가 매우 강하다.",
+      "history": "Giovanni Agnelli가 FIAT 창업에 참여했고 후손 Gianni Agnelli 등으로 이어지며 자동차·투자·스포츠 자산과 연결됐다.",
+      "wealthEvidence": "현대에는 지주 구조를 통해 자산이 분산돼 있지만 ‘Agnelli’라는 이름의 산업가문 상징성은 매우 강하다.",
+      "notables": [
+        [
+          "Giovanni Agnelli",
+          "FIAT 창업자 세대"
+        ],
+        [
+          "Gianni Agnelli",
+          "FIAT 회장·산업가"
+        ]
+      ],
+      "tags": [
+        "FIAT",
+        "자동차",
+        "Exor",
+        "산업가문"
+      ],
+      "sourceIds": [
+        "agnelliFoundation"
+      ]
+    },
+    {
+      "id": "IT-delvecchio",
+      "country": "IT",
+      "surname": "Del Vecchio",
+      "native": "",
+      "korean": "델 베키오",
+      "signal": "strong",
+      "label": "안경 산업 부호가문",
+      "hook": "Luxottica 창업자 Leonardo Del Vecchio의 후손들이 대규모 지주회사 지분을 상속한 현대 부호가문.",
+      "history": "Leonardo Del Vecchio는 Luxottica를 세계적 안경기업으로 키웠고 사후 가족이 지주회사 Delfin 지분을 나눠 보유한다.",
+      "wealthEvidence": "Forbes는 여러 Del Vecchio 상속인을 억만장자로 기록한다.",
+      "notables": [
+        [
+          "Leonardo Del Vecchio",
+          "Luxottica 창업자"
+        ]
+      ],
+      "tags": [
+        "Luxottica",
+        "Delfin",
+        "안경",
+        "상속"
+      ],
+      "sourceIds": [
+        "forbesDelVecchio"
+      ]
+    },
+    {
+      "id": "IT-medici",
+      "country": "IT",
+      "surname": "Medici",
+      "native": "de’ Medici",
+      "korean": "메디치",
+      "signal": "historical-strong",
+      "label": "역사적 금융·권력가문",
+      "hook": "현재 부호 명단이 아니라 르네상스 시대 은행·정치·예술 후원의 상징으로 남은 역사적 ‘부자 성씨’.",
+      "history": "Medici 가문은 피렌체 은행과 정치권력을 바탕으로 르네상스 후원과 교황·군주 배출로 유명하다.",
+      "wealthEvidence": "현대 자산을 뜻하지 않는 역사적 신호다. “부유한 성씨”의 역사적 문화코드를 설명하는 자료로만 사용한다.",
+      "notables": [
+        [
+          "Cosimo de’ Medici",
+          "피렌체 정치·금융 지도자"
+        ],
+        [
+          "Lorenzo de’ Medici",
+          "르네상스 후원자"
+        ]
+      ],
+      "tags": [
+        "르네상스",
+        "은행",
+        "피렌체",
+        "역사"
+      ],
+      "sourceIds": [
+        "mediciBritannica"
+      ]
+    },
+    {
+      "id": "US-walton",
+      "country": "US",
+      "surname": "Walton",
+      "native": "",
+      "korean": "월턴",
+      "signal": "very-strong",
+      "label": "미국 초대형 부호가문",
+      "hook": "Walmart 창업가문으로 현대 미국에서 성씨만으로도 거대한 세습 자산을 연상시키는 대표 이름.",
+      "history": "Sam Walton이 1962년 첫 Walmart를 열었고, 1967년에는 Walton 가족이 24개 점포를 소유했다. 후손들이 Walmart 대규모 지분을 보유한다.",
+      "wealthEvidence": "Forbes 2026은 Walton 가문을 미국에서 가장 부유한 가문으로 다루며, Walmart 지분이 자산의 핵심이라고 설명한다.",
+      "notables": [
+        [
+          "Sam Walton",
+          "Walmart 창업자"
+        ],
+        [
+          "Rob Walton",
+          "Walmart 창업가문"
+        ],
+        [
+          "Jim Walton",
+          "Walmart 창업가문"
+        ],
+        [
+          "Alice Walton",
+          "Walmart 창업가문·자선가"
+        ]
+      ],
+      "tags": [
+        "Walmart",
+        "유통",
+        "세습부"
+      ],
+      "sourceIds": [
+        "walmartHistory",
+        "forbesWaltonFamily2026",
+        "forbesAliceWalton"
+      ]
+    },
+    {
+      "id": "US-mars",
+      "country": "US",
+      "surname": "Mars",
+      "native": "",
+      "korean": "마스",
+      "signal": "very-strong",
+      "label": "비상장 가족기업 가문",
+      "hook": "M&M’s·Snickers·Petcare의 Mars Inc.와 성씨가 동일해 기업가문 브랜드가 매우 강한 사례.",
+      "history": "Frank C. Mars가 1911년 사업을 시작했고 가족 소유 기업으로 여러 세대가 사업을 확장했다.",
+      "wealthEvidence": "Mars는 여전히 가족 소유 대기업으로 알려져 있어 성씨와 기업가문 자산 이미지가 직접 연결된다.",
+      "notables": [
+        [
+          "Frank C. Mars",
+          "Mars 창업자"
+        ],
+        [
+          "Forrest Mars Sr.",
+          "2세대 글로벌 확장"
+        ],
+        [
+          "Jacqueline Mars",
+          "Mars 가문 상속인"
+        ]
+      ],
+      "tags": [
+        "Mars Inc.",
+        "식품",
+        "펫케어",
+        "가족기업"
+      ],
+      "sourceIds": [
+        "marsHistory"
+      ]
+    },
+    {
+      "id": "US-koch",
+      "country": "US",
+      "surname": "Koch",
+      "native": "",
+      "korean": "코크",
+      "signal": "very-strong",
+      "label": "산업·투자 부호가문",
+      "hook": "미국 비상장 산업기업 Koch와 동일한 성씨로, 현대 초대형 부호가문 이미지를 가진 이름.",
+      "history": "Fred Koch가 가족 사업의 기반을 만들고 Charles·David Koch 세대에서 Koch Industries를 거대 비상장 기업으로 성장시켰다.",
+      "wealthEvidence": "Forbes 2026은 Charles Koch & family와 Julia Koch & family를 각각 거대한 Koch 지분 보유자로 기록한다.",
+      "notables": [
+        [
+          "Fred Koch",
+          "가족기업 창업 세대"
+        ],
+        [
+          "Charles Koch",
+          "Koch 회장"
+        ],
+        [
+          "Julia Koch",
+          "가문 지분 상속인"
+        ]
+      ],
+      "tags": [
+        "Koch",
+        "비상장기업",
+        "산업",
+        "세습부"
+      ],
+      "sourceIds": [
+        "forbesCharlesKoch2026",
+        "forbesJuliaKoch2026"
+      ]
+    },
+    {
+      "id": "US-rockefeller",
+      "country": "US",
+      "surname": "Rockefeller",
+      "native": "",
+      "korean": "록펠러",
+      "signal": "historical-very-strong",
+      "label": "역사적 석유·금융 명문가",
+      "hook": "“미국 부자 성씨”의 대명사처럼 굳어진 이름. 현대 개인 자산보다 역사·재단·금융 엘리트 상징성이 핵심.",
+      "history": "John D. Rockefeller가 Standard Oil을 구축했고 후손들은 재단·은행·정치·자선 영역에서 영향력을 이어갔다.",
+      "wealthEvidence": "Rockefeller Archive Center는 Standard Oil과 가족의 대규모 자산·자선 기록을 보존한다. 현재 모든 Rockefeller가 부유하다는 뜻은 아니다.",
+      "notables": [
+        [
+          "John D. Rockefeller",
+          "Standard Oil 창업자"
+        ],
+        [
+          "John D. Rockefeller Jr.",
+          "자선가·가문 2세대"
+        ],
+        [
+          "David Rockefeller",
+          "은행가"
+        ]
+      ],
+      "tags": [
+        "Standard Oil",
+        "재단",
+        "역사적부호"
+      ],
+      "sourceIds": [
+        "rockefellerJDR",
+        "rockefellerFamily"
+      ]
+    },
+    {
+      "id": "US-vanderbilt",
+      "country": "US",
+      "surname": "Vanderbilt",
+      "native": "",
+      "korean": "밴더빌트",
+      "signal": "historical-strong",
+      "label": "역사적 철도·해운 재벌가문",
+      "hook": "19세기 미국 Gilded Age의 대표 부호가문 성씨.",
+      "history": "Cornelius Vanderbilt가 해운과 철도로 거대한 자산을 만들었고 후손들은 저택·대학·사교계 역사에 흔적을 남겼다.",
+      "wealthEvidence": "오늘날 동일 성씨 개인의 부를 뜻하지 않는 역사적 부호가문 신호다.",
+      "notables": [
+        [
+          "Cornelius Vanderbilt",
+          "철도·해운 사업가"
+        ],
+        [
+          "William H. Vanderbilt",
+          "2세대 사업가"
+        ]
+      ],
+      "tags": [
+        "철도",
+        "해운",
+        "Gilded Age"
+      ],
+      "sourceIds": [
+        "vanderbiltHistory"
+      ]
+    },
+    {
+      "id": "FR-bettencourt",
+      "country": "FR",
+      "surname": "Bettencourt Meyers",
+      "native": "",
+      "korean": "베탕쿠르 메이에르",
+      "signal": "very-strong",
+      "label": "L’Oréal 상속가문",
+      "hook": "프랑스에서 화장품 대기업 L’Oréal의 창업자 후손과 연결되는 대표적인 세습 부호 성씨.",
+      "history": "Françoise Bettencourt Meyers는 L’Oréal 창업자의 손녀이며 직계 가족이 회사 지분 3분의 1 이상을 보유한다.",
+      "wealthEvidence": "Forbes 2026은 Bettencourt Meyers & family를 세계 최상위 부호권으로 기록한다.",
+      "notables": [
+        [
+          "Françoise Bettencourt Meyers",
+          "L’Oréal 상속가문"
+        ],
+        [
+          "Jean-Victor Meyers",
+          "가문 차세대 이사회 인물"
+        ]
+      ],
+      "tags": [
+        "L’Oréal",
+        "화장품",
+        "상속"
+      ],
+      "sourceIds": [
+        "forbesBettencourt2026"
+      ]
+    },
+    {
+      "id": "FR-arnault",
+      "country": "FR",
+      "surname": "Arnault",
+      "native": "",
+      "korean": "아르노",
+      "signal": "very-strong",
+      "label": "명품 제국 가문",
+      "hook": "LVMH 회장 Bernard Arnault와 자녀들의 경영 참여로 ‘프랑스 럭셔리 부호가문’을 상징하는 이름.",
+      "history": "Bernard Arnault가 LVMH를 세계 최대 럭셔리 그룹으로 키웠고 가족 지주회사와 자녀들이 여러 브랜드 경영에 참여한다.",
+      "wealthEvidence": "가문 지주 구조와 LVMH 지분 때문에 현대 글로벌 최상위 부호가문 신호가 매우 강하다.",
+      "notables": [
+        [
+          "Bernard Arnault",
+          "LVMH 회장"
+        ],
+        [
+          "Delphine Arnault",
+          "Dior CEO"
+        ],
+        [
+          "Antoine Arnault",
+          "LVMH·가문 사업 경영"
+        ]
+      ],
+      "tags": [
+        "LVMH",
+        "럭셔리",
+        "가족경영"
+      ],
+      "sourceIds": [
+        "lvmhArnault"
+      ]
+    },
+    {
+      "id": "FR-wertheimer",
+      "country": "FR",
+      "surname": "Wertheimer",
+      "native": "",
+      "korean": "베르트하이머",
+      "signal": "very-strong",
+      "label": "Chanel 소유가문",
+      "hook": "Chanel의 비상장 소유가문으로 패션업계에서 성씨 자체가 막대한 자산과 연결된다.",
+      "history": "Pierre Wertheimer가 Coco Chanel과 사업을 함께했고 후손 Alain·Gérard 형제가 Chanel을 소유한다.",
+      "wealthEvidence": "Forbes 2026은 Alain Wertheimer를 Chanel 소유 억만장자로 기록한다.",
+      "notables": [
+        [
+          "Pierre Wertheimer",
+          "Chanel 사업 파트너·가문 창업 세대"
+        ],
+        [
+          "Alain Wertheimer",
+          "Chanel 회장"
+        ],
+        [
+          "Gérard Wertheimer",
+          "Chanel 공동 소유"
+        ]
+      ],
+      "tags": [
+        "Chanel",
+        "명품",
+        "비상장"
+      ],
+      "sourceIds": [
+        "forbesWertheimer2026"
+      ]
+    },
+    {
+      "id": "FR-dassault",
+      "country": "FR",
+      "surname": "Dassault",
+      "native": "",
+      "korean": "다쏘",
+      "signal": "very-strong",
+      "label": "항공·미디어 산업가문",
+      "hook": "Dassault Aviation·소프트웨어·Le Figaro와 연결돼 프랑스 산업·재산 가문을 상징하는 성씨.",
+      "history": "Marcel Dassault가 항공기업을 세웠고 후손들이 항공·소프트웨어·미디어·와인 자산을 이어받았다.",
+      "wealthEvidence": "Forbes 2026은 여러 Dassault 후손을 수십억 달러대 자산가로 기록한다.",
+      "notables": [
+        [
+          "Marcel Dassault",
+          "Dassault Aviation 창업자"
+        ],
+        [
+          "Laurent Dassault",
+          "가문 상속인·기업가"
+        ]
+      ],
+      "tags": [
+        "항공",
+        "Le Figaro",
+        "산업가문"
+      ],
+      "sourceIds": [
+        "forbesDassault2026"
+      ]
+    },
+    {
+      "id": "FR-pinault",
+      "country": "FR",
+      "surname": "Pinault",
+      "native": "",
+      "korean": "피노",
+      "signal": "very-strong",
+      "label": "명품·미술 부호가문",
+      "hook": "Kering·Christie’s·미술 컬렉션으로 프랑스 럭셔리 부호가문을 즉시 떠올리게 하는 이름.",
+      "history": "François Pinault가 1963년 사업을 시작해 Kering으로 발전시켰고 아들 François-Henri가 그룹을 이끈다.",
+      "wealthEvidence": "Forbes 2026은 Pinault & family를 프랑스 주요 부호가문으로 기록한다.",
+      "notables": [
+        [
+          "François Pinault",
+          "Kering 창업자"
+        ],
+        [
+          "François-Henri Pinault",
+          "Kering 경영자"
+        ]
+      ],
+      "tags": [
+        "Kering",
+        "Gucci",
+        "Christie’s",
+        "미술"
+      ],
+      "sourceIds": [
+        "forbesPinault2026"
+      ]
+    },
+    {
+      "id": "DE-quandt",
+      "country": "DE",
+      "surname": "Quandt",
+      "native": "",
+      "korean": "콴트",
+      "signal": "very-strong",
+      "label": "BMW 대주주 가문",
+      "hook": "독일 산업사에서 BMW 대주주 가문을 뜻하는 대표적인 부호 성씨.",
+      "history": "Herbert Quandt가 BMW의 성장 과정에서 핵심 역할을 했고 후손 Stefan Quandt와 Susanne Klatten이 대규모 BMW 지분을 보유한다.",
+      "wealthEvidence": "Forbes 2026은 Stefan Quandt와 Susanne Klatten을 독일 최상위 부호권으로 기록한다.",
+      "notables": [
+        [
+          "Herbert Quandt",
+          "BMW 산업가"
+        ],
+        [
+          "Stefan Quandt",
+          "BMW 대주주"
+        ],
+        [
+          "Susanne Klatten",
+          "BMW·Altana 대주주"
+        ]
+      ],
+      "tags": [
+        "BMW",
+        "산업가문",
+        "자동차"
+      ],
+      "sourceIds": [
+        "forbesQuandt2026",
+        "forbesKlatten2026"
+      ]
+    },
+    {
+      "id": "DE-albrecht",
+      "country": "DE",
+      "surname": "Albrecht",
+      "native": "",
+      "korean": "알브레히트",
+      "signal": "very-strong",
+      "label": "Aldi 창업가문",
+      "hook": "Aldi 창업 형제와 후손들 때문에 유통 재벌가문을 떠올리게 하는 독일 대표 성씨.",
+      "history": "Karl Albrecht Sr.와 Theo Albrecht Sr. 형제가 가족 식료품점을 확장해 Aldi를 구축했고 후손들이 재산을 상속했다.",
+      "wealthEvidence": "Forbes 2026은 Karl Albrecht Jr. & family 등을 억만장자로 기록한다.",
+      "notables": [
+        [
+          "Karl Albrecht Sr.",
+          "Aldi 공동창업자"
+        ],
+        [
+          "Theo Albrecht Sr.",
+          "Aldi 공동창업자"
+        ],
+        [
+          "Karl Albrecht Jr.",
+          "가문 상속인"
+        ]
+      ],
+      "tags": [
+        "Aldi",
+        "유통",
+        "세습부"
+      ],
+      "sourceIds": [
+        "forbesAlbrecht2026"
+      ]
+    },
+    {
+      "id": "DE-reimann",
+      "country": "DE",
+      "surname": "Reimann",
+      "native": "",
+      "korean": "라이만",
+      "signal": "very-strong",
+      "label": "JAB 지주가문",
+      "hook": "JAB Holding과 글로벌 소비재·커피·외식 브랜드 포트폴리오를 가진 독일 비공개 부호가문.",
+      "history": "Reimann 가문은 19세기 Benckiser 사업과 연결되며 현대에는 JAB Holding을 통해 소비재·외식 자산을 보유한다.",
+      "wealthEvidence": "Forbes 2026은 여러 Reimann 가족 구성원을 각각 억만장자로 기록한다.",
+      "notables": [
+        [
+          "Ludwig Reimann",
+          "19세기 Benckiser 사업 합류"
+        ],
+        [
+          "Wolfgang Reimann",
+          "JAB 가문 주주"
+        ]
+      ],
+      "tags": [
+        "JAB",
+        "Krispy Kreme",
+        "Peet’s",
+        "Panera"
+      ],
+      "sourceIds": [
+        "forbesReimann2026"
+      ]
+    },
+    {
+      "id": "DE-klatten",
+      "country": "DE",
+      "surname": "Klatten",
+      "native": "",
+      "korean": "클라텐",
+      "signal": "strong",
+      "label": "BMW·화학 자산가",
+      "hook": "Susanne Klatten 개인 때문에 현대 독일 부호 명단에서 강하게 보이는 성씨.",
+      "history": "Quandt 가문의 후손인 Susanne Klatten이 BMW 지분과 Altana 지분을 보유한다.",
+      "wealthEvidence": "부는 Klatten 성씨의 오래된 가문 역사보다 Quandt 가문에서 이어진 자산과 직접 연결된다.",
+      "notables": [
+        [
+          "Susanne Klatten",
+          "BMW·Altana 대주주"
+        ]
+      ],
+      "tags": [
+        "BMW",
+        "Altana",
+        "상속"
+      ],
+      "sourceIds": [
+        "forbesKlatten2026"
+      ]
+    },
+    {
+      "id": "ES-ortega",
+      "country": "ES",
+      "surname": "Ortega",
+      "native": "",
+      "korean": "오르테가",
+      "signal": "strong-context",
+      "label": "Inditex 창업가문",
+      "hook": "스페인 최고 부호 Amancio Ortega와 Zara 때문에 현대 부호 이미지가 강하지만 Ortega 자체는 흔한 성씨.",
+      "history": "Amancio Ortega가 1975년 Zara/Inditex를 공동창업했고 딸 Marta Ortega가 현재 Inditex 회장을 맡는다.",
+      "wealthEvidence": "Forbes 2026은 Amancio Ortega를 세계 최상위 부호권으로 기록한다. 다만 성씨 전체가 부유하다는 뜻은 아니다.",
+      "notables": [
+        [
+          "Amancio Ortega",
+          "Inditex 공동창업자"
+        ],
+        [
+          "Marta Ortega Pérez",
+          "Inditex 회장"
+        ],
+        [
+          "Sandra Ortega Mera",
+          "Inditex 상속인"
+        ]
+      ],
+      "tags": [
+        "Zara",
+        "Inditex",
+        "패션"
+      ],
+      "sourceIds": [
+        "forbesOrtega2026",
+        "forbesSandraOrtega2026"
+      ]
+    },
+    {
+      "id": "ES-delpino",
+      "country": "ES",
+      "surname": "Del Pino",
+      "native": "",
+      "korean": "델 피노",
+      "signal": "very-strong",
+      "label": "Ferrovial 창업가문",
+      "hook": "스페인 인프라 대기업 Ferrovial 창업가문 성씨로, 기업 지분이 세대에 걸쳐 이어지는 사례.",
+      "history": "Rafael del Pino y Moreno가 1952년 Ferrovial을 창업했고 자녀 Rafael·María del Pino 등이 주요 지분을 보유했다.",
+      "wealthEvidence": "Forbes 2026은 Rafael과 María del Pino를 모두 억만장자로 기록한다.",
+      "notables": [
+        [
+          "Rafael del Pino y Moreno",
+          "Ferrovial 창업자"
+        ],
+        [
+          "Rafael Del Pino",
+          "Ferrovial 회장"
+        ],
+        [
+          "Maria Del Pino",
+          "가문 대주주"
+        ]
+      ],
+      "tags": [
+        "Ferrovial",
+        "인프라",
+        "가족기업"
+      ],
+      "sourceIds": [
+        "forbesRafaelDelPino2026",
+        "forbesMariaDelPino2026"
+      ]
+    },
+    {
+      "id": "ES-march",
+      "country": "ES",
+      "surname": "March",
+      "native": "",
+      "korean": "마르치",
+      "signal": "very-strong",
+      "label": "은행가문",
+      "hook": "Banca March와 투자지주를 세대에 걸쳐 소유한 스페인 대표 금융가문.",
+      "history": "Juan March가 1926년 Banca March를 세웠고 손자 세대인 Juan·Carlos March Delgado가 가족 소유 은행과 투자회사 지분을 보유한다.",
+      "wealthEvidence": "Forbes 2026은 Juan·Carlos March Delgado를 모두 억만장자로 기록한다.",
+      "notables": [
+        [
+          "Juan March",
+          "Banca March 창업자"
+        ],
+        [
+          "Juan March Delgado",
+          "가문 은행 대주주"
+        ],
+        [
+          "Carlos March Delgado",
+          "가문 투자회사 회장"
+        ]
+      ],
+      "tags": [
+        "Banca March",
+        "은행",
+        "금융가문"
+      ],
+      "sourceIds": [
+        "forbesJuanMarch2026",
+        "forbesCarlosMarch2026"
+      ]
+    },
+    {
+      "id": "MX-slim",
+      "country": "MX",
+      "surname": "Slim",
+      "native": "",
+      "korean": "슬림",
+      "signal": "very-strong",
+      "label": "통신·지주 부호가문",
+      "hook": "Carlos Slim Helú와 가족 때문에 멕시코에서 가장 강한 ‘부호 성씨’ 코드 중 하나.",
+      "history": "Carlos Slim은 América Móvil·Grupo Carso 등 통신·건설·소비재·부동산 자산을 구축했고 가족이 대규모 지분을 함께 보유한다.",
+      "wealthEvidence": "Forbes 2026은 Carlos Slim & family를 멕시코 최고 부호이자 세계 최상위권 자산가로 기록한다.",
+      "notables": [
+        [
+          "Carlos Slim Helú",
+          "América Móvil·Grupo Carso"
+        ],
+        [
+          "Carlos Slim Domit",
+          "가문 기업 경영인"
+        ]
+      ],
+      "tags": [
+        "América Móvil",
+        "Grupo Carso",
+        "통신"
+      ],
+      "sourceIds": [
+        "forbesSlim2026"
+      ]
+    },
+    {
+      "id": "MX-larrea",
+      "country": "MX",
+      "surname": "Larrea",
+      "native": "",
+      "korean": "라레아",
+      "signal": "very-strong",
+      "label": "광산·철도 부호가문",
+      "hook": "Grupo México의 대주주 가문으로 광산·철도 자산과 직접 연결되는 성씨.",
+      "history": "Germán Larrea가 Grupo México를 이끌며 구리광산·인프라·철도 사업을 확장했다.",
+      "wealthEvidence": "Forbes 2026은 Germán Larrea & family를 세계 최상위 부호권으로 기록한다.",
+      "notables": [
+        [
+          "Germán Larrea Mota Velasco",
+          "Grupo México 회장"
+        ]
+      ],
+      "tags": [
+        "광산",
+        "구리",
+        "철도",
+        "Grupo México"
+      ],
+      "sourceIds": [
+        "forbesLarrea2026"
+      ]
+    },
+    {
+      "id": "MX-bailleres",
+      "country": "MX",
+      "surname": "Baillères",
+      "native": "",
+      "korean": "바예레스",
+      "signal": "strong",
+      "label": "광산·보험 산업가문",
+      "hook": "Grupo Bal과 Peñoles를 통해 광산·보험·리테일 자산을 이어온 멕시코 산업가문.",
+      "history": "Baillères 가문은 Grupo Bal을 중심으로 산업·금융 자산을 이어가며 후손이 경영을 승계했다.",
+      "wealthEvidence": "Forbes 2026 부호 프로필에서 Alejandro Baillères Gual & family가 대규모 자산가문으로 기록된다.",
+      "notables": [
+        [
+          "Alberto Baillères",
+          "Grupo Bal 전 회장"
+        ],
+        [
+          "Alejandro Baillères Gual",
+          "Grupo Bal 가문 승계"
+        ]
+      ],
+      "tags": [
+        "Grupo Bal",
+        "Peñoles",
+        "광산",
+        "보험"
+      ],
+      "sourceIds": [
+        "forbesBailleres2026"
+      ]
+    }
+  ],
+  "surnameCases": [
+    {
+      "id": "JP-naoi",
+      "country": "JP",
+      "surname": "Naoi",
+      "native": "直井",
+      "korean": "나오이",
+      "group": "현대 성씨 희소성 데이터",
+      "finding": "현재 민간 성씨 DB에서 전국 약 1,277위·약 13,200명으로 추정된다. 희귀한 편이라는 정보와 부유함은 별개다.",
+      "evidence": "current-data",
+      "metric": "성씨 빈도/인구 추정",
+      "period": "페이지 갱신 2024-10-20 · 2026-10-02 재확인",
+      "caution": "이 서비스가 인용한 자료 중 直井 자체를 부유한 가문으로 입증한 자료는 없습니다. “희귀 성씨 = 부자”로 일반화하면 안 됩니다.",
+      "sourceIds": [
+        "myojiNaoi",
+        "japanMobility"
+      ],
+      "tags": [
+        "레이",
+        "희귀성",
+        "팩트체크"
+      ]
+    },
+    {
+      "id": "JP-희귀 사무라이 성씨 표본-0-akabayashi",
+      "country": "JP",
+      "surname": "Akabayashi",
+      "native": "赤林",
+      "korean": "아카바야시",
+      "group": "희귀 사무라이 성씨 표본",
+      "finding": "Clark·Ishii 연구의 희귀 사무라이 성씨 표본에 포함. 표본 전체가 현대 고지위 직군에서 평균적으로 과대표현됐다.",
+      "evidence": "group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1900–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "japanMobility"
+      ],
+      "tags": [
+        "사무라이",
+        "역사적 엘리트"
+      ]
+    },
+    {
+      "id": "JP-희귀 사무라이 성씨 표본-1-amau",
+      "country": "JP",
+      "surname": "Amau",
+      "native": "天羽",
+      "korean": "아마우",
+      "group": "희귀 사무라이 성씨 표본",
+      "finding": "Clark·Ishii 연구의 희귀 사무라이 성씨 표본에 포함. 표본 전체가 현대 고지위 직군에서 평균적으로 과대표현됐다.",
+      "evidence": "group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1900–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "japanMobility"
+      ],
+      "tags": [
+        "사무라이",
+        "역사적 엘리트"
+      ]
+    },
+    {
+      "id": "JP-희귀 사무라이 성씨 표본-2-anjo",
+      "country": "JP",
+      "surname": "Anjo",
+      "native": "安生",
+      "korean": "안조",
+      "group": "희귀 사무라이 성씨 표본",
+      "finding": "Clark·Ishii 연구의 희귀 사무라이 성씨 표본에 포함. 표본 전체가 현대 고지위 직군에서 평균적으로 과대표현됐다.",
+      "evidence": "group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1900–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "japanMobility"
+      ],
+      "tags": [
+        "사무라이",
+        "역사적 엘리트"
+      ]
+    },
+    {
+      "id": "JP-희귀 사무라이 성씨 표본-3-chigusa",
+      "country": "JP",
+      "surname": "Chigusa",
+      "native": "千種",
+      "korean": "치구사",
+      "group": "희귀 사무라이 성씨 표본",
+      "finding": "Clark·Ishii 연구의 희귀 사무라이 성씨 표본에 포함. 표본 전체가 현대 고지위 직군에서 평균적으로 과대표현됐다.",
+      "evidence": "group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1900–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "japanMobility"
+      ],
+      "tags": [
+        "사무라이",
+        "역사적 엘리트"
+      ]
+    },
+    {
+      "id": "JP-희귀 사무라이 성씨 표본-4-daidoji",
+      "country": "JP",
+      "surname": "Daidoji",
+      "native": "大道寺",
+      "korean": "다이도지",
+      "group": "희귀 사무라이 성씨 표본",
+      "finding": "Clark·Ishii 연구의 희귀 사무라이 성씨 표본에 포함. 표본 전체가 현대 고지위 직군에서 평균적으로 과대표현됐다.",
+      "evidence": "group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1900–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "japanMobility"
+      ],
+      "tags": [
+        "사무라이",
+        "역사적 엘리트"
+      ]
+    },
+    {
+      "id": "JP-희귀 사무라이 성씨 표본-5-doki",
+      "country": "JP",
+      "surname": "Doki",
+      "native": "土岐",
+      "korean": "도키",
+      "group": "희귀 사무라이 성씨 표본",
+      "finding": "Clark·Ishii 연구의 희귀 사무라이 성씨 표본에 포함. 표본 전체가 현대 고지위 직군에서 평균적으로 과대표현됐다.",
+      "evidence": "group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1900–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "japanMobility"
+      ],
+      "tags": [
+        "사무라이",
+        "역사적 엘리트"
+      ]
+    },
+    {
+      "id": "JP-희귀 사무라이 성씨 표본-6-fukazu",
+      "country": "JP",
+      "surname": "Fukazu",
+      "native": "深津",
+      "korean": "후카즈",
+      "group": "희귀 사무라이 성씨 표본",
+      "finding": "Clark·Ishii 연구의 희귀 사무라이 성씨 표본에 포함. 표본 전체가 현대 고지위 직군에서 평균적으로 과대표현됐다.",
+      "evidence": "group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1900–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "japanMobility"
+      ],
+      "tags": [
+        "사무라이",
+        "역사적 엘리트"
+      ]
+    },
+    {
+      "id": "JP-희귀 사무라이 성씨 표본-7-futami",
+      "country": "JP",
+      "surname": "Futami",
+      "native": "二見",
+      "korean": "후타미",
+      "group": "희귀 사무라이 성씨 표본",
+      "finding": "Clark·Ishii 연구의 희귀 사무라이 성씨 표본에 포함. 표본 전체가 현대 고지위 직군에서 평균적으로 과대표현됐다.",
+      "evidence": "group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1900–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "japanMobility"
+      ],
+      "tags": [
+        "사무라이",
+        "역사적 엘리트"
+      ]
+    },
+    {
+      "id": "JP-가조쿠(화족) 성씨 표본-0-aburanokoji",
+      "country": "JP",
+      "surname": "Aburanokoji",
+      "native": "油小路",
+      "korean": "아부라노코지",
+      "group": "가조쿠(화족) 성씨 표본",
+      "finding": "Clark·Ishii 연구의 가조쿠 성씨 표본에 포함. 가조쿠 표본 전체가 현대 고지위 집단에서 과대표현됐으나 개별 성씨별 부는 측정하지 않았다.",
+      "evidence": "group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1900–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "japanMobility"
+      ],
+      "tags": [
+        "가조쿠",
+        "역사적 엘리트"
+      ]
+    },
+    {
+      "id": "JP-가조쿠(화족) 성씨 표본-1-anegakoji",
+      "country": "JP",
+      "surname": "Anegakoji",
+      "native": "姉小路",
+      "korean": "아네가코지",
+      "group": "가조쿠(화족) 성씨 표본",
+      "finding": "Clark·Ishii 연구의 가조쿠 성씨 표본에 포함. 가조쿠 표본 전체가 현대 고지위 집단에서 과대표현됐으나 개별 성씨별 부는 측정하지 않았다.",
+      "evidence": "group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1900–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "japanMobility"
+      ],
+      "tags": [
+        "가조쿠",
+        "역사적 엘리트"
+      ]
+    },
+    {
+      "id": "JP-가조쿠(화족) 성씨 표본-2-asukai",
+      "country": "JP",
+      "surname": "Asukai",
+      "native": "飛鳥井",
+      "korean": "아스카이",
+      "group": "가조쿠(화족) 성씨 표본",
+      "finding": "Clark·Ishii 연구의 가조쿠 성씨 표본에 포함. 가조쿠 표본 전체가 현대 고지위 집단에서 과대표현됐으나 개별 성씨별 부는 측정하지 않았다.",
+      "evidence": "group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1900–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "japanMobility"
+      ],
+      "tags": [
+        "가조쿠",
+        "역사적 엘리트"
+      ]
+    },
+    {
+      "id": "JP-가조쿠(화족) 성씨 표본-3-ayanokoji",
+      "country": "JP",
+      "surname": "Ayanokoji",
+      "native": "綾小路",
+      "korean": "아야노코지",
+      "group": "가조쿠(화족) 성씨 표본",
+      "finding": "Clark·Ishii 연구의 가조쿠 성씨 표본에 포함. 가조쿠 표본 전체가 현대 고지위 집단에서 과대표현됐으나 개별 성씨별 부는 측정하지 않았다.",
+      "evidence": "group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1900–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "japanMobility"
+      ],
+      "tags": [
+        "가조쿠",
+        "역사적 엘리트"
+      ]
+    },
+    {
+      "id": "JP-가조쿠(화족) 성씨 표본-4-bojo",
+      "country": "JP",
+      "surname": "Bojo",
+      "native": "坊城",
+      "korean": "보조",
+      "group": "가조쿠(화족) 성씨 표본",
+      "finding": "Clark·Ishii 연구의 가조쿠 성씨 표본에 포함. 가조쿠 표본 전체가 현대 고지위 집단에서 과대표현됐으나 개별 성씨별 부는 측정하지 않았다.",
+      "evidence": "group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1900–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "japanMobility"
+      ],
+      "tags": [
+        "가조쿠",
+        "역사적 엘리트"
+      ]
+    },
+    {
+      "id": "JP-가조쿠(화족) 성씨 표본-5-higashibojo",
+      "country": "JP",
+      "surname": "Higashibojo",
+      "native": "東坊城",
+      "korean": "히가시보조",
+      "group": "가조쿠(화족) 성씨 표본",
+      "finding": "Clark·Ishii 연구의 가조쿠 성씨 표본에 포함. 가조쿠 표본 전체가 현대 고지위 집단에서 과대표현됐으나 개별 성씨별 부는 측정하지 않았다.",
+      "evidence": "group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1900–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "japanMobility"
+      ],
+      "tags": [
+        "가조쿠",
+        "역사적 엘리트"
+      ]
+    },
+    {
+      "id": "JP-가조쿠(화족) 성씨 표본-6-higashifushimi",
+      "country": "JP",
+      "surname": "Higashifushimi",
+      "native": "東伏見",
+      "korean": "히가시후시미",
+      "group": "가조쿠(화족) 성씨 표본",
+      "finding": "Clark·Ishii 연구의 가조쿠 성씨 표본에 포함. 가조쿠 표본 전체가 현대 고지위 집단에서 과대표현됐으나 개별 성씨별 부는 측정하지 않았다.",
+      "evidence": "group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1900–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "japanMobility"
+      ],
+      "tags": [
+        "가조쿠",
+        "역사적 엘리트"
+      ]
+    },
+    {
+      "id": "JP-가조쿠(화족) 성씨 표본-7-tokudaiji",
+      "country": "JP",
+      "surname": "Tokudaiji",
+      "native": "徳大寺",
+      "korean": "도쿠다이지",
+      "group": "가조쿠(화족) 성씨 표본",
+      "finding": "Clark·Ishii 연구의 가조쿠 성씨 표본에 포함. 가조쿠 표본 전체가 현대 고지위 집단에서 과대표현됐으나 개별 성씨별 부는 측정하지 않았다.",
+      "evidence": "group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1900–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "japanMobility"
+      ],
+      "tags": [
+        "가조쿠",
+        "역사적 엘리트"
+      ]
+    },
+    {
+      "id": "IN-서벵골 Kulin Brahmin 연구군-0-mukherjee",
+      "country": "IN",
+      "surname": "Mukherjee",
+      "native": "Mukhopadhyaya",
+      "korean": "무케르지",
+      "group": "서벵골 Kulin Brahmin 연구군",
+      "finding": "2013년 성씨 연구에서 이 집단은 현대 의사 등 엘리트 직종에서 인구비중 대비 높은 대표성을 보였다.",
+      "evidence": "sensitive-group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1860–2011 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "indiaMobility",
+        "indiaIncomeMobility"
+      ],
+      "tags": [
+        "서벵골",
+        "카스트 연구",
+        "민감정보 주의"
+      ]
+    },
+    {
+      "id": "IN-서벵골 Kulin Brahmin 연구군-1-banerjee",
+      "country": "IN",
+      "surname": "Banerjee",
+      "native": "Bandopadhyaya",
+      "korean": "바네르지",
+      "group": "서벵골 Kulin Brahmin 연구군",
+      "finding": "2013년 성씨 연구에서 이 집단은 현대 의사 등 엘리트 직종에서 인구비중 대비 높은 대표성을 보였다.",
+      "evidence": "sensitive-group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1860–2011 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "indiaMobility",
+        "indiaIncomeMobility"
+      ],
+      "tags": [
+        "서벵골",
+        "카스트 연구",
+        "민감정보 주의"
+      ]
+    },
+    {
+      "id": "IN-서벵골 Kulin Brahmin 연구군-2-chakraborty",
+      "country": "IN",
+      "surname": "Chakraborty",
+      "native": "Chakravarty",
+      "korean": "차크라보르티",
+      "group": "서벵골 Kulin Brahmin 연구군",
+      "finding": "2013년 성씨 연구에서 이 집단은 현대 의사 등 엘리트 직종에서 인구비중 대비 높은 대표성을 보였다.",
+      "evidence": "sensitive-group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1860–2011 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "indiaMobility",
+        "indiaIncomeMobility"
+      ],
+      "tags": [
+        "서벵골",
+        "카스트 연구",
+        "민감정보 주의"
+      ]
+    },
+    {
+      "id": "IN-서벵골 Kulin Brahmin 연구군-3-chatterjee",
+      "country": "IN",
+      "surname": "Chatterjee",
+      "native": "Chattopadhyaya",
+      "korean": "차테르지",
+      "group": "서벵골 Kulin Brahmin 연구군",
+      "finding": "2013년 성씨 연구에서 이 집단은 현대 의사 등 엘리트 직종에서 인구비중 대비 높은 대표성을 보였다.",
+      "evidence": "sensitive-group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1860–2011 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "indiaMobility",
+        "indiaIncomeMobility"
+      ],
+      "tags": [
+        "서벵골",
+        "카스트 연구",
+        "민감정보 주의"
+      ]
+    },
+    {
+      "id": "IN-서벵골 Kulin Brahmin 연구군-4-bhattacharya",
+      "country": "IN",
+      "surname": "Bhattacharya",
+      "native": "Bhattacharjee",
+      "korean": "바타차리야",
+      "group": "서벵골 Kulin Brahmin 연구군",
+      "finding": "2013년 성씨 연구에서 이 집단은 현대 의사 등 엘리트 직종에서 인구비중 대비 높은 대표성을 보였다.",
+      "evidence": "sensitive-group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1860–2011 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "indiaMobility",
+        "indiaIncomeMobility"
+      ],
+      "tags": [
+        "서벵골",
+        "카스트 연구",
+        "민감정보 주의"
+      ]
+    },
+    {
+      "id": "IN-서벵골 Kulin Brahmin 연구군-5-ganguly",
+      "country": "IN",
+      "surname": "Ganguly",
+      "native": "Gangopadhyaya",
+      "korean": "강굴리",
+      "group": "서벵골 Kulin Brahmin 연구군",
+      "finding": "2013년 성씨 연구에서 이 집단은 현대 의사 등 엘리트 직종에서 인구비중 대비 높은 대표성을 보였다.",
+      "evidence": "sensitive-group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1860–2011 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "indiaMobility",
+        "indiaIncomeMobility"
+      ],
+      "tags": [
+        "서벵골",
+        "카스트 연구",
+        "민감정보 주의"
+      ]
+    },
+    {
+      "id": "IN-서벵골 Kulin Brahmin 연구군-6-goswami",
+      "country": "IN",
+      "surname": "Goswami",
+      "native": "Gosain",
+      "korean": "고스와미",
+      "group": "서벵골 Kulin Brahmin 연구군",
+      "finding": "2013년 성씨 연구에서 이 집단은 현대 의사 등 엘리트 직종에서 인구비중 대비 높은 대표성을 보였다.",
+      "evidence": "sensitive-group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1860–2011 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "indiaMobility",
+        "indiaIncomeMobility"
+      ],
+      "tags": [
+        "서벵골",
+        "카스트 연구",
+        "민감정보 주의"
+      ]
+    },
+    {
+      "id": "IN-서벵골 기타 역사적 고지위 연구군-0-bose",
+      "country": "IN",
+      "surname": "Bose",
+      "native": "Basu",
+      "korean": "보스/바수",
+      "group": "서벵골 기타 역사적 고지위 연구군",
+      "finding": "2013년 연구가 19세기 고지위 집단과 연관된 성씨군으로 분류했고, 현대 의사·판사에서 과대표현되는 패턴을 보고했다.",
+      "evidence": "sensitive-group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1860–2011 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "indiaMobility"
+      ],
+      "tags": [
+        "서벵골",
+        "역사적 지위",
+        "민감정보 주의"
+      ]
+    },
+    {
+      "id": "IN-서벵골 기타 역사적 고지위 연구군-1-dutta",
+      "country": "IN",
+      "surname": "Dutta",
+      "native": "Datta",
+      "korean": "두타/다타",
+      "group": "서벵골 기타 역사적 고지위 연구군",
+      "finding": "2013년 연구가 19세기 고지위 집단과 연관된 성씨군으로 분류했고, 현대 의사·판사에서 과대표현되는 패턴을 보고했다.",
+      "evidence": "sensitive-group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1860–2011 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "indiaMobility"
+      ],
+      "tags": [
+        "서벵골",
+        "역사적 지위",
+        "민감정보 주의"
+      ]
+    },
+    {
+      "id": "IN-서벵골 기타 역사적 고지위 연구군-2-ghosh",
+      "country": "IN",
+      "surname": "Ghosh",
+      "native": "Ghosh",
+      "korean": "고시",
+      "group": "서벵골 기타 역사적 고지위 연구군",
+      "finding": "2013년 연구가 19세기 고지위 집단과 연관된 성씨군으로 분류했고, 현대 의사·판사에서 과대표현되는 패턴을 보고했다.",
+      "evidence": "sensitive-group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1860–2011 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "indiaMobility"
+      ],
+      "tags": [
+        "서벵골",
+        "역사적 지위",
+        "민감정보 주의"
+      ]
+    },
+    {
+      "id": "IN-서벵골 기타 역사적 고지위 연구군-3-kundu",
+      "country": "IN",
+      "surname": "Kundu",
+      "native": "Kundu",
+      "korean": "쿤두",
+      "group": "서벵골 기타 역사적 고지위 연구군",
+      "finding": "2013년 연구가 19세기 고지위 집단과 연관된 성씨군으로 분류했고, 현대 의사·판사에서 과대표현되는 패턴을 보고했다.",
+      "evidence": "sensitive-group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1860–2011 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "indiaMobility"
+      ],
+      "tags": [
+        "서벵골",
+        "역사적 지위",
+        "민감정보 주의"
+      ]
+    },
+    {
+      "id": "IN-서벵골 기타 역사적 고지위 연구군-4-mitra",
+      "country": "IN",
+      "surname": "Mitra",
+      "native": "Mitra",
+      "korean": "미트라",
+      "group": "서벵골 기타 역사적 고지위 연구군",
+      "finding": "2013년 연구가 19세기 고지위 집단과 연관된 성씨군으로 분류했고, 현대 의사·판사에서 과대표현되는 패턴을 보고했다.",
+      "evidence": "sensitive-group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1860–2011 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "indiaMobility"
+      ],
+      "tags": [
+        "서벵골",
+        "역사적 지위",
+        "민감정보 주의"
+      ]
+    },
+    {
+      "id": "IN-서벵골 기타 역사적 고지위 연구군-5-sen",
+      "country": "IN",
+      "surname": "Sen",
+      "native": "Sengupta",
+      "korean": "센/센굽타",
+      "group": "서벵골 기타 역사적 고지위 연구군",
+      "finding": "2013년 연구가 19세기 고지위 집단과 연관된 성씨군으로 분류했고, 현대 의사·판사에서 과대표현되는 패턴을 보고했다.",
+      "evidence": "sensitive-group-study",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "1860–2011 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "indiaMobility"
+      ],
+      "tags": [
+        "서벵골",
+        "역사적 지위",
+        "민감정보 주의"
+      ]
+    },
+    {
+      "id": "GB-중세 토지소유·노르만계 역사적 엘리트 성씨-0-baskerville",
+      "country": "GB",
+      "surname": "Baskerville",
+      "native": "",
+      "korean": "바스커빌",
+      "group": "중세 토지소유·노르만계 역사적 엘리트 성씨",
+      "finding": "영국 장기 사회이동 연구에서 중세 상층 토지소유·노르만계 엘리트 표본의 예시로 제시된 성씨.",
+      "evidence": "historical-sample",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "중세–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "englandMobility"
+      ],
+      "tags": [
+        "중세",
+        "옥스브리지",
+        "역사적 지위"
+      ]
+    },
+    {
+      "id": "GB-중세 토지소유·노르만계 역사적 엘리트 성씨-1-darcy",
+      "country": "GB",
+      "surname": "Darcy",
+      "native": "",
+      "korean": "다아시",
+      "group": "중세 토지소유·노르만계 역사적 엘리트 성씨",
+      "finding": "영국 장기 사회이동 연구에서 중세 상층 토지소유·노르만계 엘리트 표본의 예시로 제시된 성씨.",
+      "evidence": "historical-sample",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "중세–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "englandMobility"
+      ],
+      "tags": [
+        "중세",
+        "옥스브리지",
+        "역사적 지위"
+      ]
+    },
+    {
+      "id": "GB-중세 토지소유·노르만계 역사적 엘리트 성씨-2-mandeville",
+      "country": "GB",
+      "surname": "Mandeville",
+      "native": "",
+      "korean": "맨더빌",
+      "group": "중세 토지소유·노르만계 역사적 엘리트 성씨",
+      "finding": "영국 장기 사회이동 연구에서 중세 상층 토지소유·노르만계 엘리트 표본의 예시로 제시된 성씨.",
+      "evidence": "historical-sample",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "중세–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "englandMobility"
+      ],
+      "tags": [
+        "중세",
+        "옥스브리지",
+        "역사적 지위"
+      ]
+    },
+    {
+      "id": "GB-중세 토지소유·노르만계 역사적 엘리트 성씨-3-montgomery",
+      "country": "GB",
+      "surname": "Montgomery",
+      "native": "",
+      "korean": "몽고메리",
+      "group": "중세 토지소유·노르만계 역사적 엘리트 성씨",
+      "finding": "영국 장기 사회이동 연구에서 중세 상층 토지소유·노르만계 엘리트 표본의 예시로 제시된 성씨.",
+      "evidence": "historical-sample",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "중세–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "englandMobility"
+      ],
+      "tags": [
+        "중세",
+        "옥스브리지",
+        "역사적 지위"
+      ]
+    },
+    {
+      "id": "GB-중세 토지소유·노르만계 역사적 엘리트 성씨-4-neville",
+      "country": "GB",
+      "surname": "Neville",
+      "native": "",
+      "korean": "네빌",
+      "group": "중세 토지소유·노르만계 역사적 엘리트 성씨",
+      "finding": "영국 장기 사회이동 연구에서 중세 상층 토지소유·노르만계 엘리트 표본의 예시로 제시된 성씨.",
+      "evidence": "historical-sample",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "중세–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "englandMobility"
+      ],
+      "tags": [
+        "중세",
+        "옥스브리지",
+        "역사적 지위"
+      ]
+    },
+    {
+      "id": "GB-중세 토지소유·노르만계 역사적 엘리트 성씨-5-percy",
+      "country": "GB",
+      "surname": "Percy",
+      "native": "",
+      "korean": "퍼시",
+      "group": "중세 토지소유·노르만계 역사적 엘리트 성씨",
+      "finding": "영국 장기 사회이동 연구에서 중세 상층 토지소유·노르만계 엘리트 표본의 예시로 제시된 성씨.",
+      "evidence": "historical-sample",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "중세–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "englandMobility"
+      ],
+      "tags": [
+        "중세",
+        "옥스브리지",
+        "역사적 지위"
+      ]
+    },
+    {
+      "id": "GB-중세 토지소유·노르만계 역사적 엘리트 성씨-6-punchard",
+      "country": "GB",
+      "surname": "Punchard",
+      "native": "",
+      "korean": "펀처드",
+      "group": "중세 토지소유·노르만계 역사적 엘리트 성씨",
+      "finding": "영국 장기 사회이동 연구에서 중세 상층 토지소유·노르만계 엘리트 표본의 예시로 제시된 성씨.",
+      "evidence": "historical-sample",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "중세–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "englandMobility"
+      ],
+      "tags": [
+        "중세",
+        "옥스브리지",
+        "역사적 지위"
+      ]
+    },
+    {
+      "id": "GB-중세 토지소유·노르만계 역사적 엘리트 성씨-7-talbot",
+      "country": "GB",
+      "surname": "Talbot",
+      "native": "",
+      "korean": "탤벗",
+      "group": "중세 토지소유·노르만계 역사적 엘리트 성씨",
+      "finding": "영국 장기 사회이동 연구에서 중세 상층 토지소유·노르만계 엘리트 표본의 예시로 제시된 성씨.",
+      "evidence": "historical-sample",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "중세–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "englandMobility"
+      ],
+      "tags": [
+        "중세",
+        "옥스브리지",
+        "역사적 지위"
+      ]
+    },
+    {
+      "id": "GB-중세 토지소유·노르만계 역사적 엘리트 성씨-8-berkeley",
+      "country": "GB",
+      "surname": "Berkeley",
+      "native": "",
+      "korean": "버클리",
+      "group": "중세 토지소유·노르만계 역사적 엘리트 성씨",
+      "finding": "영국 장기 사회이동 연구에서 중세 상층 토지소유·노르만계 엘리트 표본의 예시로 제시된 성씨.",
+      "evidence": "historical-sample",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "중세–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "englandMobility"
+      ],
+      "tags": [
+        "중세",
+        "옥스브리지",
+        "역사적 지위"
+      ]
+    },
+    {
+      "id": "GB-중세 토지소유·노르만계 역사적 엘리트 성씨-9-pakenham",
+      "country": "GB",
+      "surname": "Pakenham",
+      "native": "",
+      "korean": "패커넘",
+      "group": "중세 토지소유·노르만계 역사적 엘리트 성씨",
+      "finding": "영국 장기 사회이동 연구에서 중세 상층 토지소유·노르만계 엘리트 표본의 예시로 제시된 성씨.",
+      "evidence": "historical-sample",
+      "metric": "집단 내 엘리트 직종/교육 대표성",
+      "period": "중세–2012 연구",
+      "caution": "이 항목은 성씨 집단의 역사적·통계적 패턴을 설명하며, 같은 성씨를 가진 개인의 현재 자산이나 계층을 판정하지 않습니다.",
+      "sourceIds": [
+        "englandMobility"
+      ],
+      "tags": [
+        "중세",
+        "옥스브리지",
+        "역사적 지위"
+      ]
+    },
+    {
+      "id": "SE-andersson",
+      "country": "SE",
+      "surname": "Andersson",
+      "native": "",
+      "korean": "안데르손",
+      "group": "스웨덴 비교 기준 성씨",
+      "finding": "스웨덴 연구에서 귀족 성씨 집단과 비교하는 일반적 patronymic 성씨 기준군으로 사용됐다.",
+      "evidence": "comparison-group",
+      "metric": "직업·교육·2008 세금자료 비교",
+      "period": "1700–2012 / 세금자료 2008",
+      "caution": "Andersson 개인의 소득을 의미하지 않습니다. 연구의 비교 기준 집단입니다.",
+      "sourceIds": [
+        "swedenMobility"
+      ],
+      "tags": [
+        "스웨덴",
+        "비교군"
+      ]
+    },
+    {
+      "id": "SE-hamilton",
+      "country": "SE",
+      "surname": "Hamilton",
+      "native": "",
+      "korean": "해밀턴",
+      "group": "귀족 성씨 예시(다만 비교적 흔한 편)",
+      "finding": "스웨덴 귀족 계보에 존재하지만 2011년 586명이 사용해, 연구자는 희귀 귀족 성씨 핵심 표본에서는 제외했다고 설명한다.",
+      "evidence": "historical-context",
+      "metric": "귀족 계보 + 성씨 빈도",
+      "period": "2011 빈도 기준",
+      "caution": "귀족 계보와 같은 성씨라고 해서 모든 보유자가 귀족 후손이거나 부유하다는 뜻은 아닙니다.",
+      "sourceIds": [
+        "swedenMobility"
+      ],
+      "tags": [
+        "귀족",
+        "주의사례"
+      ]
+    },
+    {
+      "id": "SE-bjornberg",
+      "country": "SE",
+      "surname": "Björnberg",
+      "native": "",
+      "korean": "비욘베리",
+      "group": "귀족 성씨 예시(흔한 편)",
+      "finding": "스웨덴 논문이 귀족계 성씨이지만 2011년 925명이 사용해 희귀 귀족 표본에서 제외한 예로 제시한다.",
+      "evidence": "historical-context",
+      "metric": "귀족 계보 + 성씨 빈도",
+      "period": "2011 빈도 기준",
+      "caution": "성씨의 역사적 기원과 현대 개인의 경제상태를 동일시하면 안 됩니다.",
+      "sourceIds": [
+        "swedenMobility"
+      ],
+      "tags": [
+        "귀족",
+        "주의사례"
+      ]
+    },
+    {
+      "id": "KR-kim-bongwan",
+      "country": "KR",
+      "surname": "Kim",
+      "native": "김",
+      "korean": "김",
+      "group": "성씨 단독으로는 정보 부족",
+      "finding": "한국의 장기 계보 연구는 김씨 자체가 아니라 본관별 조선시대 과거급제자 기록과 현대 교육수준을 비교한다.",
+      "evidence": "lineage-study",
+      "metric": "본관별 역사적 위신 ↔ 현대 교육수준",
+      "period": "조선시대 계보 + 1960년 이후",
+      "caution": "김·이·박 같은 성씨 하나만으로 경제적 지위나 혈연을 추정하는 것은 부정확합니다.",
+      "sourceIds": [
+        "koreaLineage"
+      ],
+      "tags": [
+        "본관",
+        "문중",
+        "한국"
+      ]
+    },
+    {
+      "id": "CN-elite-groups",
+      "country": "CN",
+      "surname": "Elite surname groups",
+      "native": "历史精英姓氏群",
+      "korean": "역사적 엘리트 성씨군",
+      "group": "집단 수준 자료만 제공",
+      "finding": "1645–2012 장기 연구는 과거 엘리트 성씨 집단이 제국·공화·공산 시기에도 교육·지위에서 평균으로 천천히 회귀했다고 보고한다.",
+      "evidence": "group-study",
+      "metric": "교육·엘리트 대표성 장기 추적",
+      "period": "1645–2012",
+      "caution": "중국의 흔한 성씨 하나를 현대 자산의 대리변수로 쓰는 것은 적절하지 않습니다.",
+      "sourceIds": [
+        "chinaMobility"
+      ],
+      "tags": [
+        "중국",
+        "장기 사회이동"
+      ]
+    },
+    {
+      "id": "IT-florence-surnames",
+      "country": "IT",
+      "surname": "Florentine surname groups",
+      "native": "Cognomi fiorentini",
+      "korean": "피렌체 성씨 집단",
+      "group": "1427–2011 성씨 연결 연구",
+      "finding": "1427년 세금자료와 2011년 같은 성씨의 유사 후손을 연결한 연구에서 소득뿐 아니라 실물자산·엘리트 직업의 장기 지속성이 관찰됐다.",
+      "evidence": "long-run-study",
+      "metric": "소득·실물자산·엘리트 직업",
+      "period": "1427–2011",
+      "caution": "논문은 통계적 “pseudo-descendant” 연결을 사용합니다. 같은 성씨의 실제 혈연과 개인 자산을 보증하지 않습니다.",
+      "sourceIds": [
+        "florenceMobility"
+      ],
+      "tags": [
+        "피렌체",
+        "600년",
+        "자산"
+      ]
+    }
+  ],
+  "surnameProfiles": [
+    {
+      "country": "JP",
+      "surname": "Naoi",
+      "native": "直井",
+      "korean": "나오이",
+      "featuredRank": 1,
+      "frequency": {
+        "rank": 1277,
+        "label": "일본 전국 빈도 1,277위",
+        "population": "약 13,200명",
+        "sourceId": "myojiNaoi"
+      },
+      "why": "원래 글의 출발점인 레이의 성씨. 현재 성씨 데이터에서는 희귀한 편이지만, 장기 사회이동 연구가 나오이 자체의 부유함을 입증한 것은 아니다.",
+      "record": "희소성 데이터와 사회경제적 지위 연구를 분리해서 읽어야 하는 대표적인 팩트체크 사례.",
+      "history": "名字由来net은 直井를 전국 1,277위·약 13,200명으로 추정한다. 본 서비스가 인용한 일본 사회이동 논문은 특정 희귀 사무라이·가조쿠 성씨 집단을 연구했으며 直井를 “부유 성씨”로 판정하지 않는다.",
+      "notable": {
+        "name": "REI (IVE)",
+        "role": "가수 · IVE 멤버",
+        "note": "이 웹서비스의 출발점이 된 사례. “같은 성씨의 유명인” 표시는 개인 재산이나 가문 계보의 증거가 아니다.",
+        "sourceId": "iveRei"
+      },
+      "sourceIds": [
+        "myojiNaoi",
+        "japanMobility",
+        "reiEpisode",
+        "iveRei"
+      ]
+    },
+    {
+      "country": "JP",
+      "surname": "Daidoji",
+      "native": "大道寺",
+      "korean": "다이도지",
+      "featuredRank": 2,
+      "frequency": {
+        "rank": 8500,
+        "label": "일본 전국 빈도 8,500위",
+        "population": "약 910명",
+        "sourceId": "myojiDaidoji"
+      },
+      "why": "현대에는 희귀한 편이고, 일본 장기 사회이동 연구의 희귀 사무라이 성씨 표본에도 들어간다.",
+      "record": "현대 성씨 분포와 역사적 사무라이 표본이 동시에 확인되는 사례.",
+      "history": "名字由来net은 야마시로국의 지명·후지와라계 전승 등을 설명한다. 사회이동 논문에서는 희귀 사무라이 성씨 표본의 하나로 사용된다.",
+      "notable": {
+        "name": "大道寺友山 (Daidoji Yuzan)",
+        "role": "에도 전기 병법가·저술가",
+        "note": "1639–1730. 《武道初心集》 등으로 알려진 역사 인물. 같은 성씨의 모든 현대인이 이 인물과 직계 혈연이라는 뜻은 아니다.",
+        "sourceId": "daidojiYuzan"
+      },
+      "sourceIds": [
+        "myojiDaidoji",
+        "japanMobility",
+        "daidojiYuzan"
+      ]
+    },
+    {
+      "country": "JP",
+      "surname": "Asukai",
+      "native": "飛鳥井",
+      "korean": "아스카이",
+      "featuredRank": 3,
+      "frequency": {
+        "rank": 10399,
+        "label": "일본 전국 빈도 10,399위",
+        "population": "약 660명",
+        "sourceId": "myojiAsukai"
+      },
+      "why": "공가·가조쿠 계보와 연결되는 희귀 성씨로, 현재 인구도 적다.",
+      "record": "현대 빈도 자료에서는 약 660명. 가조쿠 성씨 표본 연구와 공가 역사 기록을 함께 볼 수 있다.",
+      "history": "名字由来net은 조정에 봉사한 공가 飛鳥井家와 후지와라계 전승을 설명한다. 장기 연구의 가조쿠 표본에도 포함된다.",
+      "notable": {
+        "name": "飛鳥井雅経 (Asukai Masatsune)",
+        "role": "가인·공경",
+        "note": "1170–1221. 국립국회도서관 전거 기록에서 가인·공경으로 확인된다.",
+        "sourceId": "asukaiMasatsune"
+      },
+      "sourceIds": [
+        "myojiAsukai",
+        "japanMobility",
+        "asukaiMasatsune"
+      ]
+    },
+    {
+      "country": "JP",
+      "surname": "Ayanokoji",
+      "native": "綾小路",
+      "korean": "아야노코지",
+      "featuredRank": 4,
+      "frequency": {
+        "rank": 43539,
+        "label": "일본 전국 빈도 43,539위",
+        "population": "약 50명",
+        "sourceId": "myojiAyanokoji"
+      },
+      "why": "현대 사용자가 매우 적고, 공가 綾小路家의 역사 전승이 남아 있는 극희귀 성씨 사례.",
+      "record": "약 50명 수준으로 추정되는 희귀 성씨. 희귀성 자체가 현대 부를 의미하지 않는다는 점도 함께 보여준다.",
+      "history": "名字由来net은 우다 겐지 계열 공가 綾小路家를 설명한다. 일본 장기 연구의 가조쿠 표본에도 들어간다.",
+      "notable": {
+        "name": "綾小路有良 (Ayanokoji Arikazu)",
+        "role": "메이지기 가가쿠(雅楽) 연주자·자작",
+        "note": "1849–1907. 궁중 가가쿠와 가회(歌会) 관련 활동이 인명사전에 기록되어 있다.",
+        "sourceId": "ayanokojiArikazu"
+      },
+      "sourceIds": [
+        "myojiAyanokoji",
+        "japanMobility",
+        "ayanokojiArikazu"
+      ]
+    },
+    {
+      "country": "JP",
+      "surname": "Tokudaiji",
+      "native": "徳大寺",
+      "korean": "도쿠다이지",
+      "featuredRank": 5,
+      "frequency": {
+        "rank": 44670,
+        "label": "일본 전국 빈도 44,670위",
+        "population": "약 50명",
+        "sourceId": "myojiTokudaiji"
+      },
+      "why": "현대 사용자가 매우 적고, 후지와라 북가 계열 공가 성씨로 설명되는 사례.",
+      "record": "약 50명으로 추정되는 극희귀 성씨이자 가조쿠 표본에 포함되는 사례.",
+      "history": "名字由来net은 후지와라 북가 계열 공가 전승과 교토의 徳大寺 창건에서 이름이 유래했다는 설명을 싣고 있다.",
+      "notable": {
+        "name": "徳大寺実則 (Tokudaiji Sanenori)",
+        "role": "메이지기 궁내 관료·정치인",
+        "note": "1840–1919. 국립국회도서관은 메이지 천황의 시종장, 궁내경, 내대신 등을 지낸 인물로 기록한다.",
+        "sourceId": "tokudaijiSanenori"
+      },
+      "sourceIds": [
+        "myojiTokudaiji",
+        "japanMobility",
+        "tokudaijiSanenori"
+      ]
+    },
+    {
+      "country": "IN",
+      "surname": "Banerjee",
+      "native": "Bandopadhyaya",
+      "korean": "바네르지",
+      "featuredRank": 6,
+      "frequency": {
+        "rank": null,
+        "label": "전국 공식 성씨 빈도순위 미확인",
+        "population": "—",
+        "sourceId": null
+      },
+      "why": "서벵골 성씨 기반 장기 사회이동 연구에서 역사적 고지위 집단을 추적할 때 등장하는 대표 성씨 가운데 하나.",
+      "record": "연구의 핵심은 “성씨 집단 대표성의 장기 지속”이며 현대 개인의 부나 카스트를 판정하는 것이 아니다.",
+      "history": "Clark·Landes 연구는 19세기와 현대의 의사·판사 등 엘리트 직종에서 특정 벵골 성씨 집단의 대표성을 비교한다.",
+      "notable": {
+        "name": "Abhijit Banerjee",
+        "role": "경제학자 · 2019 노벨 경제학상 수상자",
+        "note": "동일 성씨의 대표적 공인 예시일 뿐, 연구 표본과의 혈연·카스트·부의 연결을 뜻하지 않는다.",
+        "sourceId": "banerjeeNobel"
+      },
+      "sourceIds": [
+        "indiaMobility",
+        "banerjeeNobel"
+      ]
+    },
+    {
+      "country": "IN",
+      "surname": "Ganguly",
+      "native": "Gangopadhyaya",
+      "korean": "강굴리",
+      "featuredRank": 7,
+      "frequency": {
+        "rank": null,
+        "label": "전국 공식 성씨 빈도순위 미확인",
+        "population": "—",
+        "sourceId": null
+      },
+      "why": "벵골 장기 사회이동 연구의 역사적 성씨 집단 가운데 하나로 등장한다.",
+      "record": "사회경제적 신호는 집단·지역·시대 맥락에서만 읽어야 한다.",
+      "history": "인도 성씨는 지역·언어·종교·카스트와 얽힐 수 있어 개인 판정에 쓰면 안 된다. 본 서비스는 연구가 명시한 집단 맥락만 제공한다.",
+      "notable": {
+        "name": "Sourav Ganguly",
+        "role": "전 인도 크리켓 국가대표 · ICC Hall of Fame 2026",
+        "note": "ICC가 2026년 Hall of Fame 헌액을 발표한 공인 예시. 성씨 연구와 개인의 카스트·재산을 연결하지 않는다.",
+        "sourceId": "gangulyICC"
+      },
+      "sourceIds": [
+        "indiaMobility",
+        "gangulyICC"
+      ]
+    },
+    {
+      "country": "IN",
+      "surname": "Bhattacharya",
+      "native": "Bhattacharjee",
+      "korean": "바타차리야",
+      "featuredRank": 8,
+      "frequency": {
+        "rank": null,
+        "label": "전국 공식 성씨 빈도순위 미확인",
+        "population": "—",
+        "sourceId": null
+      },
+      "why": "서벵골 역사적 성씨 집단 연구에서 반복적으로 관찰되는 성씨군 중 하나.",
+      "record": "현대 직업 대표성의 집단 통계를 개인의 신분·자산 정보로 바꾸지 않는 것이 핵심.",
+      "history": "연구는 성씨군의 엘리트 직업 대표성을 다루며, 개별 보유자의 현재 재산을 측정하지 않는다.",
+      "notable": {
+        "name": "Arundhati Bhattacharya",
+        "role": "기업인 · Salesforce South Asia CEO",
+        "note": "Salesforce가 공개한 현직 경영자 프로필을 바탕으로 한 같은 성씨의 공인 예시.",
+        "sourceId": "bhattacharyaSalesforce"
+      },
+      "sourceIds": [
+        "indiaMobility",
+        "bhattacharyaSalesforce"
+      ]
+    },
+    {
+      "country": "IN",
+      "surname": "Sen",
+      "native": "Sengupta",
+      "korean": "센",
+      "featuredRank": 9,
+      "frequency": {
+        "rank": null,
+        "label": "전국 공식 성씨 빈도순위 미확인",
+        "population": "—",
+        "sourceId": null
+      },
+      "why": "서벵골의 기타 역사적 고지위 연구군에 포함되는 성씨 예시.",
+      "record": "성씨와 사회적 지위의 장기 상관관계를 탐색하는 연구 사례로만 취급한다.",
+      "history": "성씨를 개인의 카스트·종교·경제상태로 자동 변환하는 기능은 제공하지 않는다.",
+      "notable": {
+        "name": "Amartya Sen",
+        "role": "경제학자 · 1998 노벨 경제학상 수상자",
+        "note": "같은 성씨의 잘 알려진 공인 예시. 혈연·카스트·재산 연결을 주장하지 않는다.",
+        "sourceId": "senNobel"
+      },
+      "sourceIds": [
+        "indiaMobility",
+        "senNobel"
+      ]
+    },
+    {
+      "country": "GB",
+      "surname": "Neville",
+      "native": "",
+      "korean": "네빌",
+      "featuredRank": 10,
+      "frequency": {
+        "rank": null,
+        "label": "연구 표본 내 빈도순위 미제공",
+        "population": "—",
+        "sourceId": null
+      },
+      "why": "영국 장기 사회이동 연구가 중세 역사적 엘리트 성씨 표본 예시로 다루는 성씨.",
+      "record": "중세 기록과 현대 엘리트 교육·직업 자료를 성씨로 연결한 장기 연구 맥락.",
+      "history": "동일 성씨의 현대인이 중세 Neville 가문의 직계 후손이라고 자동 판정할 수는 없다.",
+      "notable": {
+        "name": "Gary Neville",
+        "role": "전 축구선수 · Premier League Hall of Fame",
+        "note": "현대의 같은 성씨 유명인 예시. 역사적 Neville 표본과의 계보 관계를 뜻하지 않는다.",
+        "sourceId": "garyNevillePL"
+      },
+      "sourceIds": [
+        "englandMobility",
+        "garyNevillePL"
+      ]
+    },
+    {
+      "country": "GB",
+      "surname": "Talbot",
+      "native": "",
+      "korean": "탤벗",
+      "featuredRank": 11,
+      "frequency": {
+        "rank": null,
+        "label": "연구 표본 내 빈도순위 미제공",
+        "population": "—",
+        "sourceId": null
+      },
+      "why": "중세 토지소유·엘리트 성씨 표본에 포함되는 영국 성씨 사례.",
+      "record": "사회적 지위가 여러 세대에 걸쳐 얼마나 천천히 평균으로 회귀하는지 살피는 자료군의 한 사례.",
+      "history": "역사적 표본 포함과 오늘날 개인의 자산 수준은 별개다.",
+      "notable": {
+        "name": "William Henry Fox Talbot",
+        "role": "사진술 선구자·과학자",
+        "note": "Science Museum Group은 Talbot을 사진술의 선구자로 소개한다. 여기서는 같은 성씨의 역사적 인물 예시로만 연결한다.",
+        "sourceId": "talbotScienceMuseum"
+      },
+      "sourceIds": [
+        "englandMobility",
+        "talbotScienceMuseum"
+      ]
+    },
+    {
+      "country": "GB",
+      "surname": "Berkeley",
+      "native": "",
+      "korean": "버클리",
+      "featuredRank": 12,
+      "frequency": {
+        "rank": null,
+        "label": "연구 표본 내 빈도순위 미제공",
+        "population": "—",
+        "sourceId": null
+      },
+      "why": "영국 역사적 엘리트 성씨 표본의 예시 중 하나.",
+      "record": "장기 사회이동 연구에서 성씨가 과거 지위의 정보를 얼마나 오래 보존하는지 살피는 사례.",
+      "history": "성씨 동일성만으로 역사적 귀족 계보나 경제상태를 추정하지 않는다.",
+      "notable": {
+        "name": "George Berkeley",
+        "role": "철학자 · 아일랜드 성공회 주교",
+        "note": "Stanford Encyclopedia of Philosophy이 소개하는 근대 철학자. 역사적 표본과의 혈연을 주장하지 않는다.",
+        "sourceId": "georgeBerkeleySEP"
+      },
+      "sourceIds": [
+        "englandMobility",
+        "georgeBerkeleySEP"
+      ]
+    }
+  ],
+  "japanRankComparison": [
+    {
+      "rank": 1,
+      "surname": "Sato",
+      "native": "佐藤",
+      "korean": "사토",
+      "population": "약 1,798,000명",
+      "sourceId": "myojiSato",
+      "note": "일본에서 가장 흔한 성씨로 집계되는 비교 기준."
+    },
+    {
+      "rank": 2,
+      "surname": "Suzuki",
+      "native": "鈴木",
+      "korean": "스즈키",
+      "population": "약 1,745,000명",
+      "sourceId": "myojiSuzuki",
+      "note": "흔한 성씨와 희귀 성씨의 규모 차이를 보기 위한 비교 기준."
+    },
+    {
+      "rank": 1277,
+      "surname": "Naoi",
+      "native": "直井",
+      "korean": "나오이",
+      "population": "약 13,200명",
+      "sourceId": "myojiNaoi",
+      "note": "레이 사례의 성씨. 희귀성은 확인되지만 부유함의 증거는 아님."
+    },
+    {
+      "rank": 8500,
+      "surname": "Daidoji",
+      "native": "大道寺",
+      "korean": "다이도지",
+      "population": "약 910명",
+      "sourceId": "myojiDaidoji",
+      "note": "희귀 사무라이 성씨 연구 표본에도 포함된 성씨."
+    },
+    {
+      "rank": 10399,
+      "surname": "Asukai",
+      "native": "飛鳥井",
+      "korean": "아스카이",
+      "population": "약 660명",
+      "sourceId": "myojiAsukai",
+      "note": "공가·가조쿠 역사와 연결되는 희귀 성씨 사례."
+    },
+    {
+      "rank": 43539,
+      "surname": "Ayanokoji",
+      "native": "綾小路",
+      "korean": "아야노코지",
+      "population": "약 50명",
+      "sourceId": "myojiAyanokoji",
+      "note": "현재도 매우 적은 수가 확인되는 공가계 희귀 성씨."
+    },
+    {
+      "rank": 44670,
+      "surname": "Tokudaiji",
+      "native": "徳大寺",
+      "korean": "도쿠다이지",
+      "population": "약 50명",
+      "sourceId": "myojiTokudaiji",
+      "note": "후지와라 북가 계열 공가 성씨로 설명되는 사례."
+    }
+  ],
+  "koreaSurnameRanking": [
+    {
+      "rank": 1,
+      "name": "김",
+      "hanja": "金",
+      "population": 10690000
+    },
+    {
+      "rank": 2,
+      "name": "이",
+      "hanja": "李",
+      "population": 7307000
+    },
+    {
+      "rank": 3,
+      "name": "박",
+      "hanja": "朴",
+      "population": 4192000
+    },
+    {
+      "rank": 4,
+      "name": "최",
+      "hanja": "崔",
+      "population": 2334000
+    },
+    {
+      "rank": 5,
+      "name": "정",
+      "hanja": "鄭",
+      "population": 2152000
+    },
+    {
+      "rank": 6,
+      "name": "강",
+      "hanja": "姜",
+      "population": 1177000
+    },
+    {
+      "rank": 7,
+      "name": "조",
+      "hanja": "趙",
+      "population": 1056000
+    },
+    {
+      "rank": 8,
+      "name": "윤",
+      "hanja": "尹",
+      "population": 1021000
+    },
+    {
+      "rank": 9,
+      "name": "장",
+      "hanja": "張",
+      "population": 993000
+    },
+    {
+      "rank": 10,
+      "name": "임",
+      "hanja": "林",
+      "population": 824000
+    },
+    {
+      "rank": 11,
+      "name": "한",
+      "hanja": "韓",
+      "population": 773000
+    },
+    {
+      "rank": 12,
+      "name": "오",
+      "hanja": "吳",
+      "population": 763000
+    },
+    {
+      "rank": 13,
+      "name": "서",
+      "hanja": "徐",
+      "population": 752000
+    },
+    {
+      "rank": 14,
+      "name": "신",
+      "hanja": "申",
+      "population": 741000
+    },
+    {
+      "rank": 15,
+      "name": "권",
+      "hanja": "權",
+      "population": 706000
+    },
+    {
+      "rank": 16,
+      "name": "황",
+      "hanja": "黃",
+      "population": 697000
+    },
+    {
+      "rank": 17,
+      "name": "안",
+      "hanja": "安",
+      "population": 686000
+    },
+    {
+      "rank": 18,
+      "name": "송",
+      "hanja": "宋",
+      "population": 683000
+    },
+    {
+      "rank": 19,
+      "name": "전",
+      "hanja": "全",
+      "population": 559000
+    },
+    {
+      "rank": 20,
+      "name": "홍",
+      "hanja": "洪",
+      "population": 559000
+    }
+  ],
+  "koreaBonGwanRanking": [
+    {
+      "rank": 1,
+      "name": "김해 김씨",
+      "hanja": "金海 金氏",
+      "population": 4457000
+    },
+    {
+      "rank": 2,
+      "name": "밀양 박씨",
+      "hanja": "密陽 朴氏",
+      "population": 3104000
+    },
+    {
+      "rank": 3,
+      "name": "전주 이씨",
+      "hanja": "全州 李氏",
+      "population": 2632000
+    },
+    {
+      "rank": 4,
+      "name": "경주 김씨",
+      "hanja": "慶州 金氏",
+      "population": 1801000
+    },
+    {
+      "rank": 5,
+      "name": "경주 이씨",
+      "hanja": "慶州 李氏",
+      "population": 1392000
+    },
+    {
+      "rank": 6,
+      "name": "진주 강씨",
+      "hanja": "晉州 姜氏",
+      "population": 968000
+    },
+    {
+      "rank": 7,
+      "name": "경주 최씨",
+      "hanja": "慶州 崔氏",
+      "population": 945000
+    },
+    {
+      "rank": 8,
+      "name": "광산 김씨",
+      "hanja": "光山 金氏",
+      "population": 926000
+    },
+    {
+      "rank": 9,
+      "name": "파평 윤씨",
+      "hanja": "坡平 尹氏",
+      "population": 771000
+    },
+    {
+      "rank": 10,
+      "name": "청주 한씨",
+      "hanja": "淸州 韓氏",
+      "population": 753000
+    },
+    {
+      "rank": 11,
+      "name": "안동 권씨",
+      "hanja": "安東 權氏",
+      "population": 696000
+    },
+    {
+      "rank": 12,
+      "name": "인동 장씨",
+      "hanja": "仁同 張氏",
+      "population": 667000
+    },
+    {
+      "rank": 13,
+      "name": "평산 신씨",
+      "hanja": "平山 申氏",
+      "population": 563000
+    },
+    {
+      "rank": 14,
+      "name": "순흥 안씨",
+      "hanja": "順興 安氏",
+      "population": 520000
+    },
+    {
+      "rank": 15,
+      "name": "안동 김씨",
+      "hanja": "安東 金氏",
+      "population": 520000
+    },
+    {
+      "rank": 16,
+      "name": "남양 홍씨",
+      "hanja": "南陽 洪氏",
+      "population": 487000
+    },
+    {
+      "rank": 17,
+      "name": "동래 정씨",
+      "hanja": "東萊 鄭氏",
+      "population": 475000
+    },
+    {
+      "rank": 18,
+      "name": "해주 오씨",
+      "hanja": "海州 吳氏",
+      "population": 463000
+    },
+    {
+      "rank": 19,
+      "name": "전주 최씨",
+      "hanja": "全州 崔氏",
+      "population": 458000
+    },
+    {
+      "rank": 20,
+      "name": "남평 문씨",
+      "hanja": "南平 文氏",
+      "population": 446000
+    }
+  ],
+  "koreaClanArchive": [
+    {
+      "id": "kr-gimhae-kim",
+      "bonGwan": "김해 김씨",
+      "hanja": "金海 金氏",
+      "rank": 1,
+      "population": 4457000,
+      "era": "가야 · 고대",
+      "category": "시조 전승",
+      "hook": "금관가야의 건국 서사와 이어지는 한국 최대 본관",
+      "history": "한국민족문화대백과는 금관가야 초대왕 수로왕을 김해 김씨의 시조로 설명한다. 성씨·본관의 역사를 고대 건국 설화와 함께 읽을 수 있는 대표 사례다.",
+      "record": "2015 인구주택총조사에서 약 445.7만 명으로 성씨·본관 조합 가운데 가장 큰 규모로 집계됐다.",
+      "notable": {
+        "name": "수로왕",
+        "role": "금관가야 제1대 왕 · 김해 김씨 시조"
+      },
+      "wealth": "현대 인구 규모가 크기 때문에 본관 자체만으로 개인의 경제적 지위를 추정하는 근거는 되지 않는다.",
+      "sourceIds": [
+        "koreaCensus2015",
+        "kimSuroAKS"
+      ]
+    },
+    {
+      "id": "kr-miryang-park",
+      "bonGwan": "밀양 박씨",
+      "hanja": "密陽 朴氏",
+      "rank": 2,
+      "population": 3104000,
+      "era": "신라계 전승 · 조선",
+      "category": "족보 기록",
+      "hook": "박씨 계통의 분파와 조선시대 족보 편찬사를 함께 볼 수 있는 본관",
+      "history": "1662년에 간행된 밀양박씨 족보는 신라 경명왕의 여러 왕자 분봉과 박씨 분파 연혁을 기록하고 있어 조선시대 문중이 계보를 어떻게 정리했는지 보여준다.",
+      "record": "2015년 약 310.4만 명으로 본관 인구 2위. 17세기 족보에는 본손뿐 아니라 외손과 서자녀 기록 방식의 변화도 남아 있다.",
+      "notable": {
+        "name": "박의영",
+        "role": "조선 전기 문신 · 본관 밀양"
+      },
+      "wealth": "대규모 본관이므로 “밀양 박씨=특정 계층” 식 해석은 성립하기 어렵다. 대신 족보·분파 기록 자체가 역사 콘텐츠다.",
+      "sourceIds": [
+        "koreaCensus2015",
+        "miryangParkGenealogy",
+        "parkUiyeongAKS"
+      ]
+    },
+    {
+      "id": "kr-jeonju-lee",
+      "bonGwan": "전주 이씨",
+      "hanja": "全州 李氏",
+      "rank": 3,
+      "population": 2632000,
+      "era": "고려 말 · 조선 · 대한제국",
+      "category": "왕실 계보",
+      "hook": "조선 왕실의 본관이자 국가가 관리한 왕실 족보의 중심",
+      "history": "태조 이성계의 본관이 전주이며, 조선 왕실은 종친의 계보를 국가 차원에서 관리했다. 대한제국기 『선원속보』는 전주 이씨 전체를 포괄하는 왕실 대동보 성격을 가졌다.",
+      "record": "2015년 약 263.2만 명. 왕실 종친 기록, 파별 족보, 종친부 문서 등 다른 본관과 성격이 다른 방대한 기록군이 남아 있다.",
+      "notable": {
+        "name": "태조 이성계",
+        "role": "조선 제1대 왕 · 본관 전주"
+      },
+      "wealth": "왕실과의 역사적 연관성은 명확하지만 오늘날 전주 이씨 개인의 경제상태를 의미하지 않는다.",
+      "sourceIds": [
+        "koreaCensus2015",
+        "taejoAKS",
+        "seonwonSokboAKS"
+      ]
+    },
+    {
+      "id": "kr-gyeongju-kim",
+      "bonGwan": "경주 김씨",
+      "hanja": "慶州 金氏",
+      "rank": 4,
+      "population": 1801000,
+      "era": "신라 · 고대",
+      "category": "시조 설화",
+      "hook": "김알지 탄생 설화와 신라 김씨 왕계의 출발점",
+      "history": "『삼국사기』와 『삼국유사』에 전하는 김알지 설화는 경주 김씨의 시조 전승으로 이어진다. 김씨 왕계가 신라에서 정치적 비중을 확대하는 서사와 함께 읽을 수 있다.",
+      "record": "2015년 약 180.1만 명. 경주 계림은 김알지 탄생 전승과 연결된 사적으로 남아 있다.",
+      "notable": {
+        "name": "김알지",
+        "role": "경주 김씨 시조로 전승되는 신라 인물"
+      },
+      "wealth": "고대 왕계와의 전승은 역사적 정체성의 문제이며 현대 개인의 자산과는 별개다.",
+      "sourceIds": [
+        "koreaCensus2015",
+        "kimAljiAKS"
+      ]
+    },
+    {
+      "id": "kr-gyeongju-lee",
+      "bonGwan": "경주 이씨",
+      "hanja": "慶州 李氏",
+      "rank": 5,
+      "population": 1392000,
+      "era": "조선",
+      "category": "관료·정치",
+      "hook": "임진왜란과 조선 중기 정치에서 오성대감 이항복으로 기억되는 본관",
+      "history": "이항복은 경주 이씨로 임진왜란기 병조판서·영의정 등을 지냈다. 특정 본관을 왕실이나 시조 서사만이 아니라 실제 관료·전쟁·정치사의 인물로 연결해 볼 수 있는 사례다.",
+      "record": "2015년 약 139.2만 명. 조선시대 문신과 학자 기록에서 본관 표기가 중요한 인적 정보로 반복된다.",
+      "notable": {
+        "name": "이항복",
+        "role": "조선 중기 문신 · 영의정 · 본관 경주"
+      },
+      "wealth": "조선시대 고위 관료 배출 기록을 현대 본관 구성원의 계층으로 일반화해서는 안 된다.",
+      "sourceIds": [
+        "koreaCensus2015",
+        "yiHangbokAKS"
+      ]
+    },
+    {
+      "id": "kr-jinju-kang",
+      "bonGwan": "진주 강씨",
+      "hanja": "晉州 姜氏",
+      "rank": 6,
+      "population": 968000,
+      "era": "고려",
+      "category": "군사·공신",
+      "hook": "거란 침입기 고려의 장군 강민첨 기록으로 이어지는 본관",
+      "history": "강민첨은 본관 진주로, 고려 현종 때 동여진과 거란 침입에 맞서 활동한 장수·공신으로 기록된다.",
+      "record": "2015년 약 96.8만 명. 본관 기록과 인물 전기를 함께 읽으면 동일 성씨 안에서도 지역·계보 구분이 중요함을 알 수 있다.",
+      "notable": {
+        "name": "강민첨",
+        "role": "고려 전기 장수·공신 · 본관 진주"
+      },
+      "wealth": "군공과 관직 기록은 역사적 위신 자료이지 현대 자산 순위가 아니다.",
+      "sourceIds": [
+        "koreaCensus2015",
+        "gangMincheomAKS"
+      ]
+    },
+    {
+      "id": "kr-gyeongju-choi",
+      "bonGwan": "경주 최씨",
+      "hanja": "慶州 崔氏",
+      "rank": 7,
+      "population": 945000,
+      "era": "통일신라",
+      "category": "학문·문장",
+      "hook": "당 유학과 동아시아 문장으로 이름을 남긴 최치원의 본관",
+      "history": "최치원은 경주 최씨로 당 유학 뒤 통일신라에서 학자·문장가·관료로 활동했다. 성씨 기록을 정치권력뿐 아니라 지식인 네트워크와 문화사로 확장해 볼 수 있다.",
+      "record": "2015년 약 94.5만 명. 최치원의 저술과 사상은 고려·조선에서도 계속 주목됐다.",
+      "notable": {
+        "name": "최치원",
+        "role": "통일신라 학자·문장가·관료 · 본관 경주"
+      },
+      "wealth": "학문적 명성과 본관의 역사적 위신은 현대 개인의 재산과 별개다.",
+      "sourceIds": [
+        "koreaCensus2015",
+        "choeChiwonAKS"
+      ]
+    },
+    {
+      "id": "kr-gwangsan-kim",
+      "bonGwan": "광산 김씨",
+      "hanja": "光山 金氏",
+      "rank": 8,
+      "population": 926000,
+      "era": "조선",
+      "category": "성리학·예학",
+      "hook": "사계 김장생을 중심으로 조선 예학과 학맥을 읽을 수 있는 본관",
+      "history": "김장생은 본관 광산으로 조선 후기 예학과 성리학을 대표하는 학자 가운데 하나다. 가문 기록을 관직만이 아니라 학문 계승의 관점에서 볼 수 있다.",
+      "record": "2015년 약 92.6만 명. 김장생과 그의 아들 김집 등은 조선 유학사에서 중요한 학맥을 형성했다.",
+      "notable": {
+        "name": "김장생",
+        "role": "조선 유학자·문신 · 본관 광산"
+      },
+      "wealth": "학맥과 정치적 영향력은 경제적 부와 동일한 개념이 아니다.",
+      "sourceIds": [
+        "koreaCensus2015",
+        "kimJangsaengAKS"
+      ]
+    },
+    {
+      "id": "kr-papyeong-yun",
+      "bonGwan": "파평 윤씨",
+      "hanja": "坡平 尹氏",
+      "rank": 9,
+      "population": 771000,
+      "era": "고려",
+      "category": "군사·외교",
+      "hook": "별무반과 여진 정벌로 알려진 윤관의 본관",
+      "history": "윤관은 본관 파평으로 고려 숙종·예종대 문신이자 여진 정벌 지휘관으로 활동했다. 별무반과 동북 9성 기록을 통해 고려의 북방정책을 함께 볼 수 있다.",
+      "record": "2015년 약 77.1만 명. 윤관 묘와 관련한 조선 후기 문중 간 산송 기록까지 남아 있어 “문중의 기억” 자체도 역사 자료가 된다.",
+      "notable": {
+        "name": "윤관",
+        "role": "고려 전기 문신·장군 · 본관 파평"
+      },
+      "wealth": "고려 공신 계보와 오늘날 개별 구성원의 경제적 지위는 분리해야 한다.",
+      "sourceIds": [
+        "koreaCensus2015",
+        "yunGwanAKS"
+      ]
+    },
+    {
+      "id": "kr-cheongju-han",
+      "bonGwan": "청주 한씨",
+      "hanja": "淸州 韓氏",
+      "rank": 10,
+      "population": 753000,
+      "era": "조선 전기",
+      "category": "권력·왕실 혼인",
+      "hook": "한명회와 왕실 혼인을 통해 조선 전기 권력구조를 보여주는 본관",
+      "history": "한명회는 본관 청주로 세조·예종·성종대 핵심 권력자로 활동했고 두 딸이 왕비가 됐다. 청주 한씨 족보는 왕후 세계를 별도로 수록하는 등 왕실과의 연결을 강조했다.",
+      "record": "2015년 약 75.3만 명. 권력·혼인·족보 편찬이 결합되는 조선 전기 가문사의 전형적 사례다.",
+      "notable": {
+        "name": "한명회",
+        "role": "조선 전기 영의정 · 본관 청주"
+      },
+      "wealth": "역사적 권세와 현대 본관 구성원의 부를 동일시해서는 안 된다.",
+      "sourceIds": [
+        "koreaCensus2015",
+        "hanMyeonghoeAKS",
+        "cheongjuHanGenealogy"
+      ]
+    },
+    {
+      "id": "kr-andong-kwon",
+      "bonGwan": "안동 권씨",
+      "hanja": "安東 權氏",
+      "rank": 11,
+      "population": 696000,
+      "era": "후삼국 · 고려",
+      "category": "사성·개국공신",
+      "hook": "고창전투 공로와 고려 태조의 사성 기록이 남은 본관",
+      "history": "권행은 고창전투에서 고려군에 협력해 공을 세우고 왕건에게 권씨 성을 하사받았다고 전한다. 한국 성씨 형성에서 “사성”이라는 제도를 보여주는 좋은 사례다.",
+      "record": "2015년 약 69.6만 명. 17세기 안동권씨 족보 편찬 기록도 남아 있다.",
+      "notable": {
+        "name": "권행",
+        "role": "고려 개국공신 · 안동 권씨 시조"
+      },
+      "wealth": "개국공신 시조 전승은 가문사의 출발점이지 현대의 경제적 지위를 보장하지 않는다.",
+      "sourceIds": [
+        "koreaCensus2015",
+        "gwonHaengAKS",
+        "andongKwonGenealogy"
+      ]
+    },
+    {
+      "id": "kr-indong-jang",
+      "bonGwan": "인동 장씨",
+      "hanja": "仁同 張氏",
+      "rank": 12,
+      "population": 667000,
+      "era": "조선",
+      "category": "학문·교육",
+      "hook": "여헌 장현광을 통해 조선 성리학과 지역 학맥을 읽는 본관",
+      "history": "장현광은 본관 인동으로 관직보다 학문과 교육에 비중을 두었던 조선 후기 학자다. 가문 기록을 정치 엘리트 일변도가 아니라 학문 공동체의 역사로 볼 수 있다.",
+      "record": "2015년 약 66.7만 명. 지역 기반 학맥과 문중의 관계를 살펴볼 수 있다.",
+      "notable": {
+        "name": "장현광",
+        "role": "조선 후기 성리학자 · 본관 인동"
+      },
+      "wealth": "학자 가문의 명성과 현대 경제지위는 별개의 층위다.",
+      "sourceIds": [
+        "koreaCensus2015",
+        "jangHyeongwangAKS"
+      ]
+    },
+    {
+      "id": "kr-pyeongsan-shin",
+      "bonGwan": "평산 신씨",
+      "hanja": "平山 申氏",
+      "rank": 13,
+      "population": 563000,
+      "era": "후삼국 · 고려",
+      "category": "개국공신",
+      "hook": "왕건을 구하고 전사한 개국공신 신숭겸의 본관",
+      "history": "신숭겸은 고려 개국공신 1등에 책록된 장수로 평산 신씨의 시조다. 후삼국 통일 과정과 성씨·본관 형성을 함께 보여준다.",
+      "record": "2015년 약 56.3만 명. 개국공신 서사와 지역 본관의 결합을 확인할 수 있다.",
+      "notable": {
+        "name": "신숭겸",
+        "role": "고려 개국공신 · 평산 신씨 시조"
+      },
+      "wealth": "공신 가문의 역사적 명예와 현대 개인의 부는 직접 연결되지 않는다.",
+      "sourceIds": [
+        "koreaCensus2015",
+        "shinSunggyeomAKS"
+      ]
+    },
+    {
+      "id": "kr-andong-kim",
+      "bonGwan": "안동 김씨",
+      "hanja": "安東 金氏",
+      "rank": 15,
+      "population": 520000,
+      "era": "조선 후기",
+      "category": "세도정치·족보",
+      "hook": "19세기 세도정치와 1580년대 족보 기록을 동시에 볼 수 있는 본관",
+      "history": "김조순은 본관 안동으로 순조대 이후 정치적 영향력을 키웠고, 안동 김씨 세력은 19세기 세도정치의 핵심으로 평가된다. 한편 1580년경 간행된 『안동김씨성보』는 조선 전기 족보 편찬사 자료이기도 하다.",
+      "record": "2015년 약 52.0만 명. “권력가문”이라는 대중적 이미지는 특정 시대 정치사에 근거하며 본관 전체의 현대적 경제상태와는 구별해야 한다.",
+      "notable": {
+        "name": "김조순",
+        "role": "조선 후기 문신 · 안동 김씨 세도정치의 중심 인물"
+      },
+      "wealth": "이 본관은 “부자 성씨”보다 특정 시기 정치권력 집중의 사례로 다루는 것이 정확하다.",
+      "sourceIds": [
+        "koreaCensus2015",
+        "kimJosunAKS",
+        "sedoPoliticsAKS",
+        "andongKimGenealogy"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "myojiSato",
+      "title": "名字由来net — 佐藤 surname page",
+      "org": "名字由来net",
+      "year": "2026-09-28 갱신",
+      "url": "https://myoji-yurai.net/searchResult.htm?from=rank&myojiKanji=%E4%BD%90%E8%97%A4",
+      "note": "佐藤를 일본 전국 1위, 약 1,798,000명으로 추정. 희귀 성씨와 규모를 비교하기 위한 기준 데이터.",
+      "type": "current-surname-data"
+    },
+    {
+      "id": "myojiSuzuki",
+      "title": "名字由来net — 鈴木 surname page",
+      "org": "名字由来net",
+      "year": "2026-09-25 갱신",
+      "url": "https://myoji-yurai.net/searchResult.htm?from=rank&myojiKanji=%E9%88%B4%E6%9C%A8",
+      "note": "鈴木를 일본 전국 2위, 약 1,745,000명으로 추정.",
+      "type": "current-surname-data"
+    },
+    {
+      "id": "myojiDaidoji",
+      "title": "名字由来net — 大道寺 surname page",
+      "org": "名字由来net",
+      "year": "2026-04-03 갱신",
+      "url": "https://myoji-yurai.net/searchResult.htm?myojiKanji=%E5%A4%A7%E9%81%93%E5%AF%BA",
+      "note": "大道寺를 일본 전국 8,500위, 약 910명으로 추정하며 주요 분포와 유래 설명을 제공.",
+      "type": "current-surname-data"
+    },
+    {
+      "id": "myojiAsukai",
+      "title": "名字由来net — 飛鳥井 surname page",
+      "org": "名字由来net",
+      "year": "2025-08-12 갱신",
+      "url": "https://myoji-yurai.net/searchResult.htm?from=rank&myojiKanji=%E9%A3%9B%E9%B3%A5%E4%BA%95",
+      "note": "飛鳥井를 일본 전국 10,399위, 약 660명으로 추정하며 공가 飛鳥井家 관련 유래를 설명.",
+      "type": "current-surname-data"
+    },
+    {
+      "id": "myojiAyanokoji",
+      "title": "名字由来net — 綾小路 surname page",
+      "org": "名字由来net",
+      "year": "2026-06-03 갱신",
+      "url": "https://myoji-yurai.net/searchResult.htm?myojiKanji=%E7%B6%BE%E5%B0%8F%E8%B7%AF",
+      "note": "綾小路를 일본 전국 43,539위, 약 50명으로 추정하며 공가 綾小路家 유래를 설명.",
+      "type": "current-surname-data"
+    },
+    {
+      "id": "myojiTokudaiji",
+      "title": "名字由来net — 徳大寺 surname page",
+      "org": "名字由来net",
+      "year": "2026-07-06 갱신",
+      "url": "https://myoji-yurai.net/searchResult.htm?from=rank&myojiKanji=%E5%BE%B3%E5%A4%A7%E5%AF%BA",
+      "note": "徳大寺를 일본 전국 44,670위, 약 50명으로 추정하며 후지와라 북가 계열 공가 유래를 설명.",
+      "type": "current-surname-data"
+    },
+    {
+      "id": "reiEpisode",
+      "title": "FOLLOW REI EP.18 — Korea-Japan match with Kangnam",
+      "org": "FOLLOW REI / YouTube",
+      "year": "2024-02-22",
+      "url": "https://www.youtube.com/watch?v=TX0m8N_DGNs",
+      "note": "기존 글의 출발점이 된 영상. 레이와 강남의 출신지·성씨 관련 대화 맥락을 확인하는 원자료 링크.",
+      "type": "primary-video-source"
+    },
+    {
+      "id": "iveRei",
+      "title": "IVE Japan Official Profile — REI",
+      "org": "IVE JAPAN OFFICIAL SITE",
+      "year": "2026 확인",
+      "url": "https://ive-official.jp/mob/pageShw.php?aff=ROBO004&cd=profile&site=DIVE",
+      "note": "IVE의 일본 공식 프로필에서 REI를 멤버로 소개. 본 서비스에서는 원래 사례의 인물 확인용으로 사용.",
+      "type": "official-profile"
+    },
+    {
+      "id": "daidojiYuzan",
+      "title": "大道寺友山",
+      "org": "コトバンク / 日本大百科全書 등",
+      "year": "1639–1730",
+      "url": "https://kotobank.jp/word/%E5%A4%A7%E9%81%93%E5%AF%BA%E5%8F%8B%E5%B1%B1-91682",
+      "note": "에도 전기의 병법가·저술가 大道寺友山의 생애와 저술 기록.",
+      "type": "biographical-reference"
+    },
+    {
+      "id": "asukaiMasatsune",
+      "title": "飛鳥井, 雅経, 1170-1221",
+      "org": "국립국회도서관 Web NDL Authorities",
+      "year": "1170–1221",
+      "url": "https://id.ndl.go.jp/auth/ndlna/00269279",
+      "note": "飛鳥井雅経을 가인·공경으로 기록한 국립국회도서관 전거 데이터.",
+      "type": "official-authority-record"
+    },
+    {
+      "id": "ayanokojiArikazu",
+      "title": "綾小路有良",
+      "org": "コトバンク / 인명사전",
+      "year": "1849–1907",
+      "url": "https://kotobank.jp/word/%E7%B6%BE%E5%B0%8F%E8%B7%AF%E6%9C%89%E8%89%AF-1050947",
+      "note": "메이지기 자작·가가쿠 연주자·궁내성 가가쿠부장으로 활동한 綾小路有良 기록.",
+      "type": "biographical-reference"
+    },
+    {
+      "id": "tokudaijiSanenori",
+      "title": "徳大寺実則 — 近代日本人の肖像",
+      "org": "국립국회도서관",
+      "year": "1840–1919",
+      "url": "https://www.ndl.go.jp/portrait/datas/6425",
+      "note": "덕대사 실칙(徳大寺実則)의 관료·정치 경력과 초상 자료.",
+      "type": "official-biographical-record"
+    },
+    {
+      "id": "banerjeeNobel",
+      "title": "Abhijit Banerjee — Biographical",
+      "org": "NobelPrize.org",
+      "year": "2019 laureate",
+      "url": "https://www.nobelprize.org/prizes/economic-sciences/2019/banerjee/biographical/",
+      "note": "2019 노벨 경제학상 수상자 Abhijit Banerjee의 공식 전기.",
+      "type": "official-profile"
+    },
+    {
+      "id": "senNobel",
+      "title": "Amartya Sen — Biographical",
+      "org": "NobelPrize.org",
+      "year": "1998 laureate",
+      "url": "https://www.nobelprize.org/prizes/economic-sciences/1998/sen/biographical/",
+      "note": "1998 노벨 경제학상 수상자 Amartya Sen의 공식 전기.",
+      "type": "official-profile"
+    },
+    {
+      "id": "gangulyICC",
+      "title": "ICC Hall of Fame — Sourav Ganguly induction",
+      "org": "International Cricket Council",
+      "year": "2026-07-11",
+      "url": "https://www.icc-cricket.com/media-releases/icc-honours-sourav-ganguly-anjum-chopra-and-kevin-pietersen-with-induction-into-the-icc-hall-of-fame",
+      "note": "ICC가 Sourav Ganguly의 2026 Hall of Fame 헌액을 발표한 공식 자료.",
+      "type": "official-profile"
+    },
+    {
+      "id": "bhattacharyaSalesforce",
+      "title": "Arundhati Bhattacharya — Author Profile",
+      "org": "Salesforce",
+      "year": "2026 확인",
+      "url": "https://www.salesforce.com/in/blog/author/arundhati-bhattacharya/",
+      "note": "Salesforce가 Arundhati Bhattacharya를 India/South Asia의 경영 리더로 소개하는 공식 프로필.",
+      "type": "official-profile"
+    },
+    {
+      "id": "talbotScienceMuseum",
+      "title": "William Henry Fox Talbot",
+      "org": "Science Museum Group Collection",
+      "year": "1800–1877",
+      "url": "https://collection.sciencemuseumgroup.org.uk/people/cp37726/william-henry-fox-talbot",
+      "note": "사진술 선구자 William Henry Fox Talbot의 생애와 연구를 소개하는 박물관 기록.",
+      "type": "museum-biography"
+    },
+    {
+      "id": "garyNevillePL",
+      "title": "Gary Neville — Hall of Fame Inductee",
+      "org": "Premier League",
+      "year": "2025",
+      "url": "https://www.premierleague.com/en/events/hall-of-fame/inductees/gary-neville",
+      "note": "Gary Neville의 Premier League 경력과 Hall of Fame 헌액 프로필.",
+      "type": "official-profile"
+    },
+    {
+      "id": "georgeBerkeleySEP",
+      "title": "George Berkeley",
+      "org": "Stanford Encyclopedia of Philosophy",
+      "year": "2026 revision",
+      "url": "https://plato.stanford.edu/entries/berkeley/",
+      "note": "철학자 George Berkeley의 생애와 사상을 다룬 학술 참고자료.",
+      "type": "academic-biography"
+    },
+    {
+      "id": "myojiNaoi",
+      "title": "名字由来net — 直井(なおい) surname page",
+      "org": "名字由来net",
+      "year": "2024-10-20 갱신 / 2026-10-02 확인",
+      "url": "https://myoji-yurai.net/searchResult.htm?myojiKanji=%E7%9B%B4%E4%BA%95",
+      "note": "直井를 전국 1,277위, 약 13,200명으로 추정하는 민간 성씨 데이터. 페이지 최종 갱신 표시는 2024-10-20이며, 본 서비스는 2026-10-02에 재확인.",
+      "type": "current-surname-data"
+    },
+    {
+      "id": "japanLaw",
+      "title": "我が国における氏の制度の変遷",
+      "org": "일본 법무성",
+      "year": "current page",
+      "url": "https://www.moj.go.jp/MINJI/minji36-02.html",
+      "note": "1870년 평민의 성씨 사용 허용, 1875년 성씨 사용 의무화 등 일본 성씨 제도의 변천을 설명.",
+      "type": "official-history"
+    },
+    {
+      "id": "aichi2023",
+      "title": "愛知県の県民経済計算（2023年度）",
+      "org": "아이치현 통계과",
+      "year": "2026 발표 / 2023년도 수치",
+      "url": "https://www.pref.aichi.jp/press-release/toukei20260130-2023kenminkeizai.html",
+      "note": "2023년도 1인당 현민소득 415만 엔. 이 지표는 임금뿐 아니라 기업소득도 포함하므로 개인 연봉과 동일하지 않음.",
+      "type": "official-economic-data"
+    },
+    {
+      "id": "aichiMunicipal2023",
+      "title": "愛知県の市町村民経済計算（2023年度）",
+      "org": "아이치현 통계과",
+      "year": "2026 발표 / 2023년도 수치",
+      "url": "https://www.pref.aichi.jp/press-release/toukei20260319-2023shichosonminkeizai.html",
+      "note": "도요타시는 인구 1인당 시정촌민소득 793.7만 엔. 법인소득을 포함해 개인 급여를 뜻하지 않는다고 공식 주의문구가 있음.",
+      "type": "official-economic-data"
+    },
+    {
+      "id": "japanMobility",
+      "title": "Social Mobility in Japan, 1868-2012: The Surprising Persistence of the Samurai",
+      "org": "Gregory Clark & Tatsuya Ishii, UC Davis working paper",
+      "year": "2012",
+      "url": "https://faculty.econ.ucdavis.edu/faculty/gclark/papers/Japan%202012.pdf",
+      "note": "희귀 사무라이·가조쿠 성씨 집단의 현대 엘리트 직종 과대표현을 추적. 집단 평균 연구이며 특정 성씨 보유자의 부를 판정하지 않음.",
+      "type": "academic-working-paper"
+    },
+    {
+      "id": "indiaMobility",
+      "title": "Caste versus Class: Social Mobility in India, 1860-2012",
+      "org": "Gregory Clark & Zach Landes, UC Davis working paper",
+      "year": "2013",
+      "url": "https://faculty.econ.ucdavis.edu/faculty/gclark/The%20Son%20Also%20Rises/India2013.pdf",
+      "note": "벵골·서벵골의 성씨 집단을 의사·판사 등 엘리트 직종에서 추적. 카스트·종교와 얽힌 매우 민감한 집단 자료이므로 개인 추정에 사용하면 안 됨.",
+      "type": "academic-working-paper"
+    },
+    {
+      "id": "indiaIncomeMobility",
+      "title": "Income mobility across castes in India: a longitudinal analysis",
+      "org": "Review of Income and Wealth / RePEc record",
+      "year": "2023",
+      "url": "https://ideas.repec.org/a/spr/inecre/v58y2023i2d10.1007_s41775-023-00207-7.html",
+      "note": "1993–2012 장기자료에서 카스트 집단 간 소득이동 차이를 분석. 성씨별 분석은 아니며 인도 맥락 설명용 보조 근거.",
+      "type": "peer-reviewed-research"
+    },
+    {
+      "id": "englandMobility",
+      "title": "Surnames and Social Mobility: England 1230-2012",
+      "org": "Gregory Clark & Neil Cummins",
+      "year": "2013 working paper",
+      "url": "https://eprints.lse.ac.uk/60593/",
+      "note": "옥스퍼드·케임브리지 기록과 성씨 빈도를 이용해 장기 사회적 지위 지속성을 추정. 역사적 엘리트 성씨 예시를 제시.",
+      "type": "academic-working-paper"
+    },
+    {
+      "id": "swedenMobility",
+      "title": "What is the True Rate of Social Mobility in Sweden? A Surname Analysis, 1700-2012",
+      "org": "Gregory Clark, UC Davis working paper",
+      "year": "2012",
+      "url": "https://faculty.econ.ucdavis.edu/faculty/gclark/papers/Sweden%202012%20AUG.pdf",
+      "note": "귀족 성씨와 Andersson 등을 직업·교육·2008년 세금자료로 비교. 귀족 성씨 집단의 평균소득·자본소득 차이를 보고.",
+      "type": "academic-working-paper"
+    },
+    {
+      "id": "chinaMobility",
+      "title": "Social mobility in China, 1645–2012: A surname study",
+      "org": "Yu Hao · China Economic Quarterly International",
+      "year": "2021",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2666933121000332",
+      "note": "후기 제국·공화·공산 시기의 역사적 엘리트 성씨 집단을 추적해 사회적 지위의 장기 지속성을 연구한 공개 학술논문.",
+      "type": "peer-reviewed-research"
+    },
+    {
+      "id": "koreaLineage",
+      "title": "Does lineage matter? A study of ancestral influence on educational attainment in Korea",
+      "org": "Christopher Paik, Economic History Review",
+      "year": "2014",
+      "url": "https://academic.oup.com/ereh/article-abstract/18/4/433/2465237",
+      "note": "한국은 성씨 하나보다 본관(본관/문중) 정보가 중요하다고 보고, 조선시대 과거급제자 기반 본관 위신과 현대 교육수준의 상관을 분석.",
+      "type": "peer-reviewed-research"
+    },
+    {
+      "id": "florenceMobility",
+      "title": "Intergenerational mobility in the very long run: Florence 1427-2011",
+      "org": "Banca d'Italia — Guglielmo Barone & Sauro Mocetti",
+      "year": "2016 working paper / 2021 journal publication",
+      "url": "https://www.bancaditalia.it/pubblicazioni/temi-discussione/2016/2016-1060/index.html",
+      "note": "1427년 피렌체 주민과 2011년 같은 성씨의 ‘유사 후손’을 연결해 소득·실물자산·엘리트 직업의 장기 지속성을 분석.",
+      "type": "official-research-paper"
+    },
+    {
+      "id": "globalSurnameMethod",
+      "title": "What is the True Rate of Social Mobility? Evidence from the Information Content of Surnames",
+      "org": "Gregory Clark, AEA conference paper",
+      "year": "2013",
+      "url": "https://www.aeaweb.org/conference/2013/retrieve.php?pdfid=504",
+      "note": "영국·스웨덴·미국·인도·일본·중국/대만의 성씨를 이용한 사회이동 연구 방법을 비교.",
+      "type": "conference-paper"
+    },
+    {
+      "id": "koreaCensus2015",
+      "title": "2015 인구주택총조사 — 성씨 및 본관 집계",
+      "org": "통계청",
+      "year": "2016 발표 / 2015 기준",
+      "url": "https://www.kostat.go.kr/boardDownload.es?bid=203&list_no=356061&seq=8",
+      "note": "성씨별 인구와 상위 성씨·본관별 인구를 수록. 본 서비스의 한국 성씨 TOP 20과 본관 TOP 20 기준.",
+      "type": "official-census-data"
+    },
+    {
+      "id": "kimSuroAKS",
+      "title": "수로왕",
+      "org": "한국민족문화대백과사전",
+      "year": "2023 수정",
+      "url": "https://encykorea.aks.ac.kr/Article/E0031325",
+      "note": "금관가야 초대왕이자 김해 김씨의 시조로 설명.",
+      "type": "academic-encyclopedia"
+    },
+    {
+      "id": "miryangParkGenealogy",
+      "title": "밀양박씨 족보(숭정임인보)",
+      "org": "한국민족문화대백과사전",
+      "year": "1662 자료 / 2022 수정",
+      "url": "https://encykorea.aks.ac.kr/Article/E0020408",
+      "note": "1662년 간행된 밀양박씨 족보와 분파 연혁, 자녀 기록 방식 등을 설명.",
+      "type": "genealogy-record"
+    },
+    {
+      "id": "parkUiyeongAKS",
+      "title": "박의영",
+      "org": "한국민족문화대백과사전",
+      "year": "2023 수정",
+      "url": "https://encykorea.aks.ac.kr/Article/E0021041",
+      "note": "본관 밀양의 조선 전기 문신 박의영의 전기.",
+      "type": "academic-biography"
+    },
+    {
+      "id": "taejoAKS",
+      "title": "태조",
+      "org": "한국민족문화대백과사전",
+      "year": "2025 수정",
+      "url": "https://encykorea.aks.ac.kr/Article/E0059033",
+      "note": "조선 제1대 왕 이성계의 본관을 전주로 기록.",
+      "type": "academic-biography"
+    },
+    {
+      "id": "seonwonSokboAKS",
+      "title": "선원속보",
+      "org": "한국민족문화대백과사전",
+      "year": "2024 수정",
+      "url": "https://encykorea.aks.ac.kr/Article/E0028866",
+      "note": "대한제국기 종정원에서 간행한 조선 왕실의 종합 족보로 전주 이씨 전체를 수록.",
+      "type": "royal-genealogy-record"
+    },
+    {
+      "id": "kimAljiAKS",
+      "title": "김알지",
+      "org": "한국민족문화대백과사전",
+      "year": "2023 수정",
+      "url": "https://encykorea.aks.ac.kr/Article/E0009726",
+      "note": "신라 경주 김씨의 시조 전승과 김알지 설화를 설명.",
+      "type": "academic-encyclopedia"
+    },
+    {
+      "id": "yiHangbokAKS",
+      "title": "이항복",
+      "org": "한국민족문화대백과사전",
+      "year": "2026 확인",
+      "url": "https://encykorea.aks.ac.kr/Article/E0046429",
+      "note": "본관 경주의 조선 중기 문신 이항복의 관직과 활동 기록.",
+      "type": "academic-biography"
+    },
+    {
+      "id": "gangMincheomAKS",
+      "title": "강민첨",
+      "org": "한국민족문화대백과사전",
+      "year": "2025 수정",
+      "url": "https://encykorea.aks.ac.kr/Article/E0001152",
+      "note": "본관 진주의 고려 전기 장수·공신 강민첨 기록.",
+      "type": "academic-biography"
+    },
+    {
+      "id": "choeChiwonAKS",
+      "title": "최치원",
+      "org": "한국민족문화대백과사전",
+      "year": "2026 수정",
+      "url": "https://encykorea.aks.ac.kr/Article/E0057711",
+      "note": "본관 경주의 통일신라 학자·문장가·관료 최치원 기록.",
+      "type": "academic-biography"
+    },
+    {
+      "id": "kimJangsaengAKS",
+      "title": "김장생",
+      "org": "한국민족문화대백과사전",
+      "year": "2023 수정",
+      "url": "https://encykorea.aks.ac.kr/Article/E0010318",
+      "note": "본관 광산의 조선 예학자 김장생 기록.",
+      "type": "academic-biography"
+    },
+    {
+      "id": "yunGwanAKS",
+      "title": "윤관",
+      "org": "한국민족문화대백과사전",
+      "year": "2026 수정",
+      "url": "https://encykorea.aks.ac.kr/Article/E0042215",
+      "note": "본관 파평의 고려 문신·장군 윤관과 별무반·여진 정벌 기록.",
+      "type": "academic-biography"
+    },
+    {
+      "id": "hanMyeonghoeAKS",
+      "title": "한명회",
+      "org": "한국민족문화대백과사전",
+      "year": "2022 수정",
+      "url": "https://encykorea.aks.ac.kr/Article/E0061599",
+      "note": "본관 청주의 조선 전기 문신 한명회와 왕실 혼인·정치활동 기록.",
+      "type": "academic-biography"
+    },
+    {
+      "id": "cheongjuHanGenealogy",
+      "title": "청주한씨 세보",
+      "org": "한국민족문화대백과사전",
+      "year": "조선 후기 자료",
+      "url": "https://encykorea.aks.ac.kr/Article/E0056764",
+      "note": "청주 한씨의 선대 사적과 왕후 세계 등을 수록한 족보 기록.",
+      "type": "genealogy-record"
+    },
+    {
+      "id": "gwonHaengAKS",
+      "title": "권행",
+      "org": "한국민족문화대백과사전",
+      "year": "2023 수정",
+      "url": "https://encykorea.aks.ac.kr/Article/E0007131",
+      "note": "고창전투 공로 뒤 고려 태조에게 권씨 성을 하사받은 안동 권씨 시조 기록.",
+      "type": "academic-biography"
+    },
+    {
+      "id": "andongKwonGenealogy",
+      "title": "안동권씨 을사보",
+      "org": "한국민족문화대백과사전",
+      "year": "1605 자료 / 2025 수정",
+      "url": "https://encykorea.aks.ac.kr/Article/E0034590",
+      "note": "1605년에 편찬된 안동 권씨 족보 관련 기록.",
+      "type": "genealogy-record"
+    },
+    {
+      "id": "jangHyeongwangAKS",
+      "title": "장현광",
+      "org": "한국민족문화대백과사전",
+      "year": "2026 확인",
+      "url": "https://encykorea.aks.ac.kr/Article/E0048902",
+      "note": "본관 인동의 조선 후기 성리학자 장현광 기록.",
+      "type": "academic-biography"
+    },
+    {
+      "id": "shinSunggyeomAKS",
+      "title": "신숭겸",
+      "org": "한국민족문화대백과사전",
+      "year": "2026 확인",
+      "url": "https://encykorea.aks.ac.kr/Article/E0033141",
+      "note": "평산 신씨 시조이자 고려 개국공신 신숭겸 기록.",
+      "type": "academic-biography"
+    },
+    {
+      "id": "kimJosunAKS",
+      "title": "김조순",
+      "org": "한국민족문화대백과사전",
+      "year": "2023 수정",
+      "url": "https://encykorea.aks.ac.kr/Article/E0010476",
+      "note": "본관 안동의 조선 후기 문신 김조순 기록.",
+      "type": "academic-biography"
+    },
+    {
+      "id": "sedoPoliticsAKS",
+      "title": "세도정치",
+      "org": "한국민족문화대백과사전",
+      "year": "2026 확인",
+      "url": "https://encykorea.aks.ac.kr/Article/E0029786",
+      "note": "순조 이후 안동 김씨 등 외척 가문의 권력 집중 과정을 설명.",
+      "type": "academic-history"
+    },
+    {
+      "id": "andongKimGenealogy",
+      "title": "안동김씨 성보",
+      "org": "한국민족문화대백과사전",
+      "year": "1580경 자료 / 2024 수정",
+      "url": "https://encykorea.aks.ac.kr/Article/E0073015",
+      "note": "1580년경 간행된 안동 김씨 족보로 조선 전기 족보 편찬사를 보여주는 기록.",
+      "type": "genealogy-record"
+    },
+    {
+      "id": "toyotaHistory",
+      "title": "The Beginnings — History of Toyota",
+      "org": "Toyota Motor Corporation",
+      "year": "official history · 2026 확인",
+      "url": "https://global.toyota/en/company/trajectory-of-toyota/history/01/",
+      "note": "Kiichiro Toyoda의 자동차 연구와 1937년 Toyota Motor 설립 기록.",
+      "type": "official-company-history"
+    },
+    {
+      "id": "toyotaName",
+      "title": "Why is the company name Toyota?",
+      "org": "Toyota Motor Corporation",
+      "year": "official FAQ · 2026 확인",
+      "url": "https://global.toyota/jp/kids/faq/company-overview/002.html",
+      "note": "창업자 성씨 Toyoda(豊田)에서 Toyota로 표기한 이유를 설명.",
+      "type": "official-company-history"
+    },
+    {
+      "id": "moriBuildingHistory",
+      "title": "History",
+      "org": "Mori Building",
+      "year": "official history · 2026 확인",
+      "url": "https://www.mori.co.jp/en/company/history/",
+      "note": "Taikichiro Mori가 1955년 Mori Fudosan을 창업한 기록.",
+      "type": "official-company-history"
+    },
+    {
+      "id": "suntoryHistory",
+      "title": "Our History",
+      "org": "House of Suntory",
+      "year": "official history · 2026 확인",
+      "url": "https://house.suntory.com/heritage",
+      "note": "Shinjiro Torii의 1899년 창업과 일본 위스키 사업 역사.",
+      "type": "official-company-history"
+    },
+    {
+      "id": "forbesJapan2026",
+      "title": "Japan’s 50 Richest 2026",
+      "org": "Forbes",
+      "year": "2026-06-08",
+      "url": "https://www.forbes.com/sites/phisanuphromchanya/2026/06/08/japans-50-richest-2026-softbanks-masayoshi-son-reclaims-top-spot-as-countrys-richest-person-amid-ai-boom/",
+      "note": "2026 일본 부호 순위와 산정 기준. Son #1, Yanai #2 등.",
+      "type": "current-wealth-ranking"
+    },
+    {
+      "id": "forbesYanai2026",
+      "title": "Tadashi Yanai & family",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/tadashi-yanai/",
+      "note": "Fast Retailing/Uniqlo 창업자 Yanai의 자산·사업 프로필.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "forbesSon2026",
+      "title": "Masayoshi Son",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/masayoshi-son/",
+      "note": "SoftBank 창업자 Son의 자산·사업 프로필.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "samsungHistory",
+      "title": "Samsung history",
+      "org": "Samsung Global Strategy Group",
+      "year": "official history · 2026 확인",
+      "url": "https://www.sgsg.samsung.com/newpage/newpage.php?f_id=samsung_history",
+      "note": "1938년 Lee Byung-Chull이 삼성의 전신을 창업한 기록.",
+      "type": "official-company-history"
+    },
+    {
+      "id": "forbesKorea2026",
+      "title": "Korea’s 50 Richest 2026",
+      "org": "Forbes",
+      "year": "2026-04-13",
+      "url": "https://www.forbes.com/sites/johnkang/2026/04/13/koreas-50-richest-2026-ai-bonanza-lifts-tycoons-wealth-to-all-time-high-samsungs-jay-y-lee-reclaims-top-spot/",
+      "note": "한국 50대 부호 2026 순위와 산정 기준.",
+      "type": "current-wealth-ranking"
+    },
+    {
+      "id": "forbesJayLee2026",
+      "title": "Jay Y. Lee",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/jay-y-lee/",
+      "note": "Samsung Electronics 회장 이재용의 2026 자산·가문 프로필.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "hyundaiHeritage",
+      "title": "Heritage",
+      "org": "Hyundai Motor",
+      "year": "official history · 2026 확인",
+      "url": "https://www.hyundai.com/uk/en/hyundai-brand/innovation-progress/heritage.html",
+      "note": "Chung Ju-yung과 Hyundai의 성장사를 설명.",
+      "type": "official-company-history"
+    },
+    {
+      "id": "lgHistory",
+      "title": "Company history",
+      "org": "LG Global",
+      "year": "official history · 2026 확인",
+      "url": "https://www.lg.com/global/about-lg/company-history/",
+      "note": "Koo In-hwoi 창업과 Lucky/Goldstar에서 LG로 이어진 회사 역사.",
+      "type": "official-company-history"
+    },
+    {
+      "id": "forbesKoo2026",
+      "title": "Koo Kwang-mo",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/koo-kwang-mo/",
+      "note": "LG 회장 구광모의 지분 상속과 기업가문 프로필.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "skHistory",
+      "title": "History",
+      "org": "SK",
+      "year": "official history · 2026 확인",
+      "url": "https://www.sk.com/en/about/history.jsp",
+      "note": "Sunkyong에서 SK로 이어진 그룹 역사.",
+      "type": "official-company-history"
+    },
+    {
+      "id": "forbesChey2026",
+      "title": "Chey Tae-won",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/chey-tae-won/",
+      "note": "SK 회장 최태원과 창업자 Chey Jong-gun과의 가족 관계를 포함한 프로필.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "lotteHistory",
+      "title": "LOTTE History",
+      "org": "LOTTE",
+      "year": "official company materials · 2026 확인",
+      "url": "https://www.lotte.co.kr/global/en/about/history.do",
+      "note": "Shin Kyuk-ho와 롯데의 한국 사업 확대 역사.",
+      "type": "official-company-history"
+    },
+    {
+      "id": "forbesIndia2025",
+      "title": "India’s 100 Richest 2025",
+      "org": "Forbes",
+      "year": "2025-10-08",
+      "url": "https://www.forbes.com/india-billionaires/",
+      "note": "Ambani, Adani, Jindal, Bajaj, Poonawalla, Birla, Godrej, Mistry 등 인도 주요 부호·가문 순위.",
+      "type": "current-wealth-ranking"
+    },
+    {
+      "id": "forbesKumarBirla",
+      "title": "Kumar Birla",
+      "org": "Forbes",
+      "year": "2026 profile / 2025 India list",
+      "url": "https://www.forbes.com/profile/kumar-birla/",
+      "note": "Kumar Birla를 Aditya Birla Group의 4세대 수장으로 설명.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "grosvenorHistory",
+      "title": "Our history",
+      "org": "Grosvenor",
+      "year": "official history · 2026 확인",
+      "url": "https://www.grosvenor.com/about-us/our-history",
+      "note": "약 1,000년의 가문사와 1677년 이후 런던 부동산 연결 기록.",
+      "type": "official-family-history"
+    },
+    {
+      "id": "rothschildArchive",
+      "title": "The Rothschild Family",
+      "org": "The Rothschild Archive",
+      "year": "archive · 2026 확인",
+      "url": "https://www.rothschildarchive.org/family/",
+      "note": "Mayer Amschel Rothschild와 유럽 은행가문 계보·기록.",
+      "type": "archive-family-history"
+    },
+    {
+      "id": "chatsworthHistory",
+      "title": "History of Chatsworth",
+      "org": "Chatsworth",
+      "year": "official estate history · 2026 확인",
+      "url": "https://www.chatsworth.org/visit-chatsworth/chatsworth-estate/history-of-chatsworth/",
+      "note": "Cavendish 가문과 Chatsworth의 여러 세대 역사.",
+      "type": "official-estate-history"
+    },
+    {
+      "id": "percyHistory",
+      "title": "The Percy Family",
+      "org": "Alnwick Castle",
+      "year": "official history · 2026 확인",
+      "url": "https://www.alnwickcastle.com/about-alnwick-castle/the-history-of-alnwick-castle/the-percy-family",
+      "note": "1309년 이후 700년 넘게 Alnwick Castle과 이어진 Percy 가문 기록.",
+      "type": "official-family-history"
+    },
+    {
+      "id": "guinnessHistory",
+      "title": "The Guinness Story",
+      "org": "Guinness",
+      "year": "official history · 2026 확인",
+      "url": "https://www.guinness.com/en/our-craft/guinness-story",
+      "note": "Arthur Guinness의 1759년 양조장 설립과 브랜드 역사.",
+      "type": "official-company-history"
+    },
+    {
+      "id": "wallenbergHistory",
+      "title": "History",
+      "org": "Wallenberg.com",
+      "year": "official family history · 2026 확인",
+      "url": "https://www.wallenberg.com/en/history",
+      "note": "1856년 SEB 전신 설립에서 5~6세대 산업·금융 활동까지 설명.",
+      "type": "official-family-history"
+    },
+    {
+      "id": "wallenbergHoldings",
+      "title": "The Wallenberg Ecosystem",
+      "org": "Wallenberg.com",
+      "year": "2026 확인",
+      "url": "https://www.wallenberg.com/en",
+      "note": "Investor AB, FAM, 재단과 주요 산업 지분 생태계를 설명.",
+      "type": "official-family-business"
+    },
+    {
+      "id": "forbesRausing2026",
+      "title": "Jorn Rausing",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/jorn-rausing/",
+      "note": "Tetra Pak 창업가 후손과 TetraLaval 공동 지분을 설명.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "hmOwnership",
+      "title": "Shareholders",
+      "org": "H&M Group",
+      "year": "2026-08-31",
+      "url": "https://hmgroup.com/investors/shareholders/",
+      "note": "Stefan Persson family의 H&M 지분·의결권 비중을 공식 공시.",
+      "type": "official-shareholding-data"
+    },
+    {
+      "id": "forbesSchorling",
+      "title": "Sofia Högberg Schörling",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/sofia-hogberg-schorling/",
+      "note": "Melker Schörling의 후손과 가족 지주회사 포트폴리오를 설명.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "forbesChina2025",
+      "title": "China’s 100 Richest 2025",
+      "org": "Forbes",
+      "year": "2025-11-05",
+      "url": "https://www.forbes.com/lists/china-billionaires/",
+      "note": "중국 100대 부호 순위. 중국의 흔한 성씨가 부의 신호로 약하다는 비교에도 활용.",
+      "type": "current-wealth-ranking"
+    },
+    {
+      "id": "forbesZhong2026",
+      "title": "Zhong Shanshan",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/zhong-shanshan/",
+      "note": "Nongfu Spring 창업자 Zhong Shanshan 프로필.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "forbesZhangYiming2026",
+      "title": "Zhang Yiming",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/zhang-yiming/",
+      "note": "ByteDance 공동창업자 Zhang Yiming 프로필.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "forbesHe2026",
+      "title": "He Xiangjian & family",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/he-xiangjian/",
+      "note": "Midea 창업자와 가족기업 연결을 설명.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "ferreroHistory",
+      "title": "The Story of a Family",
+      "org": "Ferrero Group",
+      "year": "official history · 2026 확인",
+      "url": "https://www.ferrero.com/us/en/about-us/a-story-of-a-family",
+      "note": "1946년 Ferrero 창업과 3세대 가족기업 역사.",
+      "type": "official-family-history"
+    },
+    {
+      "id": "agnelliFoundation",
+      "title": "About us",
+      "org": "Fondazione Agnelli",
+      "year": "official foundation history · 2026 확인",
+      "url": "https://www.fondazioneagnelli.it/en/about-us/",
+      "note": "FIAT 창업자 Giovanni Agnelli와 Gianni Agnelli 가문사를 확인할 수 있는 공식 재단 자료.",
+      "type": "official-family-history"
+    },
+    {
+      "id": "forbesDelVecchio",
+      "title": "Clemente Del Vecchio",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/clemente-del-vecchio/",
+      "note": "Leonardo Del Vecchio 사후 Delfin 지분을 상속한 후손 프로필.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "mediciBritannica",
+      "title": "Medici family",
+      "org": "Encyclopaedia Britannica",
+      "year": "reference · 2026 확인",
+      "url": "https://www.britannica.com/topic/Medici-family",
+      "note": "피렌체 Medici 가문의 은행·정치·예술후원 역사.",
+      "type": "historical-reference"
+    },
+    {
+      "id": "walmartHistory",
+      "title": "Walmart History",
+      "org": "Walmart",
+      "year": "official history · 2026 확인",
+      "url": "https://corporate.walmart.com/about/history",
+      "note": "Sam Walton의 1962년 첫 매장과 Walton 가족의 초기 점포 소유 기록.",
+      "type": "official-company-history"
+    },
+    {
+      "id": "forbesWaltonFamily2026",
+      "title": "The $500 Billion Family Behind Walmart",
+      "org": "Forbes",
+      "year": "2026-07-04",
+      "url": "https://www.forbes.com/sites/mattdurot/2026/07/04/inside-americas-500-billion-family/",
+      "note": "Walton 후손들의 Walmart 지분과 가문 자산을 분석.",
+      "type": "current-family-wealth"
+    },
+    {
+      "id": "forbesAliceWalton",
+      "title": "Alice Walton",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/alice-walton/",
+      "note": "Walmart 창업자 Sam Walton의 딸 Alice Walton 프로필.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "marsHistory",
+      "title": "Our History",
+      "org": "Mars Global",
+      "year": "official history · 2026 확인",
+      "url": "https://www.mars.com/about/history",
+      "note": "1911년 Frank C. Mars에서 시작한 가족 소유 기업의 세대별 역사.",
+      "type": "official-family-company-history"
+    },
+    {
+      "id": "forbesCharlesKoch2026",
+      "title": "Charles Koch & family",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/charles-koch/",
+      "note": "Koch Inc. 회장과 가족기업 지분 역사.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "forbesJuliaKoch2026",
+      "title": "Julia Koch & family",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/julia-koch/",
+      "note": "David Koch의 지분을 상속한 Julia Koch와 자녀들의 프로필.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "rockefellerJDR",
+      "title": "John D. Rockefeller, 1839–1937",
+      "org": "Rockefeller Archive Center",
+      "year": "archive · 2026 확인",
+      "url": "https://rockarch.org/resources/about-the-rockefellers/john-d-rockefeller-sr/",
+      "note": "Standard Oil 형성과 Rockefeller의 사업·자선 기록.",
+      "type": "archive-family-history"
+    },
+    {
+      "id": "rockefellerFamily",
+      "title": "About the Rockefellers",
+      "org": "Rockefeller Archive Center",
+      "year": "archive · 2026 확인",
+      "url": "https://rockarch.org/resources/about-the-rockefellers/",
+      "note": "Rockefeller 가계와 여러 세대의 전기 자료.",
+      "type": "archive-family-history"
+    },
+    {
+      "id": "vanderbiltHistory",
+      "title": "Vanderbilt family",
+      "org": "Encyclopaedia Britannica",
+      "year": "reference · 2026 확인",
+      "url": "https://www.britannica.com/topic/Vanderbilt-family",
+      "note": "Cornelius Vanderbilt에서 시작된 철도·해운 재산과 후손 역사.",
+      "type": "historical-reference"
+    },
+    {
+      "id": "forbesBettencourt2026",
+      "title": "Françoise Bettencourt Meyers & family",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/francoise-bettencourt-meyers/",
+      "note": "L’Oréal 창업자 손녀와 가족의 대규모 지분을 설명.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "lvmhArnault",
+      "title": "Bernard Arnault",
+      "org": "LVMH",
+      "year": "official profile · 2026 확인",
+      "url": "https://www.lvmh.com/en/our-group/governance/bernard-arnault",
+      "note": "Bernard Arnault의 LVMH 경영과 Groupe Arnault 관련 공식 프로필.",
+      "type": "official-company-profile"
+    },
+    {
+      "id": "forbesWertheimer2026",
+      "title": "Alain Wertheimer",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/alain-wertheimer/",
+      "note": "Chanel을 형제와 공동 소유한 Wertheimer 가문 프로필.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "forbesDassault2026",
+      "title": "Laurent Dassault",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/laurent-dassault/",
+      "note": "Dassault Aviation 창업가 후손과 가문 자산을 설명.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "forbesPinault2026",
+      "title": "François Pinault & family",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/francois-pinault/",
+      "note": "Kering 창업자와 가족 소유 자산·2세대 경영을 설명.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "forbesQuandt2026",
+      "title": "Stefan Quandt",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/stefan-quandt/",
+      "note": "BMW 23.6% 지분과 Quandt 가문 산업자산을 설명.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "forbesKlatten2026",
+      "title": "Susanne Klatten",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/susanne-klatten/",
+      "note": "BMW·Altana 지분을 보유한 Quandt 가문 후손 프로필.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "forbesAlbrecht2026",
+      "title": "Karl Albrecht Jr. & family",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/karl-albrecht-jr/",
+      "note": "Aldi 창업 형제와 후손 상속 구조를 설명.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "forbesReimann2026",
+      "title": "Wolfgang Reimann",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/wolfgang-reimann/",
+      "note": "JAB Holding과 Reimann 가문의 소비재 자산을 설명.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "forbesOrtega2026",
+      "title": "Amancio Ortega",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/amancio-ortega/",
+      "note": "Inditex/Zara 공동창업자와 가족 지분·부동산 자산을 설명.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "forbesSandraOrtega2026",
+      "title": "Sandra Ortega Mera",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/sandra-ortega-mera/",
+      "note": "Inditex 공동창업자 후손의 상속지분 프로필.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "forbesRafaelDelPino2026",
+      "title": "Rafael Del Pino",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/rafael-del-pino-1/",
+      "note": "Ferrovial 창업자 아들이자 최대 개인주주의 프로필.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "forbesMariaDelPino2026",
+      "title": "Maria Del Pino",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/maria-del-pino/",
+      "note": "Ferrovial 창업가문 지분을 상속한 Maria del Pino 프로필.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "forbesJuanMarch2026",
+      "title": "Juan March Delgado",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/juan-march-delgado/",
+      "note": "1926년 창업된 Banca March의 손자 세대 대주주.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "forbesCarlosMarch2026",
+      "title": "Carlos March Delgado",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/carlos-march-delgado/",
+      "note": "Banca March 및 가족 투자회사의 후손 대주주.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "forbesSlim2026",
+      "title": "Carlos Slim Helú & family",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/carlos-slim-helu/",
+      "note": "América Móvil·Grupo Carso의 가족 지분과 자산을 설명.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "forbesLarrea2026",
+      "title": "Germán Larrea Mota Velasco & family",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/german-larrea-mota-velasco/",
+      "note": "Grupo México 대주주 가문의 광산·철도 자산을 설명.",
+      "type": "current-wealth-profile"
+    },
+    {
+      "id": "forbesBailleres2026",
+      "title": "Alejandro Baillères Gual & family",
+      "org": "Forbes",
+      "year": "2026 profile",
+      "url": "https://www.forbes.com/profile/alejandro-bailleres-gual/",
+      "note": "Grupo Bal·Peñoles 등 Baillères 가문 자산을 설명.",
+      "type": "current-wealth-profile"
+    }
+  ]
+}

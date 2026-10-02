@@ -2,6 +2,7 @@ import { countries, countrySummaries, surnameCases } from './data/cases.js';
 import { sources } from './data/sources.js';
 import { surnameProfiles, japanRankComparison } from './data/profiles.js';
 import { koreaSurnameRanking, koreaBonGwanRanking, koreaClanArchive } from './data/korea.js';
+import { wealthSignals, wealthSignalLabels } from './data/wealthSignals.js';
 
 const app = document.querySelector('#app');
 const STORAGE = { theme: 'ssa-theme', favorites: 'ssa-favorites' };
@@ -19,6 +20,7 @@ const state = {
 
 const evidenceLabels = {
   all: '모든 근거 유형',
+  'wealth-signal': '부호가문·기업가문 신호',
   'current-data': '현재 성씨 데이터',
   'group-study': '성씨 집단 연구',
   'sensitive-group-study': '민감 집단 연구',
@@ -107,13 +109,38 @@ function countryCaseCount(country) {
 }
 
 function countryArchiveCount(country) {
-  if (country === 'KR') return koreaClanArchive.length;
-  return surnameProfiles.filter(item => item.country === country).length;
+  const base = country === 'KR' ? koreaClanArchive.length : surnameProfiles.filter(item => item.country === country).length;
+  return base + wealthSignals.filter(item => item.country === country).length;
+}
+
+function countryWealthCount(country) {
+  return wealthSignals.filter(item => item.country === country).length;
 }
 
 function countrySamples(country) {
+  const wealth = wealthSignals.filter(item => item.country === country).slice(0, 3).map(item => item.korean || item.surname);
+  if (wealth.length) return wealth;
   if (country === 'KR') return koreaClanArchive.slice(0, 3).map(x => x.bonGwan);
   return surnameCases.filter(item => item.country === country).slice(0, 3).map(item => item.korean || item.surname);
+}
+
+function getFilteredWealthSignals() {
+  const q = state.query.trim().toLowerCase();
+  const rows = wealthSignals.filter(item => {
+    const countryOk = state.country === 'all' || item.country === state.country;
+    const evidenceOk = state.evidence === 'all' || state.evidence === 'wealth-signal';
+    const haystack = [item.surname, item.native, item.korean, item.label, item.hook, item.history, item.wealthEvidence, ...(item.tags || []), ...(item.notables || []).flat()].join(' ').toLowerCase();
+    return countryOk && evidenceOk && (!q || haystack.includes(q));
+  });
+  if (state.sort === 'name') return [...rows].sort((a,b) => a.surname.localeCompare(b.surname, 'en'));
+  return rows;
+}
+
+function evidenceBadgeLabel(level) {
+  if (level === 'high') return '연구 근거 강함';
+  if (level === 'medium') return '연구 근거 있음';
+  if (level === 'context') return '가문·기업 근거';
+  return '맥락 자료';
 }
 
 function renderCountryExplorerCard(summary) {
@@ -122,13 +149,14 @@ function renderCountryExplorerCard(summary) {
     <button class="country-explorer-card" data-open-country="${esc(summary.country)}" aria-label="${esc(summary.name)} 아카이브 열기">
       <div class="country-card-top">
         <span class="country-code">${esc(summary.country)}</span>
-        <span class="evidence-dot ${summary.evidence}">${summary.evidence === 'high' ? '연구 근거 강함' : '연구 근거 보통'}</span>
+        <span class="evidence-dot ${summary.evidence}">${evidenceBadgeLabel(summary.evidence)}</span>
       </div>
       <h3>${esc(summary.name)}</h3>
       <p class="signal">${esc(summary.signal)}</p>
       <div class="country-counts">
+        <span><b>${countryWealthCount(summary.country)}</b>개 부호가문 신호</span>
         <span><b>${countryCaseCount(summary.country)}</b>개 연구 항목</span>
-        <span><b>${countryArchiveCount(summary.country)}</b>개 상세 기록</span>
+        <span><b>${countryArchiveCount(summary.country)}</b>개 누적 기록</span>
       </div>
       <div class="sample-line"><span>기록 예시</span><b>${samples.map(esc).join(' · ') || '집단 연구'}</b></div>
       <span class="card-cta">${esc(summary.name)} 레이어 열기 →</span>
@@ -165,6 +193,38 @@ function renderKoreaArchiveCard(clan) {
   </article>`;
 }
 
+
+function signalClass(signal) {
+  if (signal.includes('very-strong')) return 'signal-very-strong';
+  if (signal.includes('strong')) return 'signal-strong';
+  if (signal.includes('historical')) return 'signal-historical';
+  if (signal.includes('low')) return 'signal-low';
+  return 'signal-medium';
+}
+
+function renderWealthSignalCard(item) {
+  return `<article class="wealth-signal-card ${signalClass(item.signal)}">
+    <div class="wealth-card-top"><span class="wealth-signal-badge">${esc(wealthSignalLabels[item.signal] || item.label)}</span><span class="country-code">${esc(item.country)}</span></div>
+    <h4>${esc(item.surname)} ${item.native ? `<span>${esc(item.native)}</span>` : ''}</h4>
+    <div class="korean-name">${esc(item.korean)}</div>
+    <p class="wealth-hook">${esc(item.hook)}</p>
+    <div class="wealth-evidence"><span>왜 부유함이 연상되나</span><p>${esc(item.wealthEvidence)}</p></div>
+    <div class="wealth-notables"><span>대표 인물</span>${item.notables.slice(0,3).map(n => `<b>${esc(n[0])}<small>${esc(n[1])}</small></b>`).join('')}</div>
+    <div class="source-chips">${item.sourceIds.slice(0,3).map(sourceLink).join('')}</div>
+    <button class="more-btn" data-wealth-detail="${esc(item.id)}">가문·역사 자세히 보기</button>
+  </article>`;
+}
+
+function renderWealthSection(country, heading='성만 들어도 부유함이 연상되는 이름들') {
+  const items = wealthSignals.filter(item => item.country === country);
+  if (!items.length) return '';
+  return `<section class="layer-section wealth-signal-section" id="${country.toLowerCase()}-wealth">
+    <div class="subsection-head"><div><span class="eyebrow">WEALTH SIGNAL · FAMILY NAME</span><h3>${esc(heading)}</h3></div><span class="count-pill">${items.length}개 가문/성씨 사례</span></div>
+    <p class="section-intro">이 섹션이 서비스의 ‘어그로’ 기준입니다. 실제 기업 지분·부호 순위·귀족/토지 기록처럼 <b>성씨와 부·상류층 이미지가 연결되는 근거</b>가 있는 이름을 모았습니다. 신호 강도는 ‘같은 성을 가진 모든 사람이 부자’라는 뜻이 아니라, <b>그 성씨가 특정 유명 가문을 얼마나 강하게 떠올리게 하는가</b>를 뜻합니다.</p>
+    <div class="wealth-signal-grid">${items.map(renderWealthSignalCard).join('')}</div>
+  </section>`;
+}
+
 function renderKoreaLayer() {
   return `
     <div class="country-layer-intro korea-layer-intro">
@@ -179,8 +239,10 @@ function renderKoreaLayer() {
     </div>
 
     <nav class="layer-jumpnav" aria-label="한국 자료 바로가기">
-      <a href="#kr-surname-rank">성씨 TOP 20</a><a href="#kr-bongwan-rank">본관 TOP 20</a><a href="#kr-history">역사 아카이브</a><a href="#kr-mobility">부·지위 연구</a>
+      <a href="#kr-wealth">재벌가문 성씨</a><a href="#kr-surname-rank">성씨 TOP 20</a><a href="#kr-bongwan-rank">본관 TOP 20</a><a href="#kr-history">역사 아카이브</a><a href="#kr-mobility">부·지위 연구</a>
     </nav>
+
+    ${renderWealthSection('KR', '한국에서 재벌가문을 떠올리게 하는 성씨') .replace('id="kr-wealth"', 'id="kr-wealth"')}
 
     <section class="layer-section" id="kr-surname-rank">
       <div class="subsection-head"><div><span class="eyebrow">2015 CENSUS</span><h3>한국 성씨 인구 TOP 20</h3></div><span class="count-pill">통계청 공식 집계</span></div>
@@ -235,19 +297,19 @@ function renderGenericProfile(profile) {
 function renderGenericCountryLayer(summary) {
   const profiles = surnameProfiles.filter(p => p.country === summary.country);
   const cases = surnameCases.filter(item => item.country === summary.country);
-  const archive = profiles.length ? `<section class="layer-section"><div class="subsection-head"><div><span class="eyebrow">HISTORY & PEOPLE</span><h3>성씨별 기록과 관련 인물</h3></div><span class="count-pill">${profiles.length}개 상세 기록</span></div><div class="archive-grid">${profiles.map(renderGenericProfile).join('')}</div></section>` : '';
+  const wealth = wealthSignals.filter(item => item.country === summary.country);
+  const archive = profiles.length ? `<section class="layer-section"><div class="subsection-head"><div><span class="eyebrow">HISTORY & PEOPLE</span><h3>기존 성씨별 역사 기록과 관련 인물</h3></div><span class="count-pill">${profiles.length}개 상세 기록</span></div><div class="archive-grid">${profiles.map(renderGenericProfile).join('')}</div></section>` : '';
+  const research = cases.length ? `<section class="layer-section"><div class="subsection-head"><div><span class="eyebrow">RESEARCH RECORDS</span><h3>${esc(summary.name)} 기존 연구·역사 표본</h3></div><span class="count-pill">${cases.length}개</span></div><div class="country-list">${cases.map(renderCountryListItem).join('')}</div></section>` : `<section class="layer-section empty-research-note"><span class="eyebrow">RESEARCH NOTE</span><h3>장기 성씨 사회이동 연구는 아직 별도 수록하지 않았습니다.</h3><p>이 국가 탭은 현재 확인 가능한 기업가문·부호가문 기록을 중심으로 구성했습니다. 근거 없는 성씨 부유 순위는 만들지 않습니다.</p></section>`;
   return `
     <div class="country-layer-intro">
-      <div><span class="eyebrow">${esc(summary.country)} · COUNTRY ARCHIVE</span><h2>${esc(summary.name)} 성씨를 <span>역사와 기록으로</span> 봅니다.</h2><p>${esc(summary.summary)}</p></div>
-      <div class="country-layer-metrics"><div><b>${cases.length}</b><span>연구 항목</span></div><div><b>${profiles.length}</b><span>상세 성씨 기록</span></div><div><b>${summary.evidence === 'high' ? '강함' : '보통'}</b><span>연구 근거</span></div></div>
+      <div><span class="eyebrow">${esc(summary.country)} · COUNTRY ARCHIVE</span><h2>${esc(summary.name)}에서 <span>‘부자 성씨’로 들리는 이름</span>부터 봅니다.</h2><p>${esc(summary.summary)}</p></div>
+      <div class="country-layer-metrics"><div><b>${wealth.length}</b><span>부호가문 신호</span></div><div><b>${cases.length}</b><span>기존 연구 항목</span></div><div><b>${profiles.length}</b><span>기존 상세 기록</span></div></div>
     </div>
-    <div class="country-caveat-banner"><b>해석 주의</b><span>${esc(summary.caveat)}</span></div>
+    <div class="country-caveat-banner"><b>기준</b><span><strong>${esc(summary.signal)}</strong> · ${esc(summary.caveat)}</span></div>
+    ${renderWealthSection(summary.country)}
     ${summary.country === 'JP' ? renderJapanRanking() : ''}
     ${archive}
-    <section class="layer-section">
-      <div class="subsection-head"><div><span class="eyebrow">RESEARCH RECORDS</span><h3>${esc(summary.name)} 연구·역사 표본</h3></div><span class="count-pill">${cases.length}개</span></div>
-      <div class="country-list">${cases.map(renderCountryListItem).join('')}</div>
-    </section>`;
+    ${research}`;
 }
 
 function renderCountryListItem(item) {
@@ -269,6 +331,7 @@ function renderCaseCard(item) {
 
 function render() {
   const filtered = getFilteredCases();
+  const filteredWealth = getFilteredWealthSignals();
   const selectedName = countryMap.get(state.detailCountry)?.name || '일본';
   app.innerHTML = `
     <a class="skip-link" href="#main">본문 바로가기</a>
@@ -282,17 +345,17 @@ function render() {
 
     <main id="main">
       <section class="hero hero-archive section-shell">
-        <div class="hero-copy"><div class="eyebrow">WEALTH HOOK · HISTORY ARCHIVE</div><h1>“부자 성씨?”<br><span>들어오면 역사가 보입니다.</span></h1><p class="hero-lede">희귀 성씨와 부유 가문 이야기는 흥미로운 입구입니다. 하지만 이 서비스의 본문은 더 넓습니다. <strong>성씨의 기원, 본관·클랜, 역사 기록, 유명 인물, 인구 순위, 사회이동 연구</strong>를 나라별로 모아 보는 아카이브입니다.</p><div class="hero-points"><span>✓ 부는 훅, 역사가 본문</span><span>✓ 국가별 레이어 전환</span><span>✓ 공식 통계·학술 출처</span></div></div>
-        <div class="hero-panel archive-hero-panel"><div class="panel-kicker">현재 선택</div><strong class="hero-selected-country">${esc(selectedName)}</strong><p>상단 국가 탭을 누르면 페이지 이동 없이 이 아래의 국가 전용 자료 레이어가 통째로 교체됩니다.</p><div class="metric-row"><span>국가/지역</span><strong>${countrySummaries.length}</strong></div><div class="metric-row"><span>전체 연구 항목</span><strong>${surnameCases.length}</strong></div><div class="metric-row"><span>한국 본관 아카이브</span><strong>${koreaClanArchive.length}</strong></div></div>
+        <div class="hero-copy"><div class="eyebrow">WEALTH SIGNAL FIRST · HISTORY ARCHIVE</div><h1>“성만 들어도 부자?”<br><span>그 이미지가 생긴 이유부터 봅니다.</span></h1><p class="hero-lede">이 서비스의 첫 기준은 분명합니다. <strong>그 나라에서 어떤 성씨가 재벌·귀족·대지주·창업가문을 강하게 떠올리게 하는가?</strong>를 먼저 보여줍니다. 그 다음 같은 성씨의 <strong>기원, 본관·클랜, 역사 기록, 유명 인물, 인구·빈도 순위, 사회이동 연구</strong>까지 이어서 탐색합니다.</p><div class="hero-points"><span>✓ 부호가문 신호를 먼저</span><span>✓ 기존 역사·연구 자료 그대로 누적</span><span>✓ 공식 통계·학술·기업사 출처</span></div></div>
+        <div class="hero-panel archive-hero-panel"><div class="panel-kicker">현재 선택</div><strong class="hero-selected-country">${esc(selectedName)}</strong><p>상단 국가 탭을 누르면 페이지 이동 없이 이 아래의 국가 전용 자료 레이어가 통째로 교체됩니다.</p><div class="metric-row"><span>국가/지역</span><strong>${countrySummaries.length}</strong></div><div class="metric-row"><span>부호가문 신호</span><strong>${wealthSignals.length}</strong></div><div class="metric-row"><span>기존 연구 항목</span><strong>${surnameCases.length}</strong></div><div class="metric-row"><span>한국 본관 아카이브</span><strong>${koreaClanArchive.length}</strong></div></div>
       </section>
 
-      <section class="section-shell country-explorer-section" id="country-explorer"><div class="section-head explorer-heading"><div><span class="eyebrow">COUNTRY EXPLORER</span><h2>나라를 먼저 고르세요</h2><p>카드를 누르면 상단 탭과 같은 방식으로 아래 국가 레이어가 교체됩니다. 모바일에서도 카드 → 탭 → 국가 전용 자료 흐름을 유지합니다.</p></div><span class="count-pill">${countrySummaries.length}개 국가/지역</span></div><div class="country-explorer-grid">${countrySummaries.map(renderCountryExplorerCard).join('')}</div></section>
+      <section class="section-shell country-explorer-section" id="country-explorer"><div class="section-head explorer-heading"><div><span class="eyebrow">COUNTRY EXPLORER</span><h2>나라를 먼저 고르세요</h2><p>카드를 누르면 상단 탭과 같은 방식으로 아래 국가 레이어가 교체됩니다. 모바일에서도 카드 → 탭 → 국가 전용 자료 흐름을 유지합니다.</p></div><span class="count-pill">${countrySummaries.length}개 국가/지역</span></div><div class="country-explorer-grid">${countryOptions.map(c => countryMap.get(c.id)).filter(Boolean).map(renderCountryExplorerCard).join('')}</div></section>
 
       ${renderCountryLayer()}
 
       <section class="section-shell rei-section" id="rei-check"><div class="section-head"><div><span class="eyebrow">ORIGINAL HOOK · REI / NAOI</span><h2>레이의 ‘나오이’는 입구가 되는 이야기</h2></div><span class="status-badge caution">부의 판정은 아님</span></div><div class="fact-grid"><article class="fact-card"><span class="fact-num">01</span><h3>나오이는 희귀한 편</h3><p>直井는 전국 약 1,277위·약 13,200명으로 추정됩니다. 이것은 희소성 자료입니다.</p>${sourceLink('myojiNaoi')}</article><article class="fact-card"><span class="fact-num">02</span><h3>지역 경제는 별도 자료</h3><p>아이치현의 경제력과 개인의 집안 자산은 같은 지표가 아닙니다.</p>${sourceLink('aichi2023')}</article><article class="fact-card"><span class="fact-num">03</span><h3>재미는 역사로 확장</h3><p>희귀 성씨를 계기로 사무라이·공가·메이지 성씨 제도까지 따라가면 훨씬 오래 볼 수 있는 콘텐츠가 됩니다.</p>${sourceLink('japanLaw')}</article></div></section>
 
-      <section class="section-shell explorer" id="explorer"><div class="section-head"><div><span class="eyebrow">GLOBAL SEARCH</span><h2>전체 국가 통합 검색</h2><p>성씨, 역사 표본, 사회이동 연구를 나라 구분 없이 다시 찾습니다.</p></div><div class="toolbar-mini"><button class="text-btn" id="shareBtn">검색 URL 복사</button><button class="text-btn" id="csvBtn">CSV 내보내기</button></div></div><div class="filters" role="search"><label class="search-box"><span>검색</span><input id="searchInput" value="${esc(state.query)}" placeholder="예: 나오이, Banerjee, Neville" autocomplete="off"></label><label><span>국가</span><select id="countryFilter">${countries.map(c => `<option value="${c.id}" ${state.country===c.id?'selected':''}>${c.label}</option>`).join('')}</select></label><label><span>근거 유형</span><select id="evidenceFilter">${Object.entries(evidenceLabels).map(([k,v]) => `<option value="${k}" ${state.evidence===k?'selected':''}>${v}</option>`).join('')}</select></label><label><span>정렬</span><select id="sortFilter">${Object.entries(sortLabels).map(([k,v]) => `<option value="${k}" ${state.sort===k?'selected':''}>${v}</option>`).join('')}</select></label><button class="favorite-filter ${state.onlyFavorites?'active':''}" id="favoriteFilter">★ 즐겨찾기만</button></div><div class="result-meta"><strong>${filtered.length}개 결과</strong><span>빈도순위·역사 기록·사회경제 연구는 서로 다른 자료입니다.</span></div><div class="case-grid" id="caseGrid">${filtered.length ? filtered.map(renderCaseCard).join('') : `<div class="empty-state"><strong>검색 결과가 없습니다.</strong><span>국가·근거 필터를 초기화하거나 다른 표기를 검색해보세요.</span><button class="secondary-btn" id="resetBtn">필터 초기화</button></div>`}</div></section>
+      <section class="section-shell explorer" id="explorer"><div class="section-head"><div><span class="eyebrow">GLOBAL SEARCH</span><h2>전체 국가 통합 검색</h2><p>성씨, 역사 표본, 사회이동 연구를 나라 구분 없이 다시 찾습니다.</p></div><div class="toolbar-mini"><button class="text-btn" id="shareBtn">검색 URL 복사</button><button class="text-btn" id="csvBtn">CSV 내보내기</button></div></div><div class="filters" role="search"><label class="search-box"><span>검색</span><input id="searchInput" value="${esc(state.query)}" placeholder="예: 나오이, Banerjee, Neville" autocomplete="off"></label><label><span>국가</span><select id="countryFilter">${countries.map(c => `<option value="${c.id}" ${state.country===c.id?'selected':''}>${c.label}</option>`).join('')}</select></label><label><span>근거 유형</span><select id="evidenceFilter">${Object.entries(evidenceLabels).map(([k,v]) => `<option value="${k}" ${state.evidence===k?'selected':''}>${v}</option>`).join('')}</select></label><label><span>정렬</span><select id="sortFilter">${Object.entries(sortLabels).map(([k,v]) => `<option value="${k}" ${state.sort===k?'selected':''}>${v}</option>`).join('')}</select></label><button class="favorite-filter ${state.onlyFavorites?'active':''}" id="favoriteFilter">★ 즐겨찾기만</button></div><div class="result-meta"><strong>${filteredWealth.length + filtered.length}개 통합 결과</strong><span>부호가문 신호 ${filteredWealth.length}개 · 기존 연구자료 ${filtered.length}개</span></div>${filteredWealth.length ? `<div class="search-subhead"><span class="eyebrow">WEALTH SIGNAL RESULTS</span><h3>부호가문·기업가문 성씨</h3></div><div class="wealth-signal-grid compact">${filteredWealth.map(renderWealthSignalCard).join('')}</div>` : ''}<div class="search-subhead"><span class="eyebrow">RESEARCH RESULTS</span><h3>기존 성씨·역사·사회이동 연구</h3></div><div class="case-grid" id="caseGrid">${filtered.length ? filtered.map(renderCaseCard).join('') : `<div class="empty-state"><strong>연구자료 검색 결과가 없습니다.</strong><span>부호가문 결과가 위에 있을 수 있습니다. 국가·근거 필터를 초기화하거나 다른 표기를 검색해보세요.</span><button class="secondary-btn" id="resetBtn">필터 초기화</button></div>`}</div></section>
 
       <section class="section-shell methodology-strip"><div><span class="eyebrow">HOW TO READ</span><h2>‘부자 성씨’는 제목이 될 수 있지만 결론은 아닙니다.</h2></div><div class="do-not-grid"><div><b>입구 · 부와 지위</b><span>장기 사회이동 연구가 있는 경우 근거와 한계를 함께 표시합니다.</span></div><div><b>본문 · 역사 기록</b><span>시조 전승·왕실·공신·족보·학맥·정치사를 함께 제공합니다.</span></div><div><b>인물 · 연결고리</b><span>같은 성씨의 대표 인물은 기록 이해를 돕는 사례이며 자동 혈연 판정이 아닙니다.</span></div><div><b>통계 · 순위</b><span>인구·빈도 순위만 표시하며 부유함 순위로 바꾸지 않습니다.</span></div></div></section>
 
@@ -319,6 +382,7 @@ function bindEvents() {
   document.querySelectorAll('[data-country-tab]').forEach(btn => btn.addEventListener('click', () => switchCountry(btn.dataset.countryTab, true)));
   document.querySelectorAll('[data-open-country]').forEach(btn => btn.addEventListener('click', () => switchCountry(btn.dataset.openCountry, true)));
   document.querySelectorAll('[data-clan-detail]').forEach(btn => btn.addEventListener('click', () => showClanDetail(btn.dataset.clanDetail)));
+  document.querySelectorAll('[data-wealth-detail]').forEach(btn => btn.addEventListener('click', () => showWealthDetail(btn.dataset.wealthDetail)));
 
   const search = document.querySelector('#searchInput');
   search?.addEventListener('input', e => {
@@ -338,6 +402,13 @@ function bindEvents() {
   document.querySelectorAll('.dialog-close').forEach(btn => btn.addEventListener('click', () => btn.closest('dialog').close()));
   document.querySelectorAll('dialog').forEach(d => d.addEventListener('click', e => { if (e.target === d) d.close(); }));
   document.querySelector('#themeBtn')?.addEventListener('click', toggleTheme);
+}
+
+function showWealthDetail(id) {
+  const item = wealthSignals.find(x => x.id === id);
+  if (!item) return;
+  document.querySelector('#dialogBody').innerHTML = `<div class="dialog-content"><span class="eyebrow">${esc(item.country)} · WEALTH SIGNAL ARCHIVE</span><div class="dialog-title-row"><h2>${esc(item.surname)} ${item.native ? `<small>${esc(item.native)}</small>` : ''}</h2><span class="wealth-signal-badge ${signalClass(item.signal)}">${esc(wealthSignalLabels[item.signal] || item.label)}</span></div><p class="dialog-lead">${esc(item.hook)}</p><div class="history-box"><span>가문·기업 역사</span><p>${esc(item.history)}</p></div><div class="history-box"><span>왜 부유함이 연상되는가</span><p>${esc(item.wealthEvidence)}</p></div><div class="notable-detail"><span>대표 인물</span>${item.notables.map(n => `<h3>${esc(n[0])}</h3><b>${esc(n[1])}</b>`).join('')}</div><div class="dialog-warning"><b>판정 한계</b><span>이 항목은 유명 가문과 성씨의 문화적 연관을 설명합니다. 같은 성씨를 가진 개인이 해당 가문과 혈연이거나 부유하다는 뜻은 아닙니다.</span></div><h3>연결 출처</h3><div class="source-chips">${item.sourceIds.map(sourceLink).join('')}</div></div>`;
+  document.querySelector('#detailDialog').showModal();
 }
 
 function showClanDetail(id) {
@@ -361,11 +432,12 @@ async function shareState() {
 }
 
 function exportCsv() {
-  const rows = [['country','surname','native','korean','frequency_rank','population','notable_person','group','finding','metric','period','sources']];
+  const rows = [['record_type','country','surname','native','korean','frequency_rank','population','notable_person','group','finding','metric','period','sources']];
+  getFilteredWealthSignals().forEach(i => rows.push(['wealth-signal',i.country,i.surname,i.native,i.korean,'','',i.notables.map(n=>n[0]).join(' | '),i.label,i.hook,i.wealthEvidence,'current/historical context',i.sourceIds.map(id=>sources[id]?.url || '').filter(Boolean).join(' | ')]));
   getFilteredCases().forEach(i => {
     const p = getProfile(i);
     const ids = [...new Set([...(i.sourceIds || []), ...(p?.sourceIds || [])])];
-    rows.push([i.country,i.surname,i.native,i.korean,p?.frequency?.rank || '',p?.frequency?.population || '',p?.notable?.name || '',i.group,i.finding,i.metric,i.period,ids.map(id=>sources[id]?.url || '').filter(Boolean).join(' | ')]);
+    rows.push(['research',i.country,i.surname,i.native,i.korean,p?.frequency?.rank || '',p?.frequency?.population || '',p?.notable?.name || '',i.group,i.finding,i.metric,i.period,ids.map(id=>sources[id]?.url || '').filter(Boolean).join(' | ')]);
   });
   const csv = rows.map(r => r.map(v => `"${String(v).replaceAll('"','""')}"`).join(',')).join('\n');
   const blob = new Blob(['\ufeff'+csv], { type:'text/csv;charset=utf-8' });

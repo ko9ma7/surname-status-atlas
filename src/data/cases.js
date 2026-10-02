@@ -1,12 +1,17 @@
 export const countries = [
   { id: 'all', label: '전체 국가' },
   { id: 'JP', label: '일본' },
-  { id: 'IN', label: '인도' },
-  { id: 'GB', label: '영국(잉글랜드)' },
-  { id: 'SE', label: '스웨덴' },
-  { id: 'CN', label: '중국' },
   { id: 'KR', label: '한국' },
+  { id: 'IN', label: '인도' },
+  { id: 'GB', label: '영국' },
+  { id: 'US', label: '미국' },
+  { id: 'FR', label: '프랑스' },
+  { id: 'DE', label: '독일' },
+  { id: 'SE', label: '스웨덴' },
   { id: 'IT', label: '이탈리아' },
+  { id: 'ES', label: '스페인' },
+  { id: 'MX', label: '멕시코' },
+  { id: 'CN', label: '중국' },
 ];
 
 export const countrySummaries = [
@@ -66,12 +71,57 @@ export const countrySummaries = [
   },
   {
     country: 'IT',
-    name: '이탈리아(피렌체)',
-    signal: '600년 장기 성씨-경제지위 연결 연구',
+    name: '이탈리아',
+    signal: 'Ferrero·Agnelli 같은 기업가문 + 피렌체 장기 연구',
     evidence: 'high',
-    summary: '1427년 피렌체 세금자료와 2011년 같은 성씨의 유사 후손을 연결한 연구에서 소득·실물자산·엘리트 직업의 장기 지속성이 확인됐다.',
-    caveat: '연구는 피렌체라는 특정 도시의 성씨 집단을 통계적으로 연결한 것이며, 같은 성씨의 실제 혈연·개인 자산을 보장하지 않는다.',
-    sourceIds: ['florenceMobility']
+    summary: 'Ferrero·Agnelli처럼 성씨가 기업가문 브랜드가 된 사례와, 1427–2011 피렌체 성씨 집단의 장기 경제지위 연구를 함께 볼 수 있다.',
+    caveat: '현대 기업가문 사례와 600년 장기 학술 연구는 서로 다른 종류의 근거다. 동일 성씨 개인의 부를 자동 판정하지 않는다.',
+    sourceIds: ['florenceMobility', 'ferreroHistory', 'agnelliFoundation']
+  },
+  {
+    country: 'US',
+    name: '미국',
+    signal: 'Walton·Mars·Koch·Rockefeller처럼 이름이 곧 부호가문 브랜드',
+    evidence: 'context',
+    summary: '대형 가족기업과 역사적 산업자본 가문이 많아, 특정 희귀 성씨가 기업·재단·역사 기록과 강하게 결합되는 나라다.',
+    caveat: 'Walton이나 Rockefeller 같은 가문명은 강한 문화적 신호지만, 같은 성씨의 모든 사람을 해당 가문으로 볼 수 없다.',
+    sourceIds: ['walmartHistory', 'marsHistory', 'rockefellerFamily']
+  },
+  {
+    country: 'FR',
+    name: '프랑스',
+    signal: 'Bettencourt·Arnault·Wertheimer·Dassault·Pinault',
+    evidence: 'context',
+    summary: '럭셔리·화장품·항공·미술 시장의 대형 가족자산과 성씨가 결합된 사례가 많다.',
+    caveat: '현재 Forbes 자산 프로필과 기업 지배구조를 근거로 한 “가문 이미지”이며 성씨 인구 전체의 통계는 아니다.',
+    sourceIds: ['forbesBettencourt2026', 'lvmhArnault', 'forbesWertheimer2026']
+  },
+  {
+    country: 'DE',
+    name: '독일',
+    signal: 'Quandt·Albrecht·Reimann 같은 산업·유통 가문',
+    evidence: 'context',
+    summary: 'BMW·Aldi·JAB처럼 비상장 또는 가족 지배 사업과 연결된 성씨가 현대 부호가문 코드로 남아 있다.',
+    caveat: '현대 기업가문 기록이며 독일 성씨 전체의 사회계층을 의미하지 않는다.',
+    sourceIds: ['forbesQuandt2026', 'forbesAlbrecht2026', 'forbesReimann2026']
+  },
+  {
+    country: 'ES',
+    name: '스페인',
+    signal: 'Ortega·Del Pino·March — 패션·인프라·은행 가문',
+    evidence: 'context',
+    summary: 'Inditex, Ferrovial, Banca March처럼 창업가 성씨와 대규모 지분이 세대에 걸쳐 연결된 사례가 있다.',
+    caveat: 'Ortega처럼 흔한 성씨는 기업 맥락 없이는 부의 신호가 약하다.',
+    sourceIds: ['forbesOrtega2026', 'forbesRafaelDelPino2026', 'forbesJuanMarch2026']
+  },
+  {
+    country: 'MX',
+    name: '멕시코',
+    signal: 'Slim·Larrea·Baillères — 통신·광산·금융 대자산 가문',
+    evidence: 'context',
+    summary: '통신·광산·보험·지주회사와 결합된 소수 기업가문 성씨가 매우 강한 부호 이미지를 갖는다.',
+    caveat: '가문·기업 문맥에서의 신호이며 멕시코의 동성인 전체를 의미하지 않는다.',
+    sourceIds: ['forbesSlim2026', 'forbesLarrea2026', 'forbesBailleres2026']
   }
 ];
 
