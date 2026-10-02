@@ -75,16 +75,18 @@ GitHub의 공개된 `gh`/REST API에는 Repository Social Preview 이미지 업�
 
 ## Preview
 
-첫 화면에서 `나오이(直井)`와 아이치 지역경제의 핵심 팩트를 보여주고, 아래에서 다음을 확인할 수 있습니다.
+홈은 **국가 우선 탐색 구조**입니다. 짧은 서비스 소개 다음에 일본·인도·영국·스웨덴·중국·한국·이탈리아 국가별 탐색기가 바로 나오며, 상단의 고정 국가 탭으로 원하는 나라의 상세 리스트를 즉시 전환할 수 있습니다.
 
-- 일본 현재 성씨 빈도 비교표: 佐藤, 鈴木, 直井, 大道寺, 飛鳥井, 綾小路, 徳大寺
-- 선택 성씨 상세 dossier
-- 빈도 순위와 추정 인구
-- 연구에서 선택된 이유
-- 역사·가문명 관련 기록
+- 상단 고정 국가 탭: 일본 / 인도 / 영국 / 스웨덴 / 중국 / 한국 / 이탈리아
+- 홈 상단 국가별 탐색기 카드
+- 국가별 전체 성씨·집단 조사 리스트
+- 일본 탭의 실제 성씨 빈도순위 비교표: 佐藤, 鈴木, 直井, 大道寺, 飛鳥井, 綾小路, 徳大寺
+- 성씨별 빈도 순위와 추정 인구(자료가 있을 때만)
+- 역사·가문명 관련 기록과 선택 이유
 - 같은 성씨의 대표적 공인/역사 인물
-- 국가별 사회이동 연구
-- 전체 성씨 연구 탐색기
+- 국가별 사회이동 연구와 해석 주의사항
+- 전체 국가 통합 검색기
+- PC 행형 상세 리스트 / 모바일 카드형 상세 리스트
 
 ## Features
 
@@ -251,3 +253,13 @@ GitHub 로그인이 처음이면 브라우저 인증창이 한 번 열립니다.
 초기 Git 저장소에는 `origin`이 없는 것이 정상입니다. v2.2부터는 `git remote` 목록을 먼저 확인한 뒤 `origin`이 있을 때만 URL을 조회합니다. 또한 아직 존재하지 않는 GitHub Repository, Pages, Actions workflow를 확인하는 명령도 상태 조회로 처리하므로 첫 실행 중 정상적인 `not found` 응답 때문에 PowerShell이 중단되지 않습니다.
 
 이전 실행이 `Git 저장소 초기화` 뒤에 중단되었더라도 `.git` 폴더를 지울 필요가 없습니다. 최신 `scripts/deploy.ps1`로 교체하고 `deploy.cmd`를 다시 실행하면 이어서 Repository 생성과 Pages 배포를 진행합니다.
+
+### Windows 배포 참고: Actions가 `cancelled` 되는 경우
+
+`deploy.cmd`는 `main` push로 자동 생성된 Pages workflow를 먼저 추적합니다. push run이 생성되지 않았을 때만 `workflow_dispatch`를 1회 요청합니다. Pages workflow의 concurrency는 `cancel-in-progress: false`로 설정되어 있어, 초기 설정 과정에서 중복 실행이 생겨도 진행 중인 배포를 취소하지 않습니다. `LF will be replaced by CRLF` 메시지는 Windows Git의 줄바꿈 경고이며 배포 오류가 아닙니다.
+
+### `main -> main (fetch first)` 오류
+
+새 ZIP을 다른 폴더에 풀면 로컬 `.git` 이력은 새로 시작하지만 GitHub의 같은 저장소에는 이전 배포 이력이 남아 있을 수 있습니다. 최신 `deploy.ps1`은 기존 저장소의 `origin/main`을 먼저 fetch하고, 로컬 이력이 원격과 다르면 현재 로컬 HEAD를 `deploy-backup-날짜-시간` 브랜치로 보관한 뒤 원격 `main` 이력 위에 **현재 폴더의 파일 상태를 새 커밋**으로 올립니다. 따라서 ZIP 폴더를 새로 받아도 `fetch first` 때문에 수동으로 `git pull`하거나 강제 push할 필요가 없습니다.
+
+또한 `.gitattributes`를 포함해 일반 소스 파일은 LF, `deploy.cmd`/`deploy.ps1`은 Windows CRLF로 고정하므로 Windows의 반복적인 줄바꿈 경고도 줄였습니다.
